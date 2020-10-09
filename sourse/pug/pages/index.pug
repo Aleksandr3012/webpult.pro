@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'webpult.pro'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+		+mob-mnu(class="d-lg-none")
+	+headerBlock(style='background-color: #edf4f8;')
+
+	+sForm()
+	+sContact()
+	+footer()
+
+
+	

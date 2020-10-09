@@ -1,0 +1,20 @@
+mixin topLine()
+	// start topLine
+	+b.topLine#topLine&attributes(attributes)
+		.container
+			.row
+				.col-auto
+					+e.logo(href="#")
+						img(src="img/@2x/logo.png", alt="")
+				.col.d-none.d-lg-block
+					+top-nav()
+				.col-auto
+					+e.buttons
+						+e.lk(href="#")
+							+icon('user')
+							span Личный  кабинет
+						+e.basket(href="#")
+							+icon('shopping-cart')
+							+e.quantity 0
+						+e.btn.btn.btn-dark(href="#") Нужна консультация?
+	// end topLine

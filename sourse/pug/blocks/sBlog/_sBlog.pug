@@ -1,0 +1,33 @@
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h2= data.title
+				
+			.row
+				.col-lg-4
+					+blogItem({
+						img: 'blogImg-1',
+						name: 'Статья',
+						text: `Wi-Fi 6: нужен ли новый стандарт беспроводной связи обычному пользователю и если да, то зачем?`
+					}).text-sm
+				.col-lg-4
+					+blogItem({
+						img: 'blogImg-2',
+						name: 'Обзор',
+						text: `Ланч-тайм 269: краткий перевод&nbsp;свежих статей о&nbsp;digital`
+					}).text-sm
+				.col-lg-4
+					+blogItem({
+						img: 'blogImg-3',
+						name: 'Сайты',
+						text: `Китай может ввести санкции против Nokia и Ericsson, если&nbsp;ЕС запретит оборудование Huawei для сетей&nbsp;5G`
+					})
+	// end sBlog
+
+mixin blogItem(data)
+	+b.blogItem(href="#")&attributes(attributes)
+		+pic(data.img,'bg','')(class="picture-bg")
+		.tagBlock= data.name
+		+e.text!= data.text
