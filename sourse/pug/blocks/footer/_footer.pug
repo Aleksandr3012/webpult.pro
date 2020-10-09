@@ -1,4 +1,10 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row.justify-content-between
+				.col-auto
+					+soc()
+				.col-auto
+					+e.tel(href="tel:")
+						+icon('tel')
+						span +7 (499) 938 78 38

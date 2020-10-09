@@ -1,7 +1,9 @@
 .top-nav {
 	@include media-breakpoint-up(xl) {
-		padding-left: rem(43);
 		padding-top: rem(5px);
+	}
+	@include media-breakpoint-up(xxl) {
+		padding-left: rem(43);
 	}
 	// position: absolute;
 	// top: 100%;

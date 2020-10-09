@@ -5,7 +5,7 @@ mixin topLine()
 			.row
 				.col-auto
 					+e.logo(href="#")
-						img(src="img/@2x/logo.png", alt="")
+						img.res-i(src="img/@2x/logo.png", alt="")
 				.col.d-none.d-lg-block
 					+top-nav()
 				.col-auto
@@ -17,4 +17,7 @@ mixin topLine()
 							+icon('shopping-cart')
 							+e.quantity 0
 						+e.btn.btn.btn-dark(href="#") Нужна консультация?
+				.col-auto.d-lg-none
+					+mob-mnu
+
 	// end topLine

@@ -9,12 +9,19 @@
 	}
 
 	&__btn {
-
+		@include media-breakpoint-only(xl) {
+			padding: .375rem rem(10) .375rem rem(10);
+		}
 	}
 
 	&__logo {
-		margin-top: rem(10);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(10);
+		}	
 		display: block;
+		@include media-breakpoint-down(sm) {
+			max-width: 50%;
+		}
 	}
 
 	&__quantity {
@@ -38,14 +45,21 @@
 	}
 
 	&__basket {
-		margin-right: rem(29);
+		margin-right: rem(10);
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(29);
+		}
 		.icon {
 			margin-right: 4px;
 		}
 	}
 
 	&__lk {
-		margin-right: rem(30);
+		margin-left: auto;
+		margin-right: rem(10);
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(30);
+		}
 		display: flex;
 		align-items: center;
 		.icon {
@@ -55,6 +69,25 @@
 			color: $body-color;
 			font-size: $small;
 			line-height: 1;
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+	}
+
+	.row {
+		@include media-breakpoint-down(md) {
+			@include roww(10px);
+			justify-content: space-between;
+		}
+		@include media-breakpoint-down(lg) {
+			align-items: center;
+		}
+		@include media-breakpoint-only(lg) {
+			@include roww(20px);
+		}
+		@include media-breakpoint-only(xl) {
+			@include roww(10px);
 		}
 	}
 
@@ -67,12 +100,18 @@
 
 
 .navMenu {
-	display: flex;
-	align-items: center;
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
 	margin-bottom: 0;
 
 	&__link {
-		font-size: $small;
+		font-size: $xsmall;
+		@include media-breakpoint-up(xxl) {
+			font-size: $small;
+		}
 		letter-spacing: 0.023em;
 		color: $body-color;
 		font-weight: 600;
@@ -80,7 +119,11 @@
 
 	&__item {
 		&:not(:last-child) {
-			@include media-breakpoint-up(lg) {
+			margin-right: rem(15);
+			@include media-breakpoint-up(xl) {
+				margin-right: rem(17);
+			}	
+			@include media-breakpoint-up(xxl) {
 				margin-right: rem(29);
 			}
 		}
@@ -150,28 +193,36 @@
 	}
 
 	.drop {
-		transform: scale(0.4, 0);
-		transform-origin: top left;
-		position: absolute;
-		left: rem(-10);
-		top: rem(35);
-		width: 230px;
-		z-index: 5;
+		@include media-breakpoint-up(lg) {
+			transform: scale(0.4, 0);
+			transform-origin: top left;
+			position: absolute;
+			left: rem(-10);
+			top: rem(35);
+			width: 230px;
+			z-index: 5;
+			background-color: #fff;
+			padding: rem(24px);
+			border: solid 2px #eeeeee;
+		}
+		padding-left: rem(15);
 		@include mt;
 		border-radius: $border-radius;
-		background-color: #fff;
-		border: solid 2px #eeeeee;
-		padding: rem(24px);
 
 		&__item {
 			&:not(:last-child) {
-				margin-bottom: 22px;
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 22px;
+				}
 			}
 		}
 
 		&__link {
 			color: $body-color;
-			font-size: $small;
+			font-size: $xsmall;
+			@include media-breakpoint-up(xxl) {
+				font-size: $small;
+			}
 			&:hover {
 				color: $primary;
 			}

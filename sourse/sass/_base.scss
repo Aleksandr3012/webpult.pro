@@ -523,5 +523,8 @@ iframe {
 .btn-dark {
 	font-size: $xsmall;
 	font-weight: 500;
-	padding: .375rem rem(23) .375rem rem(23);
+	padding: .375rem rem(10) .375rem rem(10);
+	@include media-breakpoint-up(md) {
+		padding: .375rem rem(23) .375rem rem(23);
+	}
 }
