@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sSolution/_sSolution.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'webpult.pro'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', 'Готовые решения')
+
+	+sSolution()
+	+footer()
+
+
+	
