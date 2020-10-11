@@ -1,0 +1,22 @@
+mixin sNumeral(data)
+	// start sNumeral
+	+b.SECTION.sNumeral.section#sNumeral&attributes(attributes)
+		.container
+				
+			+b.section-title
+				h2 ВебПульт в цифрах
+			.row
+				.col-3
+						p Создаем только авторский дизайн премиального качества и никогда не ограничиваем наших клиентов в количестве пожеланий и правок к макетам! Работаем до полного принятия работы
+				+e.col.col
+					mixin item(t,text)
+						+e.item.text-center
+							+e.imgWrap
+								+pic('num-bg','')
+							+e.title= t
+							+e.text!= text
+					+item('8 лет','опыта в IT')
+					+item('700+','разработанных логотипов')
+					+item('300+','сайтов и Интернет-магазинов')
+					+item('100+','сайтов на сопровождении')
+	// end sNumeral

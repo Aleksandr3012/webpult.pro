@@ -1,0 +1,24 @@
+mixin sCompetences(data)
+	// start sCompetences
+	+b.SECTION.sCompetences.section#sCompetences&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h3 Наши компетеции
+				
+			+e.nav
+				+e.prev
+					+icon('arrow-r')
+				+e.next
+					+icon('arrow-r')
+			.swiper-container.competenceSlider
+				.swiper-wrapper
+					mixin slide(i)
+						.swiper-slide
+							picture
+								source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/competences-${i}.webp` type="image/webp")
+								img.swiper-lazy(src="#" data-src=`img/@2x/competences-${i}.png`, alt="")
+					+slide(1)
+					+slide(2)
+					+slide(3)
+					+slide(4)
+	// end sCompetences

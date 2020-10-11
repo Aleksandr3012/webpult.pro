@@ -316,6 +316,7 @@ function eventHandler() {
 		freeMode: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		
 		// clickable: true,
 
 	});
@@ -330,6 +331,49 @@ function eventHandler() {
 		},
 		lazy: {
 			loadPrevNext: true,
+		},
+
+	});
+
+	var cardSlider = new Swiper('.cardSlider', {
+		spaceBetween: 30,
+		slidesPerView: 1,
+		// freeMode: true,
+		loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+		navigation: {
+			nextEl: '.sCards .sCards__nextBtn',
+		},
+	});
+
+	var competenceSlider = new Swiper('.competenceSlider', {
+		spaceBetween: 20,
+		slidesPerView: 2,
+		// freeMode: true,
+		loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			768: {
+				spaceBetween: 63,
+				slidesPerView: 4
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+		navigation: {
+			nextEl: '.sCompetences .sCompetences__next',
+			prevEl: '.sCompetences .sCompetences__prev',
 		},
 	});
 	

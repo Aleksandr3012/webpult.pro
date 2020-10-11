@@ -5,7 +5,14 @@
 
 	.section-title {
 		padding-bottom: calc(var(--sTPB) + #{rem(9)});
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&__allArticles {
+			text-decoration: underline;
+		}
 	}
+
 
 	@include media-breakpoint-up(sm) {}
 	//
@@ -68,5 +75,9 @@
 		.blogItem__text {
 			max-width: rem(332px);
 		}
+	}
+
+	&__date {
+		color: #ffffff;
 	}
 }

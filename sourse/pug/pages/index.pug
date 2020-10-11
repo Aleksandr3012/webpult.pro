@@ -5,21 +5,23 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sCards/_sCards.pug
 include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sNumeral/_sNumeral.pug
+include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sMission/_sMission.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'mainPage'
 block title
 	- let  title= 'webpult.pro'
 	title= title
 block pagecontent
 	+header()
 		+topLine()
-	+headerBlock()
-	.container.section
-		.swiper-container.gallery-thumbs
+	+headerBlock() 
+		.swiper-container.gallery-thumbs.container
 			.swiper-wrapper
 				mixin slideThumb(t,e)
-					+b.slideThumb.swiper-slide.swiper-no-swiping
+					+b.slideThumb.swiper-slide
 						+e.text
 							+e.title= t
 							+e.descr= e
@@ -29,9 +31,10 @@ block pagecontent
 				+slideThumb('Сайты В рассрочку','от 3 000 ₽ в месяц')
 	+sCards()
 	+sCards-slider()
-	+sBlog({
-		title: 'Блог'
-	})
+	+sNumeral
+	+sCompetences
+	+sBlog('Блог','date')
+	+sMission
 	+footer()
 
 

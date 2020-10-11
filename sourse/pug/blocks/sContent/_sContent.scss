@@ -98,9 +98,9 @@ ul {
 			content: '';
 			position: absolute;
 			left: 0;
-			top: 8px;
-			width: 5px;
-			height: 5px;
+			top: em(6);
+			width: em(7);
+			height: em(7);
 			background-color: $primary;
 			border-radius: 50%;
 		}
