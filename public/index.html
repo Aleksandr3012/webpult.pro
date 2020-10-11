@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body>
+	<body class="mainPage">
 		<!-- start header-->
 		<header class="header" id="header">
 			<!-- start topLine-->
@@ -78,7 +78,7 @@
 								</svg><span>Личный  кабинет</span></a><a class="topLine__basket" href="#">
 								<svg class="icon icon-shopping-cart ">
 									<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-								</svg><span class="topLine__quantity">0</span></a><a class="topLine__btn btn btn-dark" href="#">Нужна консультация?</a>
+								</svg><span class="topLine__quantity">0</span></a><a class="topLine__btn btn btn-dark" href="#"> <span class="d-md-none">консультация</span><span class="d-none d-md-inline">Нужна консультация?</span></a>
 							</div>
 						</div>
 						<div class="col-auto d-lg-none">
@@ -139,7 +139,7 @@
 							<div class="swiper-slide">
 								<div class="container">
 									<div class="row">
-										<div class="col-6">
+										<div class="col-md-6">
 											<div class="section-title">
 												<h1>Сайты на 1С-Битрикс в рассрочку</h1>
 												<p>Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!</p>
@@ -147,7 +147,7 @@
 											<div class="headerBlock__buttons"><a class="headerBlock__btn btn btn-primary" href="#">Заказать сайт</a><a class="headerBlock__details" href="#">Подробнее</a>
 											</div>
 										</div>
-										<div class="col">
+										<div class="headerBlock__picCol col">
 											<picture>
 												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/headerPic.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/headerPic.png" alt=""/>
 											</picture>
@@ -158,7 +158,7 @@
 							<div class="swiper-slide">
 								<div class="container">
 									<div class="row">
-										<div class="col-6">
+										<div class="col-md-6">
 											<div class="section-title">
 												<h1>Сайты на 1С-Битрикс в рассрочку</h1>
 												<p>Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!</p>
@@ -166,7 +166,7 @@
 											<div class="headerBlock__buttons"><a class="headerBlock__btn btn btn-primary" href="#">Заказать сайт</a><a class="headerBlock__details" href="#">Подробнее</a>
 											</div>
 										</div>
-										<div class="col">
+										<div class="headerBlock__picCol col">
 											<picture>
 												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/headerPic.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/headerPic.png" alt=""/>
 											</picture>
@@ -177,7 +177,7 @@
 							<div class="swiper-slide">
 								<div class="container">
 									<div class="row">
-										<div class="col-6">
+										<div class="col-md-6">
 											<div class="section-title">
 												<h1>Сайты на 1С-Битрикс в рассрочку</h1>
 												<p>Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!</p>
@@ -185,7 +185,7 @@
 											<div class="headerBlock__buttons"><a class="headerBlock__btn btn btn-primary" href="#">Заказать сайт</a><a class="headerBlock__details" href="#">Подробнее</a>
 											</div>
 										</div>
-										<div class="col">
+										<div class="headerBlock__picCol col">
 											<picture>
 												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/headerPic.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/headerPic.png" alt=""/>
 											</picture>
@@ -196,7 +196,7 @@
 							<div class="swiper-slide">
 								<div class="container">
 									<div class="row">
-										<div class="col-6">
+										<div class="col-md-6">
 											<div class="section-title">
 												<h1>Сайты на 1С-Битрикс в рассрочку</h1>
 												<p>Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!</p>
@@ -204,7 +204,7 @@
 											<div class="headerBlock__buttons"><a class="headerBlock__btn btn btn-primary" href="#">Заказать сайт</a><a class="headerBlock__details" href="#">Подробнее</a>
 											</div>
 										</div>
-										<div class="col">
+										<div class="headerBlock__picCol col">
 											<picture>
 												<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/headerPic.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/headerPic.png" alt=""/>
 											</picture>
@@ -264,8 +264,8 @@
 					<div class="col-lg-4">
 						<div class="cardItem" style="background-color: #a1e6fc;">
 							<div class="row">
-								<div class="cardItem__textCol col-md-6">
-									<div class="cardItem__title h4">Купить лицензию Битрикс24
+								<div class="cardItem__textCol col-sm-6">
+									<div class="cardItem__title">Купить лицензию Битрикс24
 									</div>
 									<p>Коробочные и облачные решения Битрикс24 для Вашего бизнеса</p>
 									<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Выбрать</a>
@@ -286,8 +286,8 @@
 					<div class="col-lg-4">
 						<div class="cardItem" style="background-color: #befdf3;">
 							<div class="row">
-								<div class="cardItem__textCol col-md-6">
-									<div class="cardItem__title h4">Заказать внедрение Битрикс 24
+								<div class="cardItem__textCol col-sm-6">
+									<div class="cardItem__title">Заказать внедрение Битрикс 24
 									</div>
 									<p>Наши специалисты разработали свои решения в виде готовых «пакетов» услуг</p>
 									<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Заказать</a>
@@ -308,8 +308,8 @@
 					<div class="col-lg-4">
 						<div class="cardItem" style="background-color: #e0ecfe;">
 							<div class="row">
-								<div class="cardItem__textCol col-md-6">
-									<div class="cardItem__title h4">Возможности Битрикс24
+								<div class="cardItem__textCol col-sm-6">
+									<div class="cardItem__title">Возможности Битрикс24
 									</div>
 									<p>Узнайте все возвожности Битрикс24</p>
 									<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Узнать</a>
@@ -331,59 +331,227 @@
 			</div>
 		</section>
 		<!-- start sCards-->
-		<section class="sCards section" id="sCards">
+		<section class="sCards sCards--slider section" id="sCards">
 			<div class="container">
 				<div class="section-title">
 					<h2>Популярные услуги</h2>
 				</div>
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="cardItem" style="background-color: #fadb88;">
-							<div class="row">
-								<div class="cardItem__textCol col-md-6">
-									<div class="cardItem__title h4">Создание уникальных логотипов
+				<div class="sCards__nextBtn">
+					<svg class="icon icon-arrow-r ">
+						<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
+					</svg>
+				</div>
+				<div class="swiper-container cardSlider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="cardItem" style="background-color: #fadb88;">
+								<div class="row">
+									<div class="cardItem__textCol col-sm-6">
+										<div class="cardItem__title">Создание уникальных логотипов
+										</div>
+										<p>Гибкие пакеты для разработки логотипа</p>
+										<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Выбрать</a>
+										</div>
 									</div>
-									<p>Гибкие пакеты для разработки логотипа</p>
-									<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Выбрать</a>
+									<div class="cardItem__picCol col">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/cardSlider-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/cardSlider-1.png" alt=""/>
+										</picture>
 									</div>
-								</div>
-								<div class="cardItem__picCol col">
-									<!-- picture-->
-									<picture> 
-										<source srcset="img/@2x/webp/Подробнее.webp" type="image/webp"/>
-										<noscript class="loading-lazy"><img src="img/@2x/Подробнее.jpg" alt=""/></noscript>
-									</picture>
-									<!-- /picture-->
 								</div>
 							</div>
+							<!-- end sCards-->
 						</div>
-						<!-- end sCards-->
-					</div>
-					<div class="col-lg-4">
-						<div class="cardItem" style="background-color: #c7f4fa;">
-							<div class="row">
-								<div class="cardItem__textCol col-md-6">
-									<div class="cardItem__title h4">Фирменный стиль для Вашего бизнеса
+						<div class="swiper-slide">
+							<div class="cardItem" style="background-color: #c7f4fa;">
+								<div class="row">
+									<div class="cardItem__textCol col-sm-6">
+										<div class="cardItem__title">Фирменный стиль для Вашего бизнеса
+										</div>
+										<p>Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании</p>
+										<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Подробнее</a>
+										</div>
 									</div>
-									<p>Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании</p>
-									<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Подробнее</a>
+									<div class="cardItem__picCol col">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/cardSlider-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/cardSlider-2.png" alt=""/>
+										</picture>
 									</div>
-								</div>
-								<div class="cardItem__picCol col">
-									<!-- picture-->
-									<picture> 
-										<source srcset="img/@2x/webp/cardImg-2.webp" type="image/webp"/>
-										<noscript class="loading-lazy"><img src="img/@2x/cardImg-2.jpg" alt=""/></noscript>
-									</picture>
-									<!-- /picture-->
 								</div>
 							</div>
+							<!-- end sCards-->
 						</div>
-						<!-- end sCards-->
+						<div class="swiper-slide">
+							<div class="cardItem" style="background-color: #c7f4fa;">
+								<div class="row">
+									<div class="cardItem__textCol col-sm-6">
+										<div class="cardItem__title">Фирменный стиль для Вашего бизнеса
+										</div>
+										<p>Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании</p>
+										<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Подробнее</a>
+										</div>
+									</div>
+									<div class="cardItem__picCol col">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/cardSlider-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/cardSlider-2.png" alt=""/>
+										</picture>
+									</div>
+								</div>
+							</div>
+							<!-- end sCards-->
+						</div>
+						<div class="swiper-slide">
+							<div class="cardItem" style="background-color: #fadb88;">
+								<div class="row">
+									<div class="cardItem__textCol col-sm-6">
+										<div class="cardItem__title">Создание уникальных логотипов
+										</div>
+										<p>Гибкие пакеты для разработки логотипа</p>
+										<div class="cardItem__btnWrap"><a class="cardItem__btn btn btn-primary btn-primary-shadow-sm" href="#">Выбрать</a>
+										</div>
+									</div>
+									<div class="cardItem__picCol col">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/cardSlider-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/cardSlider-1.png" alt=""/>
+										</picture>
+									</div>
+								</div>
+							</div>
+							<!-- end sCards-->
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- start sNumeral-->
+		<section class="sNumeral section" id="sNumeral">
+			<div class="container">
+				<div class="section-title">
+					<h2>ВебПульт в цифрах</h2>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						<p>Создаем только авторский дизайн премиального качества и никогда не ограничиваем наших клиентов в количестве пожеланий и правок к макетам! Работаем до полного принятия работы</p>
+					</div>
+					<div class="sNumeral__col col">
+						<div class="sNumeral__item text-center">
+							<div class="sNumeral__imgWrap">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/num-bg.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/num-bg.webp" type="image/webp"/>
+									<source srcset="img/@2x/num-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/num-bg.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/num-bg.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="sNumeral__title">8 лет
+							</div>
+							<div class="sNumeral__text">опыта в IT
+							</div>
+						</div>
+						<div class="sNumeral__item text-center">
+							<div class="sNumeral__imgWrap">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/num-bg.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/num-bg.webp" type="image/webp"/>
+									<source srcset="img/@2x/num-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/num-bg.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/num-bg.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="sNumeral__title">700+
+							</div>
+							<div class="sNumeral__text">разработанных логотипов
+							</div>
+						</div>
+						<div class="sNumeral__item text-center">
+							<div class="sNumeral__imgWrap">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/num-bg.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/num-bg.webp" type="image/webp"/>
+									<source srcset="img/@2x/num-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/num-bg.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/num-bg.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="sNumeral__title">300+
+							</div>
+							<div class="sNumeral__text">сайтов и Интернет-магазинов
+							</div>
+						</div>
+						<div class="sNumeral__item text-center">
+							<div class="sNumeral__imgWrap">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/num-bg.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/num-bg.webp" type="image/webp"/>
+									<source srcset="img/@2x/num-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/num-bg.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/num-bg.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="sNumeral__title">100+
+							</div>
+							<div class="sNumeral__text">сайтов на сопровождении
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sNumeral-->
+		<!-- start sCompetences-->
+		<section class="sCompetences section" id="sCompetences">
+			<div class="container">
+				<div class="section-title text-center">
+					<h3>Наши компетеции</h3>
+				</div>
+				<div class="sCompetences__nav">
+					<div class="sCompetences__prev">
+						<svg class="icon icon-arrow-r ">
+							<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
+						</svg>
+					</div>
+					<div class="sCompetences__next">
+						<svg class="icon icon-arrow-r ">
+							<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="swiper-container competenceSlider">
+					<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/competences-1.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/competences-1.png" alt=""/>
+										</picture>
+									</div>
+									<div class="swiper-slide">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/competences-2.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/competences-2.png" alt=""/>
+										</picture>
+									</div>
+									<div class="swiper-slide">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/competences-3.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/competences-3.png" alt=""/>
+										</picture>
+									</div>
+									<div class="swiper-slide">
+										<picture>
+											<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/competences-4.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/competences-4.png" alt=""/>
+										</picture>
+									</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sCompetences-->
 		<!-- start sBlog-->
 		<section class="sBlog section" id="sBlog">
 			<div class="container">
@@ -397,8 +565,7 @@
 							<source srcset="img/@2x/webp/blogImg-1.webp" type="image/webp"/>
 							<noscript class="loading-lazy"><img class="object-fit-js" src="img/@2x/blogImg-1.jpg" alt=""/></noscript>
 						</picture>
-						<!-- /picture-->
-						<div class="tagBlock">Статья</div><span class="blogItem__text">Wi-Fi 6: нужен ли новый стандарт беспроводной связи обычному пользователю и если да, то зачем?</span></a>
+						<!-- /picture--><span class="blogItem__text">Wi-Fi 6: нужен ли новый стандарт беспроводной связи обычному пользователю и если да, то зачем?</span><span class="blogItem__date">22.05.2020</span></a>
 					</div>
 					<div class="col-lg-4"><a class="blogItem text-sm" href="#">
 						<!-- picture-->
@@ -406,8 +573,7 @@
 							<source srcset="img/@2x/webp/blogImg-2.webp" type="image/webp"/>
 							<noscript class="loading-lazy"><img class="object-fit-js" src="img/@2x/blogImg-2.jpg" alt=""/></noscript>
 						</picture>
-						<!-- /picture-->
-						<div class="tagBlock">Обзор</div><span class="blogItem__text">Ланч-тайм 269: краткий перевод&nbsp;свежих статей о&nbsp;digital</span></a>
+						<!-- /picture--><span class="blogItem__text">Ланч-тайм 269: краткий перевод&nbsp;свежих статей о&nbsp;digital</span><span class="blogItem__date">22.05.2020</span></a>
 					</div>
 					<div class="col-lg-4"><a class="blogItem" href="#">
 						<!-- picture-->
@@ -415,8 +581,7 @@
 							<source srcset="img/@2x/webp/blogImg-3.webp" type="image/webp"/>
 							<noscript class="loading-lazy"><img class="object-fit-js" src="img/@2x/blogImg-3.jpg" alt=""/></noscript>
 						</picture>
-						<!-- /picture-->
-						<div class="tagBlock">Сайты</div><span class="blogItem__text">Китай может ввести санкции против Nokia и Ericsson, если&nbsp;ЕС запретит оборудование Huawei для сетей&nbsp;5G</span></a>
+						<!-- /picture--><span class="blogItem__text">Китай может ввести санкции против Nokia и Ericsson, если&nbsp;ЕС запретит оборудование Huawei для сетей&nbsp;5G</span><span class="blogItem__date">22.05.2020</span></a>
 					</div>
 				</div>
 			</div>

@@ -6,7 +6,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sBlog/_sBlog.pug
 
 block variables
-	- let  mainPage= 'innerPage'
+	- let  mainPage= null
 block title
 	- let  title= 'webpult.pro'
 	title= title
@@ -82,9 +82,7 @@ block pagecontent
 					+icon('arrow-l')
 					span Вернутся в блог
 					
-	+sBlog({
-		title: 'Советуем почитать'
-	})
+	+sBlog('Советуем почитать')
 	+footer()
 
 

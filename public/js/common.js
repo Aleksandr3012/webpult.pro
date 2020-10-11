@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'content.png';
+	screenName = '01.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -329,6 +329,46 @@ function eventHandler() {
 		},
 		lazy: {
 			loadPrevNext: true
+		}
+	});
+	var cardSlider = new Swiper('.cardSlider', {
+		spaceBetween: 30,
+		slidesPerView: 1,
+		// freeMode: true,
+		loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 2
+			}
+		},
+		lazy: {
+			loadPrevNext: true
+		},
+		navigation: {
+			nextEl: '.sCards .sCards__nextBtn'
+		}
+	});
+	var competenceSlider = new Swiper('.competenceSlider', {
+		spaceBetween: 20,
+		slidesPerView: 2,
+		// freeMode: true,
+		loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			768: {
+				spaceBetween: 63,
+				slidesPerView: 4
+			}
+		},
+		lazy: {
+			loadPrevNext: true
+		},
+		navigation: {
+			nextEl: '.sCompetences .sCompetences__next',
+			prevEl: '.sCompetences .sCompetences__prev'
 		}
 	});
 }

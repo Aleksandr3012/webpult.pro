@@ -16,8 +16,8 @@ mixin sCards(data)
 mixin cardItem(title,text,btn,img,sl)
 	+b.cardItem&attributes(attributes)
 		.row
-			+e.textCol.col-md-6
-				+e.title.h4!= title
+			+e.textCol.col-sm-6
+				+e.title!= title
 				p!= text
 				+e.btnWrap
 					+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#")= btn
@@ -33,12 +33,19 @@ mixin cardItem(title,text,btn,img,sl)
 
 mixin sCards-slider(data)
 	// start sCards
-	+b.SECTION.sCards.section#sCards&attributes(attributes)
+	+b.SECTION.sCards--slider.section#sCards&attributes(attributes)
 		.container
 			+b.section-title
 				h2 Популярные услуги
-			.row
-				.col-lg-4
-					+cardItem('Создание уникальных логотипов','Гибкие пакеты для разработки логотипа','Выбрать','Подробнее')(style="background-color: #fadb88;")
-				.col-lg-4
-					+cardItem('Фирменный стиль для Вашего бизнеса','Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании','Подробнее','cardImg-2')(style="background-color: #c7f4fa;")
+			+e.nextBtn
+				+icon('arrow-r')
+			.swiper-container.cardSlider
+				.swiper-wrapper
+					.swiper-slide
+						+cardItem('Создание уникальных логотипов','Гибкие пакеты для разработки логотипа','Выбрать','cardSlider-1','sl')(style="background-color: #fadb88;")
+					.swiper-slide
+						+cardItem('Фирменный стиль для Вашего бизнеса','Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании','Подробнее','cardSlider-2','sl')(style="background-color: #c7f4fa;")
+					.swiper-slide
+						+cardItem('Фирменный стиль для Вашего бизнеса','Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании','Подробнее','cardSlider-2','sl')(style="background-color: #c7f4fa;")
+					.swiper-slide
+						+cardItem('Создание уникальных логотипов','Гибкие пакеты для разработки логотипа','Выбрать','cardSlider-1','sl')(style="background-color: #fadb88;")

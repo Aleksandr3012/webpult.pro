@@ -1,0 +1,54 @@
+// start .sNumeral
+.sNumeral {
+	
+
+	&__col {
+		display: flex;
+		align-items: center;
+		
+	}
+
+	&__item {
+		width: 100%;
+		position: relative;
+		&:not(:last-child) {
+			&::before {
+				content: '';
+				@include a-cent(y);
+				right: 0;
+				background-color: #e4e4e4;
+				width: 1px;
+				height: rem(110);
+			}
+		}
+	}
+
+	&__imgWrap {
+		@include a-cent();
+		z-index: -1;
+		width: 154px;
+		height: 157px;
+	}
+
+	&__title {
+		text-shadow: 0 6px 9px rgba(236, 28, 36, 0.3);
+		font-size: 42px;
+		font-size: 42px;
+		margin-bottom: rem(20);
+		letter-spacing: rem(1.34px);
+		color: $primary;
+	}
+
+	&__text {
+		font-size: $small;
+		font-weight: 500;
+	}
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sNumeral
