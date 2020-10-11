@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sPossibilities/_sPossibilities.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'webpult.pro'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', 'Возможности тарифов Битрикс24')
+	+sPossibilities
+					
+	+sBlog({
+		title: 'Советуем почитать'
+	})
+	+footer()
+
+
+	

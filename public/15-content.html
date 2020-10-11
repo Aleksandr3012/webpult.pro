@@ -163,7 +163,10 @@
 					<div class="col">
 						<!-- picture-->
 						<picture class="mb-25"> 
-							<source srcset="img/@2x/webp/technology.webp" type="image/webp"/>
+							<source srcset="img/@2x/webp/technology.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/technology.webp" type="image/webp"/>
+							<source srcset="img/@2x/technology.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="img/@1x/technology.jpg" type="image/jpg"/>
 							<noscript class="loading-lazy"><img src="img/@2x/technology.jpg" alt=""/></noscript>
 						</picture>
 						<!-- /picture-->
@@ -293,6 +296,12 @@
 			</div>
 		</footer>
 		<!--  start modals-->
+		<div class="modal-win modal-win--sPossibilities" id="modal-cloud" style="display: none">
+			<div class="modal-win__inner modal-win__inner--js">
+				<table> </table>
+			</div>
+		</div>
+		<!-- #modal-cloud-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>

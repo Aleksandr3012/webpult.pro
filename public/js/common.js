@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'content.png';
+	screenName = '13.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -330,6 +330,15 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true
 		}
+	});
+	var modalTable = "#modal-cloud";
+	$('[href="#modal-cloud"]').click(function () {
+		var table = $(modalTable + " table");
+		var number = $(this).parents("th").index();
+		table.html($(this).parents('table').html());
+		$(modalTable).find('thead').remove();
+		console.log(number);
+		table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove(); // $(modalTable).find('td').not().remove()
 	});
 }
 
