@@ -1,15 +1,28 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			.row
-				.col-6
-					+b.section-title
-						h1 Сайты на 1С-Битрикс в рассрочку
-						p Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!
-					+e.buttons
-						+e.btn.btn.btn-primary(href="#") Заказать сайт
-						+e.details.btn.btn-light(href="#") Подробнее
-				.col
-					+pic('headerPic.png')
+		.swiper-container.gallery-top
+			.swiper-wrapper
+				mixin slide()
+					.swiper-slide
+						.container
+							.row
+								.col-6
+									+b.section-title
+										h1 Сайты на 1С-Битрикс в рассрочку
+										p Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!
+									+e.buttons
+										+e.btn.btn.btn-primary(href="#") Заказать сайт
+										+e.details(href="#") Подробнее
+								.col
+									//- +pic('headerPic.png')
+									picture
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/headerPic.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/headerPic.png`, alt="")
+				+slide
+				+slide
+				+slide
+				+slide
+
+
 	// end headerBlock

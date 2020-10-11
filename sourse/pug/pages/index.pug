@@ -3,6 +3,8 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sBlog/_sBlog.pug
 
 block variables
 	- let  mainPage= null
@@ -12,10 +14,24 @@ block title
 block pagecontent
 	+header()
 		+topLine()
-	+headerBlock(style='background-color: #edf4f8;')
-
-	+sForm()
-	+sContact()
+	+headerBlock()
+	.container.section
+		.swiper-container.gallery-thumbs
+			.swiper-wrapper
+				mixin slideThumb(t,e)
+					+b.slideThumb.swiper-slide.swiper-no-swiping
+						+e.text
+							+e.title= t
+							+e.descr= e
+				+slideThumb('Корпоративные сайты','от 60 000 ₽ под ключ')
+				+slideThumb('Интернет-магазины','от 160 000 ₽ под ключ')
+				+slideThumb('Лендинг пейдж','от 60 000 ₽ с уникальным дизайном')
+				+slideThumb('Сайты В рассрочку','от 3 000 ₽ в месяц')
+	+sCards()
+	+sCards-slider()
+	+sBlog({
+		title: 'Блог'
+	})
 	+footer()
 
 

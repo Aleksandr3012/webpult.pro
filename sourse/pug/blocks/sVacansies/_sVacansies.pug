@@ -1,0 +1,34 @@
+mixin sVacansies(data)
+	// start sVacansies
+	+b.SECTION.sVacansies.section#sVacansies&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Вакансии
+			.tabs
+				+b.solutionsMenu.tabs__caption
+					+e.item.tabs__btn.active Офис
+					+e.item.tabs__btn Удаленка
+				div
+					mixin tabs()
+						.tabs__content&attributes(attributes)
+					
+							.row
+								mixin item(l,t)
+									+e.col.col-md-6.col-lg-4
+										+e.item(href="#")
+											+e.DIV.label!= l
+											+e.DIV.text-block
+												+e.DIV.title!= t
+												+e.DIV.link Подробнее
+
+								+item(`Ташкент`, `Менеджер по продажам`)
+								+item(`Москва`, `Маркетолог`)
+								+item(`Ташкент`, `Маркетолог-консультант / Marketing manager - Consultant`)
+								+item(`Ташкент`, `Графический дизайнер`)
+								+item(`Москва`, `Менеджер по работе с партнерами со знанием французского, испанского, немецкого (удаленная работа)`)
+								+item(`Ташкент`, `Дизайнер`)
+								+item(`Ташкент`, `SEO-специалист`)
+
+					+tabs().active
+					+tabs()
+	// end sVacansies

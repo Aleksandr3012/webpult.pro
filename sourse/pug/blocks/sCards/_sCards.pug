@@ -1,0 +1,44 @@
+mixin sCards(data)
+	// start sCards
+	+b.SECTION.sCards.section#sCards&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Битрикс24
+				
+			.row
+				.col-lg-4
+					+cardItem('Купить лицензию Битрикс24','Коробочные и облачные решения Битрикс24 для Вашего бизнеса','Выбрать','cardImg-1')(style="background-color: #a1e6fc;")
+				.col-lg-4
+					+cardItem('Заказать внедрение Битрикс 24','Наши специалисты разработали свои решения в виде готовых «пакетов» услуг','Заказать','cardImg-2')(style="background-color: #befdf3;")
+				.col-lg-4
+					+cardItem('Возможности Битрикс24','Узнайте все возвожности Битрикс24','Узнать','cardImg-3')(style="background-color: #e0ecfe;")
+
+mixin cardItem(title,text,btn,img,sl)
+	+b.cardItem&attributes(attributes)
+		.row
+			+e.textCol.col-md-6
+				+e.title.h4!= title
+				p!= text
+				+e.btnWrap
+					+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#")= btn
+			+e.picCol.col
+				if sl
+					picture
+						source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/${img}.webp` type="image/webp")
+						img.swiper-lazy(src="#" data-src=`img/@2x/${img}.png`, alt="")
+				else
+					+pic(`${img}`,'','')
+	// end sCards
+
+
+mixin sCards-slider(data)
+	// start sCards
+	+b.SECTION.sCards.section#sCards&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Популярные услуги
+			.row
+				.col-lg-4
+					+cardItem('Создание уникальных логотипов','Гибкие пакеты для разработки логотипа','Выбрать','Подробнее')(style="background-color: #fadb88;")
+				.col-lg-4
+					+cardItem('Фирменный стиль для Вашего бизнеса','Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании','Подробнее','cardImg-2')(style="background-color: #c7f4fa;")

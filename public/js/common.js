@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'content.png';
+	screenName = '07.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -309,6 +309,27 @@ function eventHandler() {
 	$('.drop-accardion-js').click(function () {
 		$(this).parent().toggleClass('active');
 		$(this).parent().find('.drop-accardion-toggle-js').toggle();
+	});
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 0,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true // clickable: true,
+
+	});
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		},
+		lazy: {
+			loadPrevNext: true
+		}
 	});
 }
 

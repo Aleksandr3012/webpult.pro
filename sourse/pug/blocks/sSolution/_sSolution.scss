@@ -1,37 +1,39 @@
 	// start .sSolution
 .sSolution {
 		 
-	padding-top: rem(58);
+	padding-top: rem(53);
 	padding-bottom: rem(20);
+	h2{
+		font-weight: 600;
+	}
 
 	&__col{
 		margin-bottom: rem(30);
-		// margin-right: auto;
-		// margin-left: auto;
-		// display: flex;
 	}
 
 	&__item{
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		padding: rem(24) rem(24) rem(31);
+		@include media-breakpoint-up(sm){
+			padding: rem(24) rem(24) rem(31);
+		}
+		padding: rem(11) rem(11) rem(18);
 		border-radius: $border-radius;
 		border: 1px solid #ebebeb;
 		color: $body-color;
-	}
-
-	&__img-wrap{
-		display: block;
-		position: relative;
 		&:hover{
 			color: $body-color;
 			box-shadow: 0 $em-base 30px rgba(0, 0, 0, 0.15);
 		}
 	}
 
-	picture{
-		margin-bottom: rem(32);
+	&__img-wrap{
+		display: block;
+		position: relative;
+		picture{
+			margin-bottom: rem(32);
+		}
 	}
 
 	&__label{
@@ -45,34 +47,28 @@
 		font-weight: 500;
 		letter-spacing: 0.045em;
 		@include media-breakpoint-up(sm){
-			top: rem(48);
-			left: rem(48);
+			// top: rem(35);
+			// left: rem(35);
+			top: rem(33);
+			left: rem(26);
 		}
-		top: rem(33);
-		left: rem(33);
+		top: rem(25);
+		left: rem(25);
 	}
 
-	&__text-block{
-		// flex-grow: 1;
-		// @include media-breakpoint-only(xs){
-			// 	width: rem(220);
-			// }
-		}
 		
 	&__text{
 		margin-bottom: rem(31);
-		// flex-grow: 1;
 	}
 	&__price-wrap{
 		margin-top: auto;
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		// flex-grow: 1;
 	}
 
 	.oldPrice{
-		margin-right: 24px;
+		margin-right: rem(24);
 		color: $primary;
 		font-weight: 500;
 		span{
@@ -85,10 +81,6 @@
 		font-weight: 600;
 	}
 	
-
-
-
-
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -108,10 +100,10 @@
 		flex-wrap: wrap;
 		&__item{
 			color: $body-color;
-			margin-right: rem(15);
+			margin-right: rem(31);
 			border-bottom: 1px dashed;
 		}
-		// .active{
-		// 	color: $primary;
-		// }
+		.active{
+			color: $primary;
+		}
 	}
