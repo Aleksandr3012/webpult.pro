@@ -4,6 +4,9 @@ mixin sBlog(title,date)
 		.container
 			+b.section-title
 				h2= title
+				if date
+					+e.allArticles(href="#") Перейти в блог
+
 				
 			.row
 				.col-lg-4

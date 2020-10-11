@@ -7,6 +7,7 @@ include ../blocks/sCards/_sCards.pug
 include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sNumeral/_sNumeral.pug
 include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sMission/_sMission.pug
 
 block variables
 	- let  mainPage= 'mainPage'
@@ -34,6 +35,7 @@ block pagecontent
 	+sNumeral
 	+sCompetences
 	+sBlog('Блог','date')
+	+sMission
 	+footer()
 
 
