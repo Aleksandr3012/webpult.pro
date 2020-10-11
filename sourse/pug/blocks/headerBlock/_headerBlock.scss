@@ -1,53 +1,115 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
-	padding-top: rem(100);
+	padding-top: rem(220);
+	margin-top: rem(-120);
+	padding-bottom: 0;
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
-
+	background-color: #edf4f8;
 
 	.section-title {
 		padding-top: rem(100);
 	}
 
-	@include media-breakpoint-up(xl) {}
+	&__btn {
+		margin-right: rem(24);
+	}
 
-	@include media-breakpoint-up(lg) {}
+	&__details {
+		@extend .btn;
+		background-color: #e4e4e4;
+		&:hover {
+			box-shadow: 0 5px 15px #d6d6d6;
+		}
+	}
 
-	@include media-breakpoint-up(md) {}
 
-	@include media-breakpoint-up(sm) {}
 
 	@include media-breakpoint-up(xs) {}
-
-	//
 	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
 	@include media-breakpoint-only(xl) {}
-
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
 	@include media-breakpoint-down(xs) {}
+}// end.headerBlock
 
+//thumbs
+.gallery-thumbs {
+	border: 1px solid #ebebeb;
+	background-color: #ffffff;
+	margin-top: rem(-62);
+	overflow: visible;
+
+	.slideThumb {
+		position: relative;
+		padding: rem(28) rem(25);
+		height: 100%;
+		min-height: rem(121);
+		background-color: #ffffff;
+		cursor: pointer;
+		@include mt;
+		&:hover {
+			background-color: $light;
+		}
+		
+		&::before {
+			content: '';
+			background: #fff;
+			height: calc(100% + 11px);
+			width: 100%;
+			border-radius: $border-radius;
+			@include mt;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			z-index: 1;
+			transform: scale(0);
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+		}
+
+		&::after {
+			content: '';
+			width: rem(30);
+			height: rem(30);
+			z-index: 2;
+			border-left: 1px solid #ebebeb;
+			border-top: 1px solid #ebebeb;
+			background-color: #fff;
+			position: absolute;
+			top: rem(-26px);
+			@include a-cent(x);
+			transform: rotate(45deg);
+			@include mt;
+			opacity: 0;
+		}
+
+		&__text {
+			position: relative;
+			z-index: 5;
+		}
+		
+		&__title {
+			font-size: $xsmall;
+			color: $primary;
+			margin-bottom: rem(20);
+			text-transform: uppercase;
+		}
+
+		&__descr {
+
+		}
+	}
+
+	.swiper-slide-thumb-active {
+		z-index: 5;
+		&::before {
+			transform: scale(1);
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
 }
+// thumbs end
 
-// end.headerBlock

@@ -310,6 +310,27 @@ function eventHandler() {
 		$(this).parent().toggleClass('active');
 		$(this).parent().find('.drop-accardion-toggle-js').toggle();
 	});
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 0,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true // clickable: true,
+
+	});
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		},
+		lazy: {
+			loadPrevNext: true
+		}
+	});
 }
 
 ;
