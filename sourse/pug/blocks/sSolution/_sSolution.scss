@@ -1,23 +1,28 @@
 	// start .sSolution
 .sSolution {
 		 
-	padding-top: 58px;
+	padding-top: rem(58);
+	padding-bottom: rem(20);
 
 	&__col{
-		margin-bottom: 30px;
+		margin-bottom: rem(30);
+		// margin-right: auto;
+		// margin-left: auto;
 		// display: flex;
 	}
 
 	&__item{
+		height: 100%;
 		display: flex;
+		flex-direction: column;
+		padding: rem(24) rem(24) rem(31);
+		border-radius: $border-radius;
+		border: 1px solid #ebebeb;
+		color: $body-color;
 	}
 
 	&__img-wrap{
 		display: block;
-		padding: 24px 24px 31px;
-		border-radius: $border-radius;
-		border: 1px solid #ebebeb;
-		color: $body-color;
 		position: relative;
 		&:hover{
 			color: $body-color;
@@ -26,14 +31,12 @@
 	}
 
 	picture{
-		margin-bottom: 32px;
+		margin-bottom: rem(32);
 	}
 
 	&__label{
 		position: absolute;
-		top: 48px;
-		left: 48px;
-		padding: 0 6px;
+		padding: 0 rem(6);
 		text-align: center;
 		border-radius: $border-radius;
 		background-color: #eaf7f5;
@@ -41,20 +44,45 @@
 		font-size: $small;
 		font-weight: 500;
 		letter-spacing: 0.045em;
+		@include media-breakpoint-up(sm){
+			top: rem(48);
+			left: rem(48);
+		}
+		top: rem(33);
+		left: rem(33);
 	}
 
 	&__text-block{
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-	}
-	
-	&__text{
-		margin-bottom: 31px;
-		flex-grow: 1;
-	}
-	&__price{
 		// flex-grow: 1;
+		// @include media-breakpoint-only(xs){
+			// 	width: rem(220);
+			// }
+		}
+		
+	&__text{
+		margin-bottom: rem(31);
+		// flex-grow: 1;
+	}
+	&__price-wrap{
+		margin-top: auto;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		// flex-grow: 1;
+	}
+
+	.oldPrice{
+		margin-right: 24px;
+		color: $primary;
+		font-weight: 500;
+		span{
+			text-decoration: line-through;
+		}
+		
+	}
+
+	&__price{
+		font-weight: 600;
 	}
 	
 
@@ -77,6 +105,7 @@
 .solutionsMenu{
 		display: flex;
 		margin-bottom: rem(34);
+		flex-wrap: wrap;
 		&__item{
 			color: $body-color;
 			margin-right: rem(15);
