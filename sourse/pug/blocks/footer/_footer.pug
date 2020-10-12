@@ -9,6 +9,14 @@ mixin footer()
 						+icon('tel')
 						span +7 (499) 938 78 38
 			.row.justify-content-between
+				.col-lg-auto.order-lg-last
+
+					+e.wrap
+						+e.title(href="#") Порфолио
+						+e.title(href="#") О нас
+						+e.title(href="#") Блог
+						+e.title(href="#") Контакты
+
 				.col-auto
 					+e.title(href="#") Сайты
 					ul
@@ -42,14 +50,6 @@ mixin footer()
 					ul
 						li: a(href="#") Битрикс «Управление сайтом»
 						li: a(href="#") Битрикс24
-
-				.col-auto
-
-					+e.wrap
-						+e.title(href="#") Порфолио
-						+e.title(href="#") О нас
-						+e.title(href="#") Блог
-						+e.title(href="#") Контакты
 
 
 
