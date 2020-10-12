@@ -53,13 +53,11 @@ margin-top: rem(-135);
 
 		max-width: rem(620);
 		padding-bottom: calc(var(--sTPB) * 2);
-
+	}
+	h1, .h1 {
 		p {
 			line-height: 1.4;
 		}
-	}
-	.h1,
-	h1 {
 		margin-bottom: 2rem;
 	}
 
