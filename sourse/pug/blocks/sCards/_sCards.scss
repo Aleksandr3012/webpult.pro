@@ -23,11 +23,24 @@
 		.swiper-slide {
 			height: auto;
 		}
+
+		.cardItem__textCol {
+			padding-top: rem(33);
+			padding-left: rem(53) !important;
+		}
+
+		.cardItem__title {
+			max-width: rem(280);
+		}
+
+		p {
+			max-width: rem(280);
+		}
 	}
 	&__nextBtn {
 		outline: none;
 		position: absolute;
-		top: 50%;
+		top: 46%;
 		right: rem(-10);
 		z-index: 10;
 		border-radius: 50%;

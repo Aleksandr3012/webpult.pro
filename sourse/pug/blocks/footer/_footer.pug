@@ -1,10 +1,55 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			.row.justify-content-between
+			+e.row.row.justify-content-between.align-items-center
 				.col-auto
 					+soc()
 				.col-auto
 					+e.tel(href="tel:")
 						+icon('tel')
 						span +7 (499) 938 78 38
+			.row.justify-content-between
+				.col-auto
+					+e.title(href="#") Сайты
+					ul
+						li: a(href="#") Лендинг пейдж
+						li: a(href="#") Корпоративные сайты
+						li: a(href="#") Интернет-магазины
+						li: a(href="#") В рассрочку
+						li: a(href="#") Техническая поддержка
+
+				.col-auto
+					+e.title(href="#") Брендирование
+					ul
+						li: a(href="#") Логотипы_hover
+						li: a(href="#") Фирменный стиль
+
+				.col-auto
+					+e.title(href="#") Битрикс24
+					ul
+						li: a(href="#") Возможности
+						li: a(href="#") Внедрение 
+
+				.col-auto
+					+e.title(href="#") Готовые решения
+					ul
+						li: a(href="#") Сайты
+						li: a(href="#") Интернет-магазины
+						li: a(href="#") В рассрочку
+
+				.col-auto
+					+e.title(href="#") Лицензии
+					ul
+						li: a(href="#") Битрикс «Управление сайтом»
+						li: a(href="#") Битрикс24
+
+				.col-auto
+
+					+e.wrap
+						+e.title(href="#") Порфолио
+						+e.title(href="#") О нас
+						+e.title(href="#") Блог
+						+e.title(href="#") Контакты
+
+
+
