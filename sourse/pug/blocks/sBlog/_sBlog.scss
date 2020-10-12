@@ -7,9 +7,10 @@
 		padding-bottom: calc(var(--sTPB) + #{rem(9)});
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		// align-items: center;
 		&__allArticles {
 			text-decoration: underline;
+			margin-top: rem(10);
 		}
 	}
 

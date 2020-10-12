@@ -1,18 +1,22 @@
 // start .sCompetences
 .sCompetences {
-		
+	padding-bottom: calc(var(--sPB) * 1.15);
 	.container {
 		position: relative;
 	}
 
+	.section-title {
+		padding-bottom: calc(var(--sTPB) * 2);
+	}
+
 	&__nav {
 		@include a-cent(x);
-		top: 50%;
+		top: 54%;
 		z-index: 10;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		max-width: rem(1022);
+		max-width: rem(1010);
 	}
 
 	&__prev, &__next {
