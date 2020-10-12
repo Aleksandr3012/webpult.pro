@@ -90,6 +90,33 @@ a {
 }
 
 
+.modal-win--sPossibilities{
+	max-width: rem(600);
+		td,
+		th {
+			&:first-child {
+				width: var(--thW);
+				text-align: left;
+			}
+			text-align: center;
+
+			@include media-breakpoint-up(xxl) {
+
+				padding: rem(25) rem(25);
+			}
+
+			padding: rem(10) rem(10);
+		}
+	.icon {
+		font-size: rem(20);
+		color: #7c7c7c;
+
+		&-plus {
+			color: $primary;
+		}
+	}
+}
+
 // 
 @include media-breakpoint-up(xl) {}
 

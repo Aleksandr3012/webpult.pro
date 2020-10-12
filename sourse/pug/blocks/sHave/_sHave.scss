@@ -1,0 +1,55 @@
+
+	// start .sHave
+	.sHave {
+		&__inner{
+			border-radius: $border-radius;
+			background-color: #f5f7f9;
+			overflow: hidden;
+			@include media-breakpoint-up(xxl) {
+				
+				padding-left: rem(132);
+				padding-right: rem(132);
+			}
+			@include media-breakpoint-up(sm) {
+
+				padding-left: rem(32);
+				padding-right: rem(32);
+			}
+			padding-left: rem(15);
+			padding-right: rem(15);
+			// background-image: url();
+			position: relative;
+			z-index: 2;
+			picture{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				max-height: 100%;
+				z-index: -1;
+			}
+		}
+		h3{
+			font-weight: bold;
+		}
+		&__block{
+			padding: rem(70) 0;
+				@include media-breakpoint-up(xxl){
+					max-width: rem(700);
+				}
+				@include media-breakpoint-up(xl){
+					max-width: rem(500);
+				}
+			margin-left: auto;
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sHave
