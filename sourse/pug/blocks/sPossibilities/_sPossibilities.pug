@@ -1,0 +1,326 @@
+mixin sPossibilities(data)
+	// start sPossibilities
+	+b.sPossibilities.section#sPossibilities&attributes(attributes)
+		.container
+			.tabs
+				+e.caption.tabs__caption
+					+e.btn-tab.tabs__btn.active
+						+icon("cloud")
+						| Облачное решение
+					+e.btn-tab.tabs__btn
+						+icon("server")
+						| Коробочное решение
+				div
+					.tabs__content.active
+						//- .active
+						+e.TABLE.table--cloud
+							thead
+								tr
+									th
+										+e.price-text Цена за месяц при  покупке:
+										+input("на 2 года",'select')
+											//- option на 2 года
+											//- option на 2 года
+											//- option на 2 года
+									mixin item(t,p,op, np,free)
+										th
+											+e.item
+												+e.title!= t
+												+e.text!= p
+												+e.price--old
+													if op
+														span= op
+														| рублей
+												if free
+													+e.price--new.text-success Бесплатно
+												else
+													+e.price--new= np
+												
+												+e.economy
+													if op
+														span Экономия -33% 
+												+e.footer
+													if free
+														+e.btn.btn-success(href="#") Создать
+
+													else
+														+e.btn.btn-primary(href="#") Купить
+												.d-xl-none.pt-3
+													+e.more.link-modal.tdu(href="#") Подробнее
+									+item("Бесплатный",`Необходимый <br> минимум <br> инструментов для начала работы`,'','','free')
+									+item("Старт+",`Сайты и CRM - удачное начало вашего<br> бизнеса`,'','990 рублей/мес.')
+									+item("CRM+",'Идеально для небольших отделов продаж','','2 990 рублей/мес.')
+									+item("Задачи+",'Оптимальное решение для работы над проектами, контроля сроков и качества','1 499 900  ','990 рублей/мес.')
+									+item("Команда",'Лучший выбор для автоматизации продаж в CRM и проектной работы','1 499 900 ','5 990 рублей/мес.')
+									+item("Компания",'Максимальные возможности для всей компании','1 499 900   ','11 990 рублей/мес.')
+							tbody
+								mixin tr(data)
+									tr
+										td
+											if data.t0
+												= data.t0 
+											else
+												block
+										td
+											if data.t1
+												.small= data.t1
+											else if data.plus1
+												+icon('minus')
+											else
+													+icon('plus')
+												
+										td
+											if data.t2
+												.small= data.t2
+											else if data.plus2
+												+icon('minus')
+											else
+												+icon('plus')
+												
+										td
+											if data.t3
+												.small= data.t3
+											else if  data.plus3
+												+icon('minus')
+											else
+												+icon('plus')
+												
+										td
+											if data.t4
+												.small= data.t4
+											else if  data.plus4
+												+icon('minus')
+											else
+												+icon('plus')
+												
+										td
+											if data.t5
+												.small= data.t5
+											else if  data.plus5
+												+icon('minus')
+											else
+												+icon('plus')
+												
+										td
+											if data.t6
+												.small= data.t6
+											else if  data.plus6
+												+icon('minus')
+											else
+												+icon('plus')
+								+tr({ 
+									t0: 'Пользователи',
+									t1: 'неограниченно',
+									t2: '2',
+									t3: '6',
+									t4: '24',
+									t5: '50',
+									t6: 'неограниченно',
+								}) 
+								+tr({ 
+									plus2: 'з', 
+								})
+									.h6 CRM
+									.h6 Базовые возможности
+									.small Лиды (неограниченное количество)
+									
+								+tr({
+									t0: 'Cделки (неограниченное количество)', 
+								})
+								+tr({
+									t0: 'Счета', 
+								})
+								+tr({
+									t0: 'Письма из CRM писем в месяц', 
+									t1: '1 000',
+									t2: '2 000',
+									t3: '35 000',
+									t4: '1 000',
+									t5: '50 000',
+									t6: '1 000 000',
+								})
+								+tr({
+									t0: 'Число Открытых линий', 
+									t1: '1',
+									t2: 'неограниченно',
+									t3: 'неограниченно',
+									t4: '1',
+									t5: 'неограниченно',
+									t6: 'неограниченно',
+								})
+								+tr({  
+									plus2: '9', 
+								})
+									.h6 Настройка Открытых линий
+									.small Настройка времени работы Открытой линии
+								+tr({
+									t0: 'Cделки (неограниченное количество)', 
+								})
+								+tr({
+									t0: 'Счета', 
+								})
+								+tr({
+									t0: 'Письма из CRM писем в месяц', 
+									t1: '1 000',
+									t2: '2 000',
+									t3: '35 000',
+									t4: '1 000',
+									t5: '50 000',
+									t6: '1 000 000',
+								})
+								+tr({
+									t0: 'Число Открытых линий', 
+									t1: '1',
+									t2: 'неограниченно',
+									t3: 'неограниченно',
+									t4: '1',
+									t5: 'неограниченно',
+									t6: 'неограниченно',
+								})
+								+tr({ 
+									t1: '1',
+									t2: 'неограниченно',
+									t3: 'неограниченно',
+									t4: '1',
+									t5: 'неограниченно',
+									t6: 'неограниченно',
+								})
+								+tr({ 
+									plus2: 'p'
+								})
+									.h6 Задачи и Проекты
+									.h6 Базовые возможности
+									.samll Лиды (неограниченное количество)
+								+tr({ 
+									t0: 'Cделки (неограниченное количество)',  
+								})
+								+tr({ 
+									t0: 'Счета',  
+								})
+								+tr({
+									t0: 'Письма из CRM писем в месяц', 
+									t1: '1 000',
+									t2: '2 000',
+									t3: '35 000',
+									t4: '1 000',
+									t5: '50 000',
+									t6: '1 000 000',
+								})
+								+tr({
+									t0: 'Число Открытых линий', 
+									t1: '1',
+									t2: 'неограниченно',
+									t3: 'неограниченно',
+									t4: '1',
+									t5: 'неограниченно',
+									t6: 'неограниченно',
+								}) 
+								
+					.tabs__content
+						+e.TABLE.table--cloud
+							thead
+								tr
+									th
+									
+									mixin item(t,p,op, np,free)
+										th
+											+e.item
+												+e.title!= t
+												+e.text!= p
+												+e.price--old
+													if op
+														span= op
+														| рублей
+												if free
+													+e.price--new.text-success Бесплатно
+												else
+													+e.price--new= np
+												
+												+e.economy
+													if op
+														span Экономия -33% 
+												+e.footer
+													if free
+														+e.btn.btn-success(href="#") Создать
+
+													else
+														+e.btn.btn-primary(href="#") Купить
+												.d-xl-none.pt-3
+													+e.more.link-modal.tdu(href="#") Подробнее 
+									+item("CRM",`—`,'1 499 900  ','990 рублей/мес.')
+									+item("Интернет-магазин + CRM",'Экстранет, eCommerce-платформа','1 499 900 ',' 990 рублей/мес.')
+									+item("Корпоративный портал",'Экстранет, eCommerce-платформа','1 499 900  ','990 рублей/мес.') 
+									+item("Энтерпрайз",' Экстранет, eCommerce-платформа, Многодепартаментность, Веб-кластер, VIP поддержка 24/7','1 499 900   ',' 990 рублей/мес.')
+							tbody
+								mixin tr(data)
+									tr
+										td
+											if data.t0
+												= data.t0 
+											else
+												block
+										td
+											if data.t1
+												.small= data.t1
+											else if data.plus1
+												+icon('minus')
+											else
+													+icon('plus')
+												
+										td
+											if data.t2
+												.small= data.t2
+											else if data.plus2
+												+icon('minus')
+											else
+												+icon('plus')
+												
+										td
+											if data.t3
+												.small= data.t3
+											else if  data.plus3
+												+icon('minus')
+											else
+												+icon('plus')
+												
+										td
+											if data.t4
+												.small= data.t4
+											else if  data.plus4
+												+icon('minus')
+											else
+												+icon('plus')
+								 
+								+tr({
+									plus1: '9', 
+									plus2: '9', 
+								} ) 
+									.h6  Модули 
+									.small Лиды (неограниченное количество)
+								+tr({ 
+									t0: 'Cделки (неограниченное количество)', 
+									plus1: 'з', 
+								})
+								+tr({ 
+									t0: 'Счета', 
+									plus1: 'з', 
+								})
+								+tr({
+									plus1: '9', 
+								} ) 
+									.h6   Сайты 
+									.small Лиды (неограниченное количество)
+						 
+								+tr({
+									t0: 'Cделки (неограниченное количество)', 
+									t1: '100',
+									t2: '1000',
+									t3: '2000',
+									t4: 'неограниченно',
+								})
+								+tr({ 
+									t0: 'Счета', 
+									plus1: 'з', 
+								})
+
+	// end sPossibilities

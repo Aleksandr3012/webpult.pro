@@ -24,71 +24,19 @@
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body class="innerPage">
-		<!-- start header-->
-		<header class="header" id="header">
-			<!-- start topLine-->
-			<div class="topLine" id="topLine">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto"><a class="topLine__logo" href="#"><img class="res-i" src="img/@2x/logo.png" alt=""/></a>
-						</div>
-						<div class="col d-none d-lg-block">
-							<!-- start top-nav-->
-							<div class="top-nav block-with-lazy">
-								<ul class="navMenu mnu-sm" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Портфолио</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Блог  </a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
-									</li>
-								</ul>
-								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item dropdown" itemprop="item"><a class="navMenu__link" href="#">Сайты</a>
-										<div class="drop-open drop-accardion-js"></div>
-										<ul class="drop drop--about drop-accardion-toggle-js">
-											<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Лендинг пейдж</a>
-											</li>
-											<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Корпоративные сайты</a>
-											</li>
-											<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Интернет-магазины</a>
-											</li>
-											<li class="drop__item"><a class="drop__link" href="#" itemprop="url">В рассрочку</a>
-											</li>
-											<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Техническая поддержка</a>
-											</li>
-										</ul>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Брендирование</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Битрикс24</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Готовые решения</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Лицензии</a>
-									</li>
-								</ul>
+		<div class="main-wrapper">
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine" id="topLine">
+					<div class="container">
+						<div class="row">
+							<div class="col-auto"><a class="topLine__logo" href="#"><img class="res-i" src="img/@2x/logo.png" alt=""/></a>
 							</div>
-							<!-- end top-nav-->
-						</div>
-						<div class="col-auto">
-							<div class="topLine__buttons"><a class="topLine__lk" href="#">
-								<svg class="icon icon-user ">
-									<use xlink:href="img/svg/sprite.svg#user"></use>
-								</svg><span>Личный  кабинет</span></a><a class="topLine__basket" href="#">
-								<svg class="icon icon-shopping-cart ">
-									<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-								</svg><span class="topLine__quantity">0</span></a><a class="topLine__btn btn btn-dark" href="#"> <span class="d-md-none">консультация</span><span class="d-none d-md-inline">Нужна консультация?</span></a>
-							</div>
-						</div>
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-							</div>
-							<div class="menu-mobile menu-mobile--js">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-								</div>
-								<div class="menu-mobile__inner">
-									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<div class="col d-none d-lg-block">
+								<!-- start top-nav-->
+								<div class="top-nav block-with-lazy">
+									<ul class="navMenu mnu-sm" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Портфолио</a>
 										</li>
 										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Блог  </a>
@@ -121,264 +69,324 @@
 										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Лицензии</a>
 										</li>
 									</ul>
-									<div class="text-right"></div>
+								</div>
+								<!-- end top-nav-->
+							</div>
+							<div class="col-auto">
+								<div class="topLine__buttons"><a class="topLine__lk" href="#">
+									<svg class="icon icon-user ">
+										<use xlink:href="img/svg/sprite.svg#user"></use>
+									</svg><span>Личный  кабинет</span></a><a class="topLine__basket" href="#">
+									<svg class="icon icon-shopping-cart ">
+										<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+									</svg><span class="topLine__quantity">0</span></a><a class="topLine__btn btn btn-dark" href="#"> <span class="d-md-none">консультация</span><span class="d-none d-md-inline">Нужна консультация?</span></a>
 								</div>
 							</div>
-							<!--  мобильное меню-->
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+								<div class="menu-mobile menu-mobile--js">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
+									<div class="menu-mobile__inner">
+										<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Портфолио</a>
+											</li>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Блог  </a>
+											</li>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+											</li>
+										</ul>
+										<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="navMenu__item dropdown" itemprop="item"><a class="navMenu__link" href="#">Сайты</a>
+												<div class="drop-open drop-accardion-js"></div>
+												<ul class="drop drop--about drop-accardion-toggle-js">
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Лендинг пейдж</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Корпоративные сайты</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Интернет-магазины</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">В рассрочку</a>
+													</li>
+													<li class="drop__item"><a class="drop__link" href="#" itemprop="url">Техническая поддержка</a>
+													</li>
+												</ul>
+											</li>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Брендирование</a>
+											</li>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Битрикс24</a>
+											</li>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Готовые решения</a>
+											</li>
+											<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#">Лицензии</a>
+											</li>
+										</ul>
+										<div class="text-right"></div>
+									</div>
+								</div>
+								<!--  мобильное меню-->
+							</div>
 						</div>
 					</div>
 				</div>
+				<!-- end topLine-->
+			</header>
+			<!-- end header-->
+			<div class="breadcrumbWrap">
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Вакансии</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+				</div>
 			</div>
-			<!-- end topLine-->
-		</header>
-		<!-- end header-->
-		<div class="breadcrumbWrap">
-			<div class="container">
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-								<meta itemprop="position" content="1"/></a></li>
-						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Вакансии</span>
-								<meta itemprop="position" content="2"/></a></li>
-					</ol>
-				</nav>
+			<!-- start sVacansies-->
+			<section class="sVacansies section" id="sVacansies">
+				<div class="container">
+					<div class="section-title">
+						<h2>Вакансии</h2>
+					</div>
+					<div class="tabs">
+						<div class="solutionsMenu tabs__caption">
+							<div class="solutionsMenu__item tabs__btn active">Офис
+							</div>
+							<div class="solutionsMenu__item tabs__btn">Удаленка
+							</div>
+						</div>
+						<div>
+										<div class="tabs__content active">
+											<div class="row">
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Менеджер по продажам
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Москва
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Маркетолог
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Маркетолог-консультант / Marketing manager - Consultant
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Графический дизайнер
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Москва
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Менеджер по работе с партнерами со знанием французского, испанского, немецкого (удаленная работа)
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Дизайнер
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">SEO-специалист
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+											</div>
+										</div>
+										<div class="tabs__content">
+											<div class="row">
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Менеджер по продажам
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Москва
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Маркетолог
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Маркетолог-консультант / Marketing manager - Consultant
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Графический дизайнер
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Москва
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Менеджер по работе с партнерами со знанием французского, испанского, немецкого (удаленная работа)
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">Дизайнер
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+																	<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
+																		<div class="sVacansies__label">Ташкент
+																		</div>
+																		<div class="sVacansies__text-block">
+																			<div class="sVacansies__title">SEO-специалист
+																			</div>
+																			<div class="sVacansies__link">Подробнее
+																			</div>
+																		</div></a>
+																	</div>
+											</div>
+										</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sVacansies-->
+			<footer class="footer block-with-lazy">
+				<div class="container">
+					<div class="footer__row row justify-content-between align-items-center">
+						<div class="col-auto">
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-twitter ">
+									<use xlink:href="img/svg/sprite.svg#twitter"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a>
+							</div>
+						</div>
+						<div class="col-auto"><a class="footer__tel" href="tel:">
+							<svg class="icon icon-tel ">
+								<use xlink:href="img/svg/sprite.svg#tel"></use>
+							</svg><span>+7 (499) 938 78 38</span></a>
+						</div>
+					</div>
+					<div class="row justify-content-between">
+						<div class="col-lg-auto order-lg-last">
+							<div class="footer__wrap"><a class="footer__title" href="#">Порфолио</a><a class="footer__title" href="#">О нас</a><a class="footer__title" href="#">Блог</a><a class="footer__title" href="#">Контакты</a>
+							</div>
+						</div>
+						<div class="col-auto"><a class="footer__title" href="#">Сайты</a>
+							<ul>
+								<li><a href="#">Лендинг пейдж</a></li>
+								<li><a href="#">Корпоративные сайты</a></li>
+								<li><a href="#">Интернет-магазины</a></li>
+								<li><a href="#">В рассрочку</a></li>
+								<li><a href="#">Техническая поддержка</a></li>
+							</ul>
+						</div>
+						<div class="col-auto"><a class="footer__title" href="#">Брендирование</a>
+							<ul>
+								<li><a href="#">Логотипы_hover</a></li>
+								<li><a href="#">Фирменный стиль</a></li>
+							</ul>
+						</div>
+						<div class="col-auto"><a class="footer__title" href="#">Битрикс24</a>
+							<ul>
+								<li><a href="#">Возможности</a></li>
+								<li><a href="#">Внедрение </a></li>
+							</ul>
+						</div>
+						<div class="col-auto"><a class="footer__title" href="#">Готовые решения</a>
+							<ul>
+								<li><a href="#">Сайты</a></li>
+								<li><a href="#">Интернет-магазины</a></li>
+								<li><a href="#">В рассрочку</a></li>
+							</ul>
+						</div>
+						<div class="col-auto"><a class="footer__title" href="#">Лицензии</a>
+							<ul>
+								<li><a href="#">Битрикс «Управление сайтом»</a></li>
+								<li><a href="#">Битрикс24</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win modal-win--sPossibilities" id="modal-cloud" style="display: none">
+			<div class="modal-win__inner modal-win__inner--js">
+				<table> </table>
 			</div>
 		</div>
-		<!-- start sVacansies-->
-		<section class="sVacansies section" id="sVacansies">
-			<div class="container">
-				<div class="section-title">
-					<h2>Вакансии</h2>
-				</div>
-				<div class="tabs">
-					<div class="solutionsMenu tabs__caption">
-						<div class="solutionsMenu__item tabs__btn active">Офис
-						</div>
-						<div class="solutionsMenu__item tabs__btn">Удаленка
-						</div>
-					</div>
-					<div>
-									<div class="tabs__content active">
-										<div class="row">
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Менеджер по продажам
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Москва
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Маркетолог
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Маркетолог-консультант / Marketing manager - Consultant
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Графический дизайнер
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Москва
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Менеджер по работе с партнерами со знанием французского, испанского, немецкого (удаленная работа)
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Дизайнер
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">SEO-специалист
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-										</div>
-									</div>
-									<div class="tabs__content">
-										<div class="row">
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Менеджер по продажам
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Москва
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Маркетолог
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Маркетолог-консультант / Marketing manager - Consultant
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Графический дизайнер
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Москва
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Менеджер по работе с партнерами со знанием французского, испанского, немецкого (удаленная работа)
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">Дизайнер
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-																<div class="sVacansies__col col-md-6 col-lg-4"><a class="sVacansies__item" href="#">
-																	<div class="sVacansies__label">Ташкент
-																	</div>
-																	<div class="sVacansies__text-block">
-																		<div class="sVacansies__title">SEO-специалист
-																		</div>
-																		<div class="sVacansies__link">Подробнее
-																		</div>
-																	</div></a>
-																</div>
-										</div>
-									</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- end sVacansies-->
-		<footer class="footer block-with-lazy">
-			<div class="container">
-				<div class="footer__row row justify-content-between align-items-center">
-					<div class="col-auto">
-						<div class="soc"><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-twitter ">
-								<use xlink:href="img/svg/sprite.svg#twitter"></use>
-							</svg></a><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-fb ">
-								<use xlink:href="img/svg/sprite.svg#fb"></use>
-							</svg></a><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-vk ">
-								<use xlink:href="img/svg/sprite.svg#vk"></use>
-							</svg></a><a class="soc__item" href="#" target="_blank">
-							<svg class="icon icon-instagram ">
-								<use xlink:href="img/svg/sprite.svg#instagram"></use>
-							</svg></a>
-						</div>
-					</div>
-					<div class="col-auto"><a class="footer__tel" href="tel:">
-						<svg class="icon icon-tel ">
-							<use xlink:href="img/svg/sprite.svg#tel"></use>
-						</svg><span>+7 (499) 938 78 38</span></a>
-					</div>
-				</div>
-				<div class="row justify-content-between">
-					<div class="col-lg-auto order-lg-last">
-						<div class="footer__wrap"><a class="footer__title" href="#">Порфолио</a><a class="footer__title" href="#">О нас</a><a class="footer__title" href="#">Блог</a><a class="footer__title" href="#">Контакты</a>
-						</div>
-					</div>
-					<div class="col-auto"><a class="footer__title" href="#">Сайты</a>
-						<ul>
-							<li><a href="#">Лендинг пейдж</a></li>
-							<li><a href="#">Корпоративные сайты</a></li>
-							<li><a href="#">Интернет-магазины</a></li>
-							<li><a href="#">В рассрочку</a></li>
-							<li><a href="#">Техническая поддержка</a></li>
-						</ul>
-					</div>
-					<div class="col-auto"><a class="footer__title" href="#">Брендирование</a>
-						<ul>
-							<li><a href="#">Логотипы_hover</a></li>
-							<li><a href="#">Фирменный стиль</a></li>
-						</ul>
-					</div>
-					<div class="col-auto"><a class="footer__title" href="#">Битрикс24</a>
-						<ul>
-							<li><a href="#">Возможности</a></li>
-							<li><a href="#">Внедрение </a></li>
-						</ul>
-					</div>
-					<div class="col-auto"><a class="footer__title" href="#">Готовые решения</a>
-						<ul>
-							<li><a href="#">Сайты</a></li>
-							<li><a href="#">Интернет-магазины</a></li>
-							<li><a href="#">В рассрочку</a></li>
-						</ul>
-					</div>
-					<div class="col-auto"><a class="footer__title" href="#">Лицензии</a>
-						<ul>
-							<li><a href="#">Битрикс «Управление сайтом»</a></li>
-							<li><a href="#">Битрикс24</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!--  start modals-->
+		<!-- #modal-cloud-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>

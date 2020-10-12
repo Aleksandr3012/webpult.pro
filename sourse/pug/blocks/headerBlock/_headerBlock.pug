@@ -1,7 +1,13 @@
-mixin headerBlock()
+mixin headerBlockBody()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.swiper-container.gallery-top
+	+b.headerBlock#headerBlock&attributes(attributes)
+		block
+
+
+	// end headerBlock
+mixin headerBlock()
+	+headerBlockBody().--main
+		+e.slider.swiper-container.gallery-top
 			.swiper-wrapper
 				mixin slide()
 					.swiper-slide
@@ -22,7 +28,5 @@ mixin headerBlock()
 				+slide
 				+slide
 				+slide
-				+slide
-
-
-	// end headerBlock
+				+slide 
+		block

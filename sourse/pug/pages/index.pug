@@ -17,12 +17,11 @@ block title
 block pagecontent
 	+header()
 		+topLine()
-	+headerBlock()
-	.container.section
-		.swiper-container.gallery-thumbs
+	+headerBlock() 
+		.swiper-container.gallery-thumbs.container
 			.swiper-wrapper
 				mixin slideThumb(t,e)
-					+b.slideThumb.swiper-slide.swiper-no-swiping
+					+b.slideThumb.swiper-slide
 						+e.text
 							+e.title= t
 							+e.descr= e
