@@ -72,6 +72,7 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite
+	+e.polite(class="margin")
 		+in-c()
-			+e.SMALL.text Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp;#[.text-primary принимаю условия.]
+			+e.SMALL.text Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; 
+				a.text-primary(href="#") принимаю условия.

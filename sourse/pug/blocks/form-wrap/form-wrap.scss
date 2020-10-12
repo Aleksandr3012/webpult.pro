@@ -21,6 +21,11 @@
  	}
 }
 
+textarea{
+	margin-top: 12px;
+	margin-bottom: 24px;
+}
+
 
 .parsley-error{
 	border-image: none;
@@ -119,6 +124,11 @@
 	&__text{
 		font-size: $small;
 		line-height: (20 / 14);
+		&:hover{
+			a{
+				text-decoration: underline;
+			}
+		}
 	}
  
 	&__input[type="checkbox"] + &__lab{
@@ -147,6 +157,11 @@
 	}
  
 }
+
+.margin{
+	margin-bottom: 40px;
+}
+
 
 
 
