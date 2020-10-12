@@ -1,5 +1,26 @@
 //- pugination
 mixin pugin()
+	.pagination-wrapper
+		ul.page-numbers
+			mixin li(n)
+				li
+					if n
+						a.page-numbers(href='#')= n 
+					else
+						block
+			+li()
+				span.prev.page-numbers( )
+					+icon('arrow-l')
+		 
+			+li()
+				span.page-numbers.current  1 
+			+li(2)
+			+li(3)
+			+li('...')
+			+li(99)
+			+li()
+				a.next.page-numbers(href='#')
+					+icon('arrow-l')
 	//- nav(aria-label='...')
 	//- 	ul.pagination.justify-content-center
 	//- 		li.page-item.disabled
@@ -24,27 +45,28 @@ mixin pugin()
 	//- 		li.page-item
 	//- 			a.page-link(href='#') 
 	//- 				i(class="fas fa-chevron-right")
-	.pagination-wrapper
-		ul.page-numbers
-			mixin li(n)
-				li
-					if n
-						a.page-numbers(href='#')= n 
-					else
-						block
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev.svg", alt="")
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
-			+li()
-				span.page-numbers.current  1
-			- for (var x = 1; x < 5; x++)
-				+li(x)
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next.svg", alt="")
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+	//- .pagination-wrapper
+	//- 	ul.page-numbers
+	//- 		mixin li(n)
+	//- 			li
+	//- 				if n
+	//- 					a.page-numbers(href='#')= n 
+	//- 				else
+	//- 					block
+	//- 		+li()
+	//- 			span.prev.page-numbers( )
+	//- 				img(src="img/svg/return.svg", alt="")
+	//- 		+li()
+	//- 			span.page-numbers.current 1
+	//- 		+li()
+	//- 			a.page-numbers 2
+	//- 		+li()
+	//- 			a.page-numbers 3
+	//- 		+li()
+	//- 			span.page-numbers ... 
+	//- 		+li()
+	//- 			a.page-numbers 99
+	//- 		+li()
+	//- 			a.next.page-numbers(href='#')
+	//- 				img(src="img/svg/return.svg", alt="")
+	

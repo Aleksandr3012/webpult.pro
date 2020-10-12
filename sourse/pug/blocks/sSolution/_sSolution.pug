@@ -1,0 +1,52 @@
+mixin sSolution(data)
+	// start sSolution
+	+b.SECTION.sSolution.section#sSolution&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Готовые решения на&nbsp;1С-Битрикс
+			+b.solutionsMenu
+				+e.item.active(href="#") Все
+				+e.item(href="#") Сайты
+				+e.item(href="#") Интернет-магазины
+				+e.item(href="#") Лендинги
+
+			.row
+				mixin item(i,l,t,s)
+					+e.col.col-md-6.col-xl-4
+						+e.item(href="#")
+							+e.img-wrap
+								+pic(`solutions-${i}`,``,``)
+								if l
+									+e.DIV.label!= l
+								else
+									+e.DIV.label Сайты
+							+e.DIV.text-block
+								+e.DIV.text!= t
+							+e.price-wrap
+								block
+									
+				+item(1, ``, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`, ``)
+					.oldPrice #[span 1 499 900] рублей
+					+e.price 19 900 рублей
+				+item(2, ``, `Аспро: Медицинский центр 2.0`)
+					+e.price 2 900 рублей
+				+item(3, ``, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`)
+					+e.price 19 900 рублей
+				+item(1, `Интернет-магазин`, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`)
+					+e.price 19 900 рублей
+				+item(2, ``, `Аспро: Медицинский центр 2.0`)
+					+e.price 2 900 рублей
+				+item(3, ``, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`)
+					+e.price 19 900 рублей
+				+item(1, ``, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`)
+					+e.price 19 900 рублей
+				+item(2, ``, `Аспро: Медицинский центр 2.0`, `2 900 рублей`)
+					+e.price 2 900 рублей
+				+item(3, ``, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`)
+					+e.price 19 900 рублей
+
+			+pugin()
+
+			block
+
+	// end sSolution
