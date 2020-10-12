@@ -8,14 +8,21 @@ mixin modal()
 
 	// #modal-cloud
 	
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
+	+b.modal-win(id="modal-vacancy" class=" " style="display: none" )
 		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
+			
+			+e.title.form-data.h3 #[.text-primary Откликнуться] на&nbsp;вакансию
+			p.after-headline Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+			+input("Как Вас зовут?", "text", "Как Вас зовут? *")(required)  
+			+input("XXX-XXX-XX-XX", "tel", "Номер телефона *")(required)  
+			+input("info@webpult.pro", "email", "E-mail *")(required)  
+			+input("Укажите город", "text", "Город *")(required)  
+			p Прикрепить резюме
+
+			+e.btn.btn.btn-gray(type="submit") Обзор
 			+polite()
+			+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
+			//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
 	// #modal-call
 	
 	// end modals

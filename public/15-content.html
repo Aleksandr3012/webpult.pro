@@ -344,7 +344,7 @@
 			</div>
 		</div>
 		<!-- #modal-cloud-->
-		<div class="modal-win" id="modal-call" style="display: none">
+		<div class="modal-win" id="modal-vacancy" style="display: none">
 			<div class="form-wrap">
 				<form>
 					<input type="hidden" name="example-input-field"/>
@@ -353,20 +353,40 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					<div class="form-wrap__title form-data h3">
+						<div class="text-primary">Откликнуться</div> на&nbsp;вакансию
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<p class="after-headline">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Как Вас зовут? *</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text" required="required"/> 
+						</label> 
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Номер телефона *</span><input class="form-wrap__input form-control" type="tel" placeholder="XXX-XXX-XX-XX" name="tel" required="required"/> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Город *</span><input class="form-wrap__input form-control" type="text" placeholder="Укажите город" name="text" required="required"/> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
+					<p>Прикрепить резюме</p>
+					<button class="form-wrap__btn btn btn-gray" type="submit">Обзор
 					</button>
 					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp;
+							<div class="text-primary">принимаю условия.</div></small>
 						</label>
 					</div>
+					<button class="form-wrap__btn btn btn-primary btn-primary-shadow-sm" type="submit">Оставить заявку
+					</button>
 				</form>
 			</div>
 		</div>
