@@ -17,7 +17,7 @@
 	&__item{
 		display: flex;
 		flex-direction: column;
-		height: rem(240);
+		min-height: rem(240);
 		@include media-breakpoint-up(sm){
 			padding: rem(23) rem(23) rem(30) rem(24);
 		}
@@ -49,18 +49,23 @@
 		margin-right: auto;
 	}
 
-	&__text-block{
-		font-weight: 500;
+	&__title-wrap{
 		margin-top: auto;
 	}
-
+	
 	&__title{
+		font-weight: 500;
 		font-size: rem(18);
 		line-height: (22 / 18);
-		margin-bottom: rem(40);
+		// margin-bottom: rem(40);
 	}
 
+	&__link-wrap{
+		margin-top: auto;
+	}
+	
 	&__link{
+		font-weight: 500;
 		color: $primary;
 	}
 
