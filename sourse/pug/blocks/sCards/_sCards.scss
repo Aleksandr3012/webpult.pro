@@ -18,15 +18,13 @@
 		}
 		.cardItem__picCol {
 			justify-content: flex-end;
-			@include media-breakpoint-up(xl) {
-				justify-content: center;
-			}
+
 			picture {
 				// max-height: 100%;
 				// max-width: 100%;
 				img {
 					max-height: rem(272);
-					height: 100%;
+					// height: 100%;
 					// width: 100%;
 					// object-fit: cover;
 					// object-position: left;
@@ -53,6 +51,8 @@
 		p {
 			max-width: rem(280);
 			@include ell();
+			display: block !important;
+			
 		}
 
 		@include media-breakpoint-down(lg) {
@@ -155,6 +155,9 @@
 		line-height: 1.3;
 		@include media-breakpoint-down(xl) {
 			margin-bottom: rem(15);
+		}
+		@include media-breakpoint-down(sm) {
+			display: none;
 		}
 	}
 }

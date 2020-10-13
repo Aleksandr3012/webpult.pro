@@ -35,6 +35,13 @@ h1 {
 	letter-spacing: 0.035em;
 }
 
+// p {
+// 	margin-bottom: calc(#{$paragraph-margin-bottom} / 2);
+// 	@include media-breakpoint-up(md) {
+// 		margin-bottom: $paragraph-margin-bottom;
+// 	}
+// }
+
 
 .section {
 	@include bgs; 

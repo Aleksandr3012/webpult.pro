@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '01.png';
+	screenName = '13.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -316,11 +316,10 @@ function eventHandler() {
 
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 0,
-		slidesPerView: 4,
-		freeMode: true,
+		slidesPerView: 4, 
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
-		
+		watchOverflow: true
 		// clickable: true,
 
 	});
@@ -366,7 +365,7 @@ function eventHandler() {
 
 
 	var blogSlider = new Swiper('.blogSlider', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		spaceBetween: 30,
 		// loop: true,
 		watchSlidesVisibility: true,
@@ -376,7 +375,7 @@ function eventHandler() {
 				slidesPerView: 2,
 
 			},
-			992: {
+			1200: {
 				slidesPerView: 3,
 			}
 		},
@@ -390,15 +389,15 @@ function eventHandler() {
 		},
 	});
 
-	var competenceSlider = new Swiper('.competenceSlider', {
-		spaceBetween: 20,
-		slidesPerView: 3,
+	var competenceSlider = new Swiper('.competenceSlider-js', {
+		spaceBetween: 32,
+		slidesPerView: 'auto',
 		// freeMode: true,
 		loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
-			768: {
+			992: {
 				spaceBetween: 63,
 				slidesPerView: 4
 			}
