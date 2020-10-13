@@ -52,6 +52,31 @@
 		}
 	}
 
+	.swiper-container {
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+
+			&::before {
+				content: '';
+				position: absolute;
+				right: 100%;
+				top: 0;
+				background-color: #fff;
+				z-index: 5;
+				width: calc(100vw - 100%);
+				height: 100%;
+
+			}
+		}
+	}
+
+	.swiper-slide {
+		@include media-breakpoint-down(md) {
+			width: 85%;
+		}
+
+	}
+
 
 	@include media-breakpoint-up(sm) {}
 	//

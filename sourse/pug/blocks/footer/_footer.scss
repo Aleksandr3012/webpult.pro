@@ -27,6 +27,19 @@
 		}
 	}
 
+	&__input {
+		background-color: transparent;
+		color: #fff;
+		border: none;
+		position: relative;
+
+
+		option {
+			background-color: transparent;
+			color: $body-color;
+		}
+	}
+
 	
 	&__row {
 		border-bottom: solid 1px #2b2e30;
@@ -42,6 +55,12 @@
 		@include media-breakpoint-only(lg) {
 			@include roww(10px);
 		}
+		// @include media-breakpoint-down(md) {
+		// 	display: block;
+		// 	columns: 2;
+		// 	page-break-inside: avoid;
+		// 	padding-bottom: rem(30);
+		// }
 	}
 
 	&__wrap {

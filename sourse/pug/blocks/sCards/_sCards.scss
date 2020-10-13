@@ -51,6 +51,8 @@
 		p {
 			max-width: rem(280);
 			@include ell();
+			display: block !important;
+			
 		}
 
 		@include media-breakpoint-down(lg) {
@@ -153,6 +155,9 @@
 		line-height: 1.3;
 		@include media-breakpoint-down(xl) {
 			margin-bottom: rem(15);
+		}
+		@include media-breakpoint-down(sm) {
+			display: none;
 		}
 	}
 }

@@ -3,11 +3,9 @@
 	--fontSizeBase: #{$small};
 	@include media-breakpoint-up(md) {
 		--fontSizeBase: #{$em-base};
-
 		--sPT: #{rem(0)};
 		--sPB: #{rem(54)};
 	}
-	
 	--sTPB: #{rem(5)};
 	--sPT: #{rem(0)};
 	--sPB: #{rem(60 / 2)};

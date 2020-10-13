@@ -24,6 +24,8 @@
 			background: $primary;
 			border: none;
 			border-radius: $border-radius;
+			display: flex;
+			align-items: center;
 		}
 
 		.icon {

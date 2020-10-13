@@ -359,7 +359,7 @@ function eventHandler() {
 		}
 	});
 	var blogSlider = new Swiper('.blogSlider', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		spaceBetween: 30,
 		// loop: true,
 		watchSlidesVisibility: true,
@@ -382,14 +382,14 @@ function eventHandler() {
 		}
 	});
 	var competenceSlider = new Swiper('.competenceSlider-js', {
-		spaceBetween: 20,
-		slidesPerView: 3,
+		spaceBetween: 32,
+		slidesPerView: 'auto',
 		// freeMode: true,
 		loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
-			768: {
+			992: {
 				spaceBetween: 63,
 				slidesPerView: 4
 			}
