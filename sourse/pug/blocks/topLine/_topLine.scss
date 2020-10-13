@@ -24,6 +24,9 @@
 			background: $primary;
 			border: none;
 			border-radius: $border-radius;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		.icon {
@@ -33,9 +36,9 @@
 	}
 
 	&__logo {
-		@include media-breakpoint-up(lg) {
+		// @include media-breakpoint-up(lg) {
 			margin-top: rem(10);
-		}
+		// }
 		display: block;
 		width: rem(160);
 		@include media-breakpoint-up(md) {

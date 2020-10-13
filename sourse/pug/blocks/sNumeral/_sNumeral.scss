@@ -34,7 +34,7 @@
 	}
 
 	&__item {
-		width: 50%;
+		width: 49.5%;
 		@include media-breakpoint-up(md) {
 			width: 100%;
 		}
@@ -65,6 +65,9 @@
 		z-index: -1;
 		width: 154px;
 		height: 157px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__title {
@@ -80,6 +83,12 @@
 	&__text {
 		font-size: $small;
 		font-weight: 500;
+	}
+
+	p {
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 2.7rem;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {}

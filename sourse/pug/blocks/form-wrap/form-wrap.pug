@@ -32,7 +32,8 @@ mixin input(placeholder,  t='text', label, name= t)
 mixin select(label,pl,...items)
 	+e.input-wrap
 		label
-			+e.SPAN.title!= label
+			if label
+				+e.SPAN.title!= label
 			+e.SELECT.input
 
 					option()= pl

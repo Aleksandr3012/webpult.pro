@@ -6,10 +6,15 @@ mixin footer()
 					+e.tel(href="tel:")
 						+icon('tel')
 						span +7 (499) 938 78 38
+						+e.drop
+							+icon('drop')
+					//- +e.tel
+					//- 	+icon('tel')
+					//- 	+select('','+7 (499) 938 78 38','+7 (000) 000 00 00','+7 (000) 000 00 00','+7 (000) 000 00 00','+7 (000) 000 00 00')
 				.col-md-auto
 					+soc()
 			+e.linkRow.row.justify-content-between
-				.col-6.col-lg-auto
+				.col-6.col-md-4.col-lg-auto
 					+e.title(href="#") Сайты
 					ul
 						li: a(href="#") Лендинг пейдж
@@ -18,26 +23,26 @@ mixin footer()
 						li: a(href="#") В рассрочку
 						li: a(href="#") Техническая поддержка
 
-				.col-6.col-lg-auto
+				.col-6.col-md-4.col-lg-auto
 					+e.title(href="#") Брендирование
 					ul
-						li: a(href="#") Логотипы_hover
+						li: a(href="#") Логотипы
 						li: a(href="#") Фирменный стиль
 
-				.col-6.col-lg-auto
+				.col-6.col-md-4.col-lg-auto
 					+e.title(href="#") Битрикс24
 					ul
 						li: a(href="#") Возможности
 						li: a(href="#") Внедрение 
 
-				.col-6.col-lg-auto
+				.col-6.col-md-4.col-lg-auto
 					+e.title(href="#") Готовые решения
 					ul
 						li: a(href="#") Сайты
 						li: a(href="#") Интернет-магазины
 						li: a(href="#") В рассрочку
 
-				.col-6.col-lg-auto
+				.col-6.col-md-4.col-lg-auto
 					+e.title(href="#") Лицензии
 					ul
 						li: a(href="#") Битрикс «Управление сайтом»

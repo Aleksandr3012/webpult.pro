@@ -20,10 +20,36 @@
 		@include media-breakpoint-down(md) {
 			justify-content: center;
 		}
-		.icon {
+		&:hover {
+			color: #c7c7c7;
+		}
+		.icon-tel {
 			font-size: rem(17);
 			color: $primary;
 			margin-right: rem(13);
+		}
+
+		.icon-drop {
+			font-size: rem(7);
+			color: #c7c7c7;
+			transform: rotate(90deg);
+		}
+	}
+
+	&__drop {
+		margin-left: rem(8);
+	}
+
+	&__input {
+		background-color: transparent;
+		color: #fff;
+		border: none;
+		position: relative;
+
+
+		option {
+			background-color: transparent;
+			color: $body-color;
 		}
 	}
 
@@ -42,6 +68,12 @@
 		@include media-breakpoint-only(lg) {
 			@include roww(10px);
 		}
+		// @include media-breakpoint-down(md) {
+		// 	display: block;
+		// 	columns: 2;
+		// 	page-break-inside: avoid;
+		// 	padding-bottom: rem(30);
+		// }
 	}
 
 	&__wrap {
@@ -58,6 +90,9 @@
 		color: #fff;
 		font-weight: 500;
 		font-size: $h6-font-size;
+		&:hover {
+			color: #c7c7c7;
+		}
 		
 	}
 

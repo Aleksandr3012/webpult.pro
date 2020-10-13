@@ -1,12 +1,11 @@
 :root {
 	--animate-delay: 1.2s;
-	--fontSizeBase: #{$em-base};
+	--fontSizeBase: 14px;
 	@include media-breakpoint-up(md) {
-
+		--fontSizeBase: #{$em-base};
 		--sPT: #{rem(0)};
 		--sPB: #{rem(54)};
 	}
-	
 	--sTPB: #{rem(5)};
 	--sPT: #{rem(0)};
 	--sPB: #{rem(60 / 2)};
@@ -21,7 +20,18 @@
 		--swiperBorderColorDefHover: var(--bs-primary);
 		--swiperColorDefHover: var(--bs-primary);
 		--swiperBgDefHover: #ffffff;
+		@include media-breakpoint-up(md) {
+		
+			--h2mb: 1.7rem;
+			--h3mb: 1.6rem;
+			--h4mb: 1.5rem;
+			--pmb: 2.7rem;
+		}
+		--pmb: 1rem;
+		// --h2mb: 1.7rem;
 }
+
+// типографика
 
 @include media-breakpoint-up(xl) {}
 

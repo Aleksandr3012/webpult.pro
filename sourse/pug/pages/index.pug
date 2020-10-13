@@ -18,17 +18,18 @@ block pagecontent
 	+header()
 		+topLine()
 	+headerBlock() 
-		.swiper-container.gallery-thumbs.container
-			.swiper-wrapper
-				mixin slideThumb(t,e)
-					+b.slideThumb.swiper-slide
-						+e.text
-							+e.title= t
-							+e.descr= e
-				+slideThumb('Корпоративные сайты','от 60 000 ₽ под ключ')
-				+slideThumb('Интернет-магазины','от 160 000 ₽ под ключ')
-				+slideThumb('Лендинг пейдж','от 60 000 ₽ с уникальным дизайном')
-				+slideThumb('Сайты В рассрочку','от 3 000 ₽ в месяц')
+
+			.swiper-container.gallery-thumbs.container
+				.swiper-wrapper
+					mixin slideThumb(t,e)
+						+b.slideThumb.swiper-slide
+							+e.text
+								+e.title= t
+								+e.descr= e
+					+slideThumb('Корпоративные сайты','от 60 000 ₽ под ключ')
+					+slideThumb('Интернет-магазины','от 160 000 ₽ под ключ')
+					+slideThumb('Лендинг пейдж','от 60 000 ₽ с уникальным дизайном')
+					+slideThumb('Сайты В рассрочку','от 3 000 ₽ в месяц')
 	+sCards()
 	+sCards-slider()
 	+sNumeral

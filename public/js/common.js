@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '18.png';
+	screenName = '13.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -316,9 +316,9 @@ function eventHandler() {
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 0,
 		slidesPerView: 4,
-		freeMode: true,
 		watchSlidesVisibility: true,
-		watchSlidesProgress: true // clickable: true,
+		watchSlidesProgress: true,
+		watchOverflow: true // clickable: true,
 
 	});
 	var galleryTop = new Swiper('.gallery-top', {
@@ -359,7 +359,7 @@ function eventHandler() {
 		}
 	});
 	var blogSlider = new Swiper('.blogSlider', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		spaceBetween: 30,
 		// loop: true,
 		watchSlidesVisibility: true,
@@ -368,7 +368,7 @@ function eventHandler() {
 			768: {
 				slidesPerView: 2
 			},
-			992: {
+			1200: {
 				slidesPerView: 3
 			}
 		},
@@ -381,15 +381,15 @@ function eventHandler() {
 			hiddenClass: 'swiper-button-hidden'
 		}
 	});
-	var competenceSlider = new Swiper('.competenceSlider', {
-		spaceBetween: 20,
-		slidesPerView: 3,
+	var competenceSlider = new Swiper('.competenceSlider-js', {
+		spaceBetween: 32,
+		slidesPerView: 'auto',
 		// freeMode: true,
 		loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
-			768: {
+			992: {
 				spaceBetween: 63,
 				slidesPerView: 4
 			}

@@ -18,7 +18,7 @@ mixin cardItem(title,text,btn,img,sl)
 		.row
 			+e.textCol.col-6
 				+e.title!= title
-				p.d-none.d-sm-block!= text
+				p!= text
 				+e.btnWrap
 					+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#")= btn
 			+e.picCol.col

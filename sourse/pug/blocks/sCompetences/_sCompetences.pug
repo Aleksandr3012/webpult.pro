@@ -2,14 +2,14 @@ mixin sCompetences(data)
 	// start sCompetences
 	+b.SECTION.sCompetences.section#sCompetences&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title
 				h3 Наши компетеции
 				
 			+e.prev
 				+icon('arrow-r')
 			+e.next
 				+icon('arrow-r')
-			.swiper-container.competenceSlider
+			.competenceSlider-js.swiper-container
 				.swiper-wrapper
 					mixin slide(i)
 						.swiper-slide
