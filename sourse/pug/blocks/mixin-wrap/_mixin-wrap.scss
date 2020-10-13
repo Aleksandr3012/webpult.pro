@@ -3,6 +3,9 @@
 .soc{
 	margin: 0 rem(-22px);
 	display: flex;
+	@include media-breakpoint-down(md) {
+		justify-content: center;
+	}
 	&__item{
 		text-decoration: none !important;
 		margin: 0 rem(22px);

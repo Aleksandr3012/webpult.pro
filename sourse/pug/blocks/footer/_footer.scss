@@ -1,16 +1,22 @@
 .footer {
 	background-color: $dark;
 	padding-top: calc(var(--sPB) / 2);
-	padding-bottom: var(--sPB);
+	// padding-bottom: var(--sPB);
 
 	
 	
 	&__tel {
 		color: #fff;
 		@extend .h6;
-		margin-bottom: 0 !important;
+		margin-bottom: rem(30) !important;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0 !important;
+		}
 		display: flex;
 		align-items: center;
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+		}
 		.icon {
 			font-size: rem(17);
 			color: $primary;
@@ -25,10 +31,16 @@
 		margin-bottom: rem(40);
 	}
 
+	&__linkRow {
+		@include media-breakpoint-only(lg) {
+			@include roww(10px);
+		}
+	}
+
 	&__wrap {
 		display: flex;
 		flex-direction: column;
-		@include media-breakpoint-up(xl) {
+		@include media-breakpoint-up(xxl) {
 			padding-right: rem(142);
 		}
 	}
@@ -38,6 +50,7 @@
 		display: block;
 		color: #fff;
 		font-weight: 500;
+		font-size: $h6-font-size;
 		
 	}
 
@@ -48,10 +61,25 @@
 		}
 
 		a {
+			font-size: $small;
 			color: #9c9c9c;
 			&:hover {
 				color: #fff;
 			}
+		}
+	}
+
+	&__foot {
+		padding-top: rem(26);
+		padding-bottom: rem(26);
+		background-color: #1d1f21;
+	}
+
+	&__polite {
+		color: #9c9c9c;
+		font-size: $xsmall;
+		&:hover {
+			color: #fff;
 		}
 	}
 

@@ -3,13 +3,15 @@ mixin topLine()
 	+b.topLine#topLine&attributes(attributes)
 		.container
 			.row
+				.col-auto.d-lg-none
+					+mob-mnu
 				.col-auto
 					+e.logo(href="#")
-						img.res-i(src="img/@2x/logo.png", alt="")
+						img.res-i(src="img/svg/logo.svg", alt="")
 				.col.d-none.d-lg-block
 					+top-nav()
 				.col-auto
-					+e.buttons
+					+e.buttons.d-none.d-md-flex
 						+e.lk(href="#")
 							+icon('user')
 							span Личный  кабинет
@@ -17,9 +19,8 @@ mixin topLine()
 							+icon('shopping-cart')
 							+e.quantity 0
 						+e.btn.btn.btn-dark(href="#") 
-							span.d-md-none консультация
 							span.d-none.d-md-inline Нужна консультация?
-				.col-auto.d-lg-none
-					+mob-mnu
+					+e.btn.d-md-none(href="tel:+74999387838")
+						+icon('tel')
 
 	// end topLine

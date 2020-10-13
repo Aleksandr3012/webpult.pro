@@ -1,18 +1,18 @@
 // мобильное меню
 
 // мобильное меню
-$h: em(2);
+$h: 4px;
 
 .toggle-menu-mobile {
 	display: block;
 	width: 37px;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	color: #000;
 	font-size: 32px;
 
 	&.on {
-		color: #ffffff;
+		// color: #ffffff;
 	}
 
 	span:after,
@@ -79,20 +79,22 @@ $h: em(2);
 
 .menu-mobile {
 	position: fixed !important;
-	z-index: 999;
-	max-width: 85%;
-	height: 101vh;
-	width: 280px;
+	z-index: 1000;
+	// max-width: 85%;
+	margin-top: 80px;
+	height: calc(101vh - 80px);
+	width: 320px;
 	top: 0;
 	// left: 0;
-	right: 0;
-	transform: translate(120%, 0);
+	left: 0;
+	transform: translate(-120%, 0);
 	@include mt(.6);
 	will-change: transform;
+	border-top: solid 1px #e4e4e4;
 
 	&__inner {
-		background-color: #c3c3c3;
-		padding: 5% 0;
+		background-color: #fff;
+		padding: 0 0 5%;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
@@ -126,16 +128,16 @@ $h: em(2);
 		}
 
 		&.on {
-			opacity: 1;
+			// opacity: 1;
 
 			span {
-				background-color: transparent;
+				// background-color: transparent;
 			}
 		}
 	}
 
 	ul {
-		position: relative;
+		// position: relative;
 	}
 
 	li {
@@ -150,5 +152,57 @@ $h: em(2);
 			display: block;
 
 		}
+	}
+
+	&__buttons {
+		// display: flex;
+		// align-items: center;
+	}
+
+	&__basket {
+		display: flex;
+		align-items: center;
+		padding: rem(15);
+		border-bottom: solid 1px #e4e4e4;
+		margin-bottom: rem(20);
+		.icon {
+			margin-right: 4px;
+		}
+	}
+
+	&__lk {
+		display: flex;
+		align-items: center;
+		padding: rem(15);
+		border-bottom: solid 1px #e4e4e4;
+		.icon {
+			margin-right: 6px;
+		}
+		span {
+			color: $body-color;
+			font-size: $small;
+			line-height: 1;
+		}
+	}
+
+	&__quantity {
+		background-color: $primary;
+		color: #fff;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		flex-shrink: 0;
+		width: rem(18);
+		height: rem(18);
+		font-size: 12px;
+		font-weight: 500;
+	}
+	
+
+	&__btn {
+		display: block;
+		margin: 0 rem(15);
 	}
 }

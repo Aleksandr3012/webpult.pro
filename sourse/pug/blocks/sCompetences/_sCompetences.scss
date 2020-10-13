@@ -10,16 +10,13 @@
 	}
 
 	&__nav {
-		@include a-cent(x);
-		top: 54%;
-		z-index: 10;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		max-width: rem(1010);
+
 	}
 
 	&__prev, &__next {
+		position: absolute;
+		top: 54%;
+		z-index: 10;
 		outline: none;
 		display: flex;
 		align-items: center;
@@ -35,9 +32,11 @@
 	}
 
 	&__prev {
+		left: rem(-10);
 	}
 
 	&__next {
+		right: rem(-10);
 		.icon {
 			transform: rotate(180deg);
 		}
