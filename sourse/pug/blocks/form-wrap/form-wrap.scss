@@ -1,20 +1,29 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
-			
-		}
+		
+		margin-bottom: 23px;
+	}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 margin-top: 12px;
+		 height: 55px;
  	}
  	&__btn{
- 		cursor: pointer;
+		 cursor: pointer;
+		 width: 100%;
  	}
  	label{
  		width: 100%;
  		display: block;
  	}
+}
+
+textarea{
+	margin-top: 12px;
+	margin-bottom: 24px;
 }
 
 
@@ -79,7 +88,7 @@
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
-	padding-left: rem(35px);
+	padding-left: rem(32px);
 	display: inline-block;
 	&__input{
 		position: absolute;
@@ -98,7 +107,9 @@
 		top: rem(3); 
 		width: rem(20px);
 		height: rem(20px);
-		background-color: $primary;
+		border-radius: $border-radius;
+		background-color: #fff;
+		border: 1px solid #c7c7c7;
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
@@ -108,7 +119,16 @@
 			@include a-cent; 
 			opacity: 0;
 		}
+	}
 
+	&__text{
+		font-size: $small;
+		line-height: (20 / 14);
+		&:hover{
+			a{
+				text-decoration: underline;
+			}
+		}
 	}
  
 	&__input[type="checkbox"] + &__lab{
@@ -128,7 +148,7 @@
 	}
 
 	&__input:checked + &__lab{
-		background-color: $success;
+		background-color: $primary;
 		 
 		&::after{
 	
@@ -137,6 +157,11 @@
 	}
  
 }
+
+.margin{
+	margin-bottom: 40px;
+}
+
 
 
 

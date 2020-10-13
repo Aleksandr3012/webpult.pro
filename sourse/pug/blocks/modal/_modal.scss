@@ -1,7 +1,14 @@
 .modal-win {
 	// display: block;
-	width: 100%;
 	position: relative;
+	max-width: rem(390);
+	width: 100%;
+	border-radius: 8px 8px 0;
+	background-color: #f5f7f9;
+	@include media-breakpoint-up(sm){
+		padding: rem(40) rem(30);
+	}
+	padding: rem(30) rem(14);
 
 	.modal-content {
 		// max-width: 485px;
@@ -12,6 +19,10 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+
+	.btn-gray{
+		margin-bottom: rem(24);
 	}
 }
 
