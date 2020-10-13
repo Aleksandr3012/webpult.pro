@@ -1,0 +1,34 @@
+mixin sPortfolio(data)
+	// start sPortfolio
+	+b.SECTION.sPortfolio.section#sPortfolio&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Порфтолио
+			+b.solutionsMenu
+				+e.item.active(href="#") Сайты
+				+e.item(href="#") Лендинг
+				+e.item(href="#") Логотипы
+				+e.item(href="#") Фирменный стиль
+
+			.row
+				mixin item(i,h,t)
+					+e.col.col-md-6
+						+e.item(href="#")
+							+e.DIV.img-wrap.bg-wrap
+								+pic(`portfolio-${i}`,`bg`,``)(class="picture-bg")
+							+e.DIV.text-block
+								+e.DIV.title!= h
+								+e.DIV.text!= t
+
+				+item(1, `Мэдокс`, `Компания, занимающаяся обслуживанием элитной недвижимости и сдачей недвижимости в аренду`)
+				+item(2, `Агроимпорт`, `ООО АгроИмпорт – динамично развивающаяся компания по работе в области торговли импортными товарами.`)
+				+item(3, `Diamond Clinic`, `Разработка логотипа центру соверменной стоматологии`)
+				+item(4, `Агроимпорт`, `Интернет-магазин РИКОЛЬ - профессиональный шоу-рум лицевого кирпича и клинкера. `)
+				+item(1, `Мэдокс`, ``)
+				+item(2, `Агроимпорт`, `ООО АгроИмпорт – динамично развивающаяся компания по работе в области торговли импортными товарами.`)
+
+			+pugin()
+				
+
+
+	// end sPortfolio
