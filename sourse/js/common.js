@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '13.png';
+	screenName = 'content.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -328,6 +328,36 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+
+	});
+
+	var galleryThumbs = new Swiper('.prioritizeS-thumbs-js', {
+		spaceBetween: 8,
+		slidesPerView: 'auto', 
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		watchOverflow: true,
+		loop: true,
+
+		// clickable: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+	var galleryTop = new Swiper('.prioritizeS-top-js', {
+		spaceBetween: 0,
+		loop: true,
+
+		navigation: {
+			nextEl: '.sPrioritize .sPrioritize__nextBtn',
+			prevEl: '.sPrioritize .sPrioritize__prevBtn',
 		},
 		thumbs: {
 			swiper: galleryThumbs
@@ -427,6 +457,39 @@ function eventHandler() {
 
 		// $(modalTable).find('td').not().remove()
 	})
+
+	//custom input file
+	// ;(function (document, window, index){
+	// 	'use strict';
+	// 	var inputs = document.querySelectorAll('.add-file__input');
+	// 	Array.prototype.forEach.call(inputs, function (input) {
+	// 		var label = input.nextElementSibling,
+	// 				labelVal = label.innerHTML;
+
+	// 		input.addEventListener('change', function (e) {
+	// 			var fileName = '';
+	// 			if (this.files && this.files.length > 1){
+	// 				fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace('{count}', this.files.length);
+	// 			}else{
+	// 				fileName = e.target.value.split('\\').pop();
+	// 			}
+
+	// 			if (fileName){
+	// 				label.querySelector('.add-file__text').innerHTML = fileName;
+	// 			}else{
+	// 				label.innerHTML = labelVal;
+	// 			}
+	// 		});
+
+	// 		// Firefox bug fix
+	// 		input.addEventListener('focus', function () {
+	// 			input.classList.add('has-focus');
+	// 		});
+	// 		input.addEventListener('blur', function () {
+	// 			input.classList.remove('has-focus');
+	// 		});
+	// 	});
+	// }(document, window, 0));
 
 };
 if (document.readyState !== 'loading') {

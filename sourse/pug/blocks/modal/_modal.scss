@@ -24,6 +24,21 @@
 	.btn-gray{
 		margin-bottom: rem(24);
 	}
+
+	textarea {
+		resize: none;
+		max-height: rem(110);
+	}
+
+	.form-wrap {
+		&__input {
+		}
+	}
+
+	.form-control {
+		border: none;
+
+	}
 }
 
 a {

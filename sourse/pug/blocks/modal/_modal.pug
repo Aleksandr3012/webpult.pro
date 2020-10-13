@@ -10,8 +10,8 @@ mixin modal()
 	
 	+b.modal-win(id="modal-logo" class=" " style="display: none" )
 		+form-wrap
-			+e.title.form-data.h3 #[.text-primary Заказать] разработку логотипа
-			p.after-headline Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+			+e.title.form-data.h3 #[span.text-primary Заказать] разработку логотипа
+			p.mb-45 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
 			+input("Как Вас зовут?", "text", "Как Вас зовут?")  
 			+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
 			+input("info@webpult.pro", "email", "E-mail *")(required)
@@ -28,8 +28,8 @@ mixin modal()
 
 	+b.modal-win(id="modal-onlineStore" class=" " style="display: none" )
 		+form-wrap
-			+e.title.form-data.h3 #[.text-primary Заказать] разработку интернет-магазина
-			p.after-headline Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+			+e.title.form-data.h3 #[span.text-primary Заказать] разработку интернет-магазина
+			p.mb-40 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
 			+input("Как Вас зовут?", "text", "Как Вас зовут?")  
 			+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
 			+input("info@webpult.pro", "email", "E-mail *")(required)
@@ -46,15 +46,15 @@ mixin modal()
 
 	+b.modal-win(id="modal-vacancy" class=" " style="display: none" )
 		+form-wrap
-			+e.title.form-data.h3 #[.text-primary Откликнуться] на&nbsp;вакансию
-			p.after-headline Оставьте заявку и менеджер свяжется с Вами в ближайшее время
-			+input("Как Вас зовут?", "text", "Как Вас зовут? *")(required)  
-			+input("XXX-XXX-XX-XX", "tel", "Номер телефона *")(required)  
-			+input("info@webpult.pro", "email", "E-mail *")(required)  
-			+input("Укажите город", "text", "Город *")(required)  
-			p Прикрепить резюме
-
-			+e.btn.btn.btn-gray(type="submit") Обзор
+			+e.title.form-data.h3 #[span.text-primary Откликнуться] на&nbsp;вакансию
+			p.mb-45 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+			+input("Как Вас зовут?", "text", "Как Вас зовут? <span class='text-primary'>*<span>")(required)  
+			+input("XXX-XXX-XX-XX", "tel", "Номер телефона <span class='text-primary'>*<span>")(required)  
+			+input("info@webpult.pro", "email", "E-mail <span class='text-primary'>*<span>")(required)  
+			+input("Укажите город", "text", "Город <span class='text-primary'>*<span>")(required)  
+			p.mb-2 Прикрепить резюме
+			+add-file('Обзор')(class="btn btn-gray d-block")
+			//- +e.btn.btn.btn-gray(type="submit") Обзор
 			+polite()
 			+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
 			//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
