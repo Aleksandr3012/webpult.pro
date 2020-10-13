@@ -140,6 +140,10 @@
 		margin-top: auto;
 	}
 
+	&__btn {
+		position: relative;
+	}
+
 	&__title {
 		@extend .h4;
 		@include media-breakpoint-down(xl) {

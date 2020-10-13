@@ -40,6 +40,9 @@
 		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(120);
+			&:nth-child(3),&:nth-child(4) {
+				margin-bottom: rem(55);
+			}
 		}
 		position: relative;
 		padding-top: rem(15);

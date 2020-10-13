@@ -41,11 +41,11 @@
 	}
 
 	&__prevBtn {
-		left: rem(-10);
+		left: 0;
 	}
 
 	&__nextBtn {
-		right: rem(-10);
+		right: 0;
 
 		.icon {
 			transform: rotate(180deg);
@@ -70,7 +70,10 @@
 	flex-direction: column;
 	padding: rem(24) rem(35) rem(34) rem(24);
 	height: calc(100% - #{rem(30)});
-	min-height: rem(340);
+	min-height: rem(258);
+	@include media-breakpoint-up(lg) {
+		min-height: rem(340);
+	}
 	margin-bottom: rem(30px);
 
 	.picture-bg {

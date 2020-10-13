@@ -18,7 +18,7 @@
 		}
 	}
 	
-	padding-bottom: 5rem;
+	padding-bottom: .5rem;
 	@include media-breakpoint-up(md) {
 		padding-bottom: 0;
 	}
@@ -31,7 +31,7 @@
 	}
 
 	.section-title {
-		padding-top: rem(50);
+		padding-top: rem(40);
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(100);
 		}
@@ -67,7 +67,7 @@
 	}
 
 	&__buttons {
-		padding-bottom: rem(37);
+		padding-bottom: rem(25);
 		@include media-breakpoint-up(lg) {
 			padding-bottom: rem(120);
 		}
