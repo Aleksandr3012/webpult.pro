@@ -1,7 +1,10 @@
 // start .sBlog
 .sBlog {
-	
 	padding-bottom: calc(var(--sPB) - #{rem(30)});
+
+	.container {
+		position: relative;
+	}
 
 	.section-title {
 		padding-bottom: calc(var(--sTPB) + #{rem(9)});
@@ -11,6 +14,41 @@
 		&__allArticles {
 			text-decoration: underline;
 			margin-top: rem(10);
+		}
+	}
+
+	&__nextBtn, &__prevBtn {
+		outline: none;
+		position: absolute;
+		top: 46%;
+		z-index: 10;
+		border-radius: 50%;
+		background-color: #fff;
+		box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+		width: rem(52px);
+		height: rem(52px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include mt;
+		.icon {
+			font-size: rem(17);
+			color: $gray-700;
+		}
+		&.swiper-button-disabled {
+			transform: scale(0);
+		}
+	}
+
+	&__prevBtn {
+		left: 0;
+	}
+
+	&__nextBtn {
+		right: 0;
+
+		.icon {
+			transform: rotate(180deg);
 		}
 	}
 
@@ -32,11 +70,19 @@
 	flex-direction: column;
 	padding: rem(24) rem(35) rem(34) rem(24);
 	height: calc(100% - #{rem(30)});
-	min-height: rem(340);
+	min-height: rem(258);
+	@include media-breakpoint-up(lg) {
+		min-height: rem(340);
+	}
 	margin-bottom: rem(30px);
 
 	.picture-bg {
 		z-index: -2;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&::before {

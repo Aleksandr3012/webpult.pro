@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '13.png';
+	screenName = '01.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -307,7 +307,11 @@ function eventHandler() {
 	//header accardion 
 	$('.drop-accardion-js').click(function(){
 		$(this).parent().toggleClass('active');
-		$(this).parent().find('.drop-accardion-toggle-js').toggle();
+		$(this).parent().find('.drop-accardion-toggle-js').toggleClass('active');
+	})
+
+	$('.accardion-close-js').click(function(){
+		$(this).parent().removeClass('active');
 	})
 
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -336,15 +340,18 @@ function eventHandler() {
 	});
 
 	var cardSlider = new Swiper('.cardSlider', {
-		spaceBetween: 30,
 		slidesPerView: 1,
 		// freeMode: true,
-		loop: true,
+		// loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		noSwipingClass: 'swiper-no-swiping',
+		noSwiping: true,
 		breakpoints: {
-			768: {
+			992: {
+				spaceBetween: 30,
 				slidesPerView: 2,
+				// noSwiping: false,
 			}
 		},
 		lazy: {
@@ -352,12 +359,40 @@ function eventHandler() {
 		},
 		navigation: {
 			nextEl: '.sCards .sCards__nextBtn',
+			prevEl: '.sCards .sCards__prevBtn',
+			hiddenClass: 'swiper-button-hidden'
+		},
+	});
+
+
+	var blogSlider = new Swiper('.blogSlider', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		// loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+
+			},
+			992: {
+				slidesPerView: 3,
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+		navigation: {
+			nextEl: '.sBlog .sBlog__nextBtn',
+			prevEl: '.sBlog .sBlog__prevBtn',
+			hiddenClass: 'swiper-button-hidden'
 		},
 	});
 
 	var competenceSlider = new Swiper('.competenceSlider', {
 		spaceBetween: 20,
-		slidesPerView: 2,
+		slidesPerView: 3,
 		// freeMode: true,
 		loop: true,
 		watchSlidesVisibility: true,

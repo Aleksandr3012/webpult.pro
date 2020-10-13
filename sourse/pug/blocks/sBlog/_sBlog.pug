@@ -52,9 +52,49 @@ mixin sBlog(title,date)
 
 mixin blogItem(data)
 	+b.blogItem(href="#")&attributes(attributes)
-		+pic(data.img,'bg','')(class="picture-bg")
+		if data.date
+			picture.picture-bg
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/` + data.img + `.webp` type="image/webp")
+				img.swiper-lazy(src="#" data-src=`img/@2x/` + data.img + `.png`, alt="")
+		else
+			+pic(data.img,'bg','')(class="picture-bg")
 		if data.name
 			.tagBlock= data.name
 		+e.text!= data.text
 		if data.date
 			+e.date= data.date
+
+
+mixin sBlog(title,date)
+	// start sBlog
+	+b.SECTION.sBlog--slider.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h2= title
+				if date
+					+e.allArticles(href="#") Перейти в блог
+			+e.prevBtn
+				+icon('arrow-r')
+			+e.nextBtn
+				+icon('arrow-r')
+			.swiper-container.blogSlider
+				.swiper-wrapper
+					.swiper-slide
+						+blogItem({
+							img: 'blogImg-1',
+							text: `Wi-Fi 6: нужен ли новый стандарт беспроводной связи обычному пользователю и если да, то зачем?`,
+							date: '22.05.2020'
+						}).text-sm
+					.swiper-slide
+						+blogItem({
+							img: 'blogImg-2',
+							text: `Ланч-тайм 269: краткий перевод&nbsp;свежих статей о&nbsp;digital`,
+							date: '22.05.2020'
+						}).text-sm
+					.swiper-slide
+						+blogItem({
+							img: 'blogImg-3',
+							text: `Китай может ввести санкции против Nokia и Ericsson, если&nbsp;ЕС запретит оборудование Huawei для сетей&nbsp;5G`,
+							date: '22.05.2020'
+						})
+
