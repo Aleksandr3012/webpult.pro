@@ -33,9 +33,9 @@
 	}
 
 	&__logo {
-		@include media-breakpoint-up(lg) {
+		// @include media-breakpoint-up(lg) {
 			margin-top: rem(10);
-		}
+		// }
 		display: block;
 		width: rem(160);
 		@include media-breakpoint-up(md) {

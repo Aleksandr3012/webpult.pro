@@ -71,6 +71,9 @@
 		@include media-breakpoint-up(lg) {
 			padding-bottom: rem(205);
 		}
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(15);
+		}
 	}
 
 	&__btn {
@@ -98,8 +101,16 @@
 		justify-content: flex-end;
 		@include media-breakpoint-up(lg) {
 			position: absolute;
-			right: 0;
 			@include a-cent(y);
+			right: 0;
+		}
+		@include media-breakpoint-up(xxl) {
+			right: 4vw;
+		}
+		@include media-breakpoint-down(md) {
+			padding-right: 0;
+			padding-left: 0;
+			margin-right: rem(-20);
 		}
 	}
 
@@ -129,8 +140,9 @@
 
 	.slideThumb {
 		position: relative;
-		margin-bottom: var(--sPB);
+		margin-bottom: calc(var(--sPB) / 1.3);
 		@include media-breakpoint-up(lg) {
+			margin-bottom: var(--sPB);
 			min-height: rem(121);
 			padding: rem(25) rem(25);
 	
@@ -153,27 +165,22 @@
 				position: absolute;
 				z-index: 1;
 				transform: scale(0);
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+					box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 			}
 			&::after {
-				content: '';
-				width: rem(10);
-				height: rem(10);
-				top: rem(-16);
-				@include media-breakpoint-up(md) {
+					content: '';
+					z-index: 2;
+					position: absolute;
+					@include a-cent(x);
+					@include mt;
+					opacity: 0;
+					top: rem(-26px);
+					transform: rotate(45deg);
 					width: rem(30);
 					height: rem(30);
-					top: rem(-26px);
-				}
-				z-index: 2;
-				border-left: 1px solid #ebebeb;
-				border-top: 1px solid #ebebeb;
-				background-color: #fff;
-				position: absolute;
-				@include a-cent(x);
-				transform: rotate(45deg);
-				@include mt;
-				opacity: 0;
+					border-left: 1px solid #ebebeb;
+					border-top: 1px solid #ebebeb;
+					background-color: #fff;
 			}
 		}
 
@@ -200,7 +207,7 @@
 			flex-direction: column;
 			height: 100%;
 			@include media-breakpoint-down(lg) {
-				transform: scale(0);
+				display: none;
 			}
 		}
 		
@@ -227,11 +234,14 @@
 	.swiper-slide-thumb-active {
 		z-index: 5;
 		border-color: #fff;
-		&::before {
-			transform: scale(1);
-		}
-		&::after {
-			opacity: 1;
+		@include media-breakpoint-up(lg) {
+			&::before {
+				
+				transform: scale(1);
+			}
+			&::after {
+				opacity: 1;
+			}
 		}
 		@include media-breakpoint-down(lg) {
 			background-color: $primary;

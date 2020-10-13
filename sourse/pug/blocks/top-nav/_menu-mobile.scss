@@ -13,6 +13,7 @@ $h: 4px;
 
 	&.on {
 		// color: #ffffff;
+		pointer-events: none;
 	}
 
 	span:after,
@@ -66,6 +67,7 @@ $h: 4px;
 		top: 0;
 		bottom: 0;
 		transform-origin: 50% 50%;
+		height: $h / 2;
 	}
 
 	&.on span:before {

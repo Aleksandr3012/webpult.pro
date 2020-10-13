@@ -15,7 +15,10 @@
 
 	&__prev, &__next {
 		position: absolute;
-		top: 54%;
+		top: 50%;
+		@include media-breakpoint-up(md) {
+			top: 54%;
+		}
 		z-index: 10;
 		outline: none;
 		display: flex;
@@ -33,14 +36,14 @@
 
 	&__prev {
 		left: rem(0);
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 				left: rem(-80);
 			}
 	}
 
 	&__next {
 		right: rem(0);
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 				right: rem(-80);
 			}
 		.icon {

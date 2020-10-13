@@ -368,7 +368,7 @@ function eventHandler() {
 			768: {
 				slidesPerView: 2
 			},
-			992: {
+			1200: {
 				slidesPerView: 3
 			}
 		},
@@ -381,7 +381,7 @@ function eventHandler() {
 			hiddenClass: 'swiper-button-hidden'
 		}
 	});
-	var competenceSlider = new Swiper('.competenceSlider', {
+	var competenceSlider = new Swiper('.competenceSlider-js', {
 		spaceBetween: 20,
 		slidesPerView: 3,
 		// freeMode: true,
