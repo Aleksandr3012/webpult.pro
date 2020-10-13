@@ -14,8 +14,8 @@ mixin sSolution(data)
 				mixin item(i,l,t,s)
 					+e.col.col-md-6.col-xl-4
 						+e.item(href="#")
-							+e.img-wrap
-								+pic(`solutions-${i}`,``,``)
+							+e.DIV.img-wrap.bg-wrap
+								+pic(`solutions-${i}`,`bg`,``)(class="picture-bg")
 								if l
 									+e.DIV.label!= l
 								else

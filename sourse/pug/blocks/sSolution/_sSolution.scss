@@ -29,11 +29,12 @@
 	}
 
 	&__img-wrap{
-		display: block;
-		position: relative;
-		picture{
-			margin-bottom: rem(32);
-		}
+		// display: block;
+		@include block(442,308);
+		margin-bottom: rem(32);
+		// position: relative;
+		// picture{
+		// }
 	}
 
 	&__label{

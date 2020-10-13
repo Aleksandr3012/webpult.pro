@@ -17,7 +17,9 @@
 	&__item{
 		display: flex;
 		flex-direction: column;
+		
 		min-height: rem(240);
+		height: 100%;
 		@include media-breakpoint-up(sm){
 			padding: rem(23) rem(23) rem(30) rem(24);
 		}
@@ -51,6 +53,7 @@
 
 	&__title-wrap{
 		margin-top: auto;
+		margin-bottom: 1rem;
 	}
 	
 	&__title{
@@ -68,6 +71,8 @@
 		font-weight: 500;
 		color: $primary;
 	}
+
+
 
 
 
