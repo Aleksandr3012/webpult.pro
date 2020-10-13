@@ -49,12 +49,12 @@
 		margin-right: auto;
 	}
 
-	&__text-block{
-		font-weight: 500;
+	&__title-wrap{
 		margin-top: auto;
 	}
-
+	
 	&__title{
+		font-weight: 500;
 		font-size: rem(18);
 		line-height: (22 / 18);
 		// margin-bottom: rem(40);
@@ -63,8 +63,9 @@
 	&__link-wrap{
 		margin-top: auto;
 	}
-
+	
 	&__link{
+		font-weight: 500;
 		color: $primary;
 	}
 
