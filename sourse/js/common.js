@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '13.png';
+	screenName = '20.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -411,23 +411,42 @@ function eventHandler() {
 		},
 	});
 	
-	let modalTable = "#modal-cloud";
 
+	// клонирование значений таблицы в модалку
+	let modalTable = "#modal-cloud";
+	
 	$('[href="#modal-cloud"]').click(function () {
 		let table = $(modalTable + " table");
 		let number = $(this).parents("th").index();
 		table.html(
 			$(this).parents('table').html()
 			)
-		$(modalTable).find('thead').remove()
-		console.log(number);
-	 
+			$(modalTable).find('thead').remove()
+			console.log(number);
 			
-		table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove() 
+			
+			table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove() 
+			
+			// $(modalTable).find('td').not().remove()
+		})
+		// /клонирование значений таблицы в модалку
+		
+		// hide/show text
+	let btnMore = document.querySelector(".sPreview__more--js");
+	if (btnMore) {
+		btnMore.addEventListener('click', (e) => {
+			e.preventDefault();
+			document.querySelector(".sPreview__toggle-block--js").classList.toggle('active');
+		})
+	}
 
-		// $(modalTable).find('td').not().remove()
-	})
-
+	$('.sPreview__toggle-block--js').moreLines({
+		linecount: 3,                   	// force moreLines after a certain  
+		buttontxtmore: "Подробнее",     	// Add your inner text for button
+		buttontxtless: "Cкрыть",     	// Add your inner text for button
+		animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
+	});
+		// /hide/show text
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

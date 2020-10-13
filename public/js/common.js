@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '13.png';
+	screenName = '20.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -401,7 +401,8 @@ function eventHandler() {
 			nextEl: '.sCompetences .sCompetences__next',
 			prevEl: '.sCompetences .sCompetences__prev'
 		}
-	});
+	}); // клонирование значений таблицы в модалку
+
 	var modalTable = "#modal-cloud";
 	$('[href="#modal-cloud"]').click(function () {
 		var table = $(modalTable + " table");
@@ -410,7 +411,28 @@ function eventHandler() {
 		$(modalTable).find('thead').remove();
 		console.log(number);
 		table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove(); // $(modalTable).find('td').not().remove()
-	});
+	}); // /клонирование значений таблицы в модалку
+	// hide/show text
+
+	var btnMore = document.querySelector(".sPreview__more--js");
+
+	if (btnMore) {
+		btnMore.addEventListener('click', function (e) {
+			e.preventDefault();
+			document.querySelector(".sPreview__toggle-block--js").classList.toggle('active');
+		});
+	}
+
+	$('.sPreview__toggle-block--js').moreLines({
+		linecount: 3,
+		// force moreLines after a certain  
+		buttontxtmore: "Подробнее",
+		// Add your inner text for button
+		buttontxtless: "Cкрыть",
+		// Add your inner text for button
+		animationspeed: 250 // Type your custom speed animation, by defaul is 'auto' auto = 1
+
+	}); // /hide/show text
 }
 
 ;

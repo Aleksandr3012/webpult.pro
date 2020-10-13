@@ -1,0 +1,141 @@
+
+	// start .sHowOrder
+	.sHowOrder {
+		--sTPB: #{rem(30)};
+		h2{
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(720);
+			// margin-bottom: rem(30);
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {
+		--sPB: #{rem(75)};
+	}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sHowOrder
+
+.row-circle-wrap{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(1190);
+}
+.row-circle{
+		counter-reset: num;
+}
+.item-circle{
+	position: relative;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(225);
+	margin-bottom: rem(42);
+	&__count{
+		position: relative;
+		width: rem(64px);
+		height: rem(64px);
+		border-radius: 50%;
+		border: $border-radius solid $light2;
+		// border: $border-radius solid #000;
+		background-color: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+		@include rfs(26px);
+		color: $primary;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(15);
+		&::after{
+			content: '';
+			position: absolute;
+			top: -$border-radius;
+			left: -$border-radius;
+			border: $border-radius solid $primary;
+			border-radius: 50%;
+			width: calc(100% + #{$border-radius} * 2);
+			height: calc(100% + #{$border-radius} * 2);
+			
+		}
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+	font-weight: 600;
+}
+.col-circle{
+	position: relative;
+	@include media-breakpoint-up(xsm) {
+
+		&::after{
+			content: '';
+			position: absolute;
+			top: rem(64 / 2);
+			border-top: 1px dashed #c7c7c7;
+			height: 1px;
+			width: calc(100% - #{rem(64)} - 22px);
+			left: calc(50% + #{rem(64 / 2)} + 11px);
+		}
+	}
+	&:last-child{
+		&::after{
+			display: none;
+		}
+	}
+	&:nth-child(1) {
+		.item-circle__count {
+			&::after {
+				clip-path: polygon(50% 0, 100% 0%, 100% 50%, 50% 50%, 50% 50%);
+			}
+		}
+	}
+	&:nth-child(2) {
+		.item-circle__count{
+			&::after{
+				clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 50% 100%);
+			}
+		}
+	}
+	&:nth-child(3) {
+		.item-circle__count{
+			&::after{
+				clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 50%, 50% 50%, 50% 0%);
+			}
+		}
+	}
+}
+
+.content-block{
+	padding: rem(40) rem(25);
+	border-radius: $border-radius;
+	background-color: $light2;
+	@include media-breakpoint-up(md) {
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	margin-left: auto;
+	margin-right: auto;
+	max-width: rem(1010);
+	p{
+		max-width: rem(607);
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+			margin-right: 1rem;
+		}
+	}
+	.btn{
+		flex: 0 0 auto;
+	}
+}

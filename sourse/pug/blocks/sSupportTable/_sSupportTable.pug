@@ -1,0 +1,148 @@
+mixin sSupportTable(data)
+	// start sSupportTable
+	+b.SECTION.sSupportTable.section#sSupportTable&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Стоимость технической  поддержки сайтов:
+			+e.wrap
+				table
+					thead
+						tr
+							th.bg-white
+							th.bg-light2 
+								.h5 Начальный 
+								+e.price
+									span 19 900 рублей
+									
+							th.bg-light2 
+								.h5 Оптимальный 
+								+e.price  19 900 рублей
+							th.bg-light2 
+								.h5 Профессиональный 
+								+e.price  19 900 рублей
+							th.bg-light2 
+								.h5 Индивидуальный
+								+e.price  19 900 рублей
+					tbody
+						mixin tr(data)
+							tr.d-xl-none.bg-light2.text-center
+								td(colspan="5").strong= data.t0 
+							tr
+								td
+									if data.t0
+										= data.t0 
+									else
+										block
+								td
+									if data.t1
+										.small= data.t1
+									else if data.plus1
+										+icon('minus')
+									else
+											+icon('plus')
+										
+								td
+									if data.t2
+										.small= data.t2
+									else if data.plus2
+										+icon('minus')
+									else
+										+icon('plus')
+										
+								td
+									if data.t3
+										.small= data.t3
+									else if  data.plus3
+										+icon('minus')
+									else
+										+icon('plus')
+										
+								td
+									if data.t4
+										.small= data.t4
+									else if  data.plus4
+										+icon('minus')
+									else
+										+icon('plus')
+						
+						+tr({ 
+							t0: "Количество часов возможных для выполнения работ",
+							t1: "-",
+							t2: "20",
+							t3: "30",
+							t4: "По запросу ", 
+						}) 
+						+tr({ 
+							t0: "Стоимость 1 часа сверх пакета (рублей)",
+							t1: "2 190",
+							t2: "1 990",
+							t3: "1 790",
+							t4: "По запросу ", 
+						}) 
+						+tr({ 
+							t0: "Время реакции на поставленную задачу",
+							t1: "До 8 часов в рабочее время ",
+							t2: "До 6 часов в рабочее время",
+							t3: "До 4 часа в рабочее время",
+							t4: "По запросу ", 
+						}) 
+						
+						+tr({ 
+							t0: "Кратность заказа",
+							t1: "1 час ",
+							t2: "1 час ",
+							t3: "0,5 часа",
+							t4: "По запросу ", 
+						})
+						tr
+
+							td(colspan='5').bg-light2 
+								.h5.text-center.mb-0 В стоимость технической поддержки также уже включено:
+						+tr({ 
+							t0: "Написание и размещение тематических статей",
+							t1: "1 / неделю ",
+							t2: "2 / неделю",
+							t3: "3 / неделю",
+							t4: "По запросу ", 
+						})
+						+tr({ 
+							t0: "Проверка на наличие битых ссылок",
+							t1: "1 раз в месяц",
+							t2: "1 раз в месяц",
+							t3: "1 раз в месяц",
+							t4: "По запросу ", 
+						})
+						+tr({ 
+							t0: "Проверка работоспособности сайта",
+							t1: "Каждый час",
+							t2: "Каждый час",
+							t3: "Каждый час",
+							t4: "По запросу ", 
+						})
+						+tr({ 
+							t0: "Проверка работоспособности всех форм обратной связи (в т.ч. заказ звонка, заказ товара в Интернет-магазинах и т.д.)",
+							plus1: "Каждый час",
+							t2: "Ежемесячно",
+							t3: "2 раза в месяц",
+							t4: "По запросу ", 
+						})
+						+tr({ 
+							t0: "Исправление ошибок, возникающих в сервисе Яндекс.Вебмастер ",
+							plus1: "Каждый час",
+							plus2: "Ежемесячно",
+						})
+					tfoot
+						tr
+							td
+							td.bg-light2
+								a.btn.btn-primary(href="#") Заказать
+							td.bg-light2
+								a.btn.btn-primary(href="#") Заказать
+							td.bg-light2
+								a.btn.btn-primary(href="#") Заказать
+							td.bg-light2
+								a.btn.btn-primary(href="#") Заказать
+			.alert.bg-info.d-flex
+				+icon("information")
+				div Указанная выше цена на&nbsp;техническую поддержку сайтов на&nbsp;битрикс&nbsp;&mdash; актуальна, фиксирована и&nbsp;прозрачна. Мы&nbsp;гарантируем, что стоимость на&nbsp;выбранное пакетное предложение не&nbsp;изменится ни&nbsp;в&nbsp;коем случае. #[strong ВНИМАНИЕ!] Мы&nbsp;даём 100% бессрочную гарантию на&nbsp;все виды работ!
+	// end sSupportTable
