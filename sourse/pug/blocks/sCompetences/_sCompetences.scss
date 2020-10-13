@@ -32,18 +32,26 @@
 	}
 
 	&__prev {
-		left: rem(-10);
+		left: rem(0);
+		@include media-breakpoint-up(md) {
+				left: rem(-80);
+			}
 	}
 
 	&__next {
-		right: rem(-10);
+		right: rem(0);
+		@include media-breakpoint-up(md) {
+				right: rem(-80);
+			}
 		.icon {
 			transform: rotate(180deg);
 		}
 	}
 
-	.swiper-container {
-		max-width: rem(750);
+	.container {
+		@include media-breakpoint-up(md) {
+			max-width: rem(750);
+		}
 
 	}
 
