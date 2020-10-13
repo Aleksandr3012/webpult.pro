@@ -109,6 +109,7 @@ margin-top: rem(-135);
 	overflow: visible;
 
 	.swiper-wrapper {
+		transform: none !important;
 		@include media-breakpoint-down(lg) {
 			flex-wrap: wrap;
 		}
