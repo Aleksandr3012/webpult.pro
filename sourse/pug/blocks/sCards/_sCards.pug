@@ -16,9 +16,9 @@ mixin sCards(data)
 mixin cardItem(title,text,btn,img,sl)
 	+b.cardItem&attributes(attributes)
 		.row
-			+e.textCol.col-sm-6
+			+e.textCol.col-6
 				+e.title!= title
-				p!= text
+				p.d-none.d-sm-block!= text
 				+e.btnWrap
 					+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#")= btn
 			+e.picCol.col
@@ -37,7 +37,9 @@ mixin sCards-slider(data)
 		.container
 			+b.section-title
 				h2 Популярные услуги
-			+e.nextBtn
+			+e.prevBtn.d-none.d-lg-flex
+				+icon('arrow-r')
+			+e.nextBtn.d-none.d-lg-flex
 				+icon('arrow-r')
 			.swiper-container.cardSlider
 				.swiper-wrapper
@@ -47,5 +49,3 @@ mixin sCards-slider(data)
 						+cardItem('Фирменный стиль для Вашего бизнеса','Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании','Подробнее','cardSlider-2','sl')(style="background-color: #c7f4fa;")
 					.swiper-slide
 						+cardItem('Фирменный стиль для Вашего бизнеса','Разработка фирменного стиля является важной составляющей формирования имиджа вашей компании','Подробнее','cardSlider-2','sl')(style="background-color: #c7f4fa;")
-					.swiper-slide
-						+cardItem('Создание уникальных логотипов','Гибкие пакеты для разработки логотипа','Подробнее','cardSlider-1','sl')(style="background-color: #fadb88;")

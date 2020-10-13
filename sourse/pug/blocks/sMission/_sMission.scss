@@ -4,17 +4,29 @@
 
 	&__innerBlock {
 		background-color: $light;
-		padding: rem(30) rem(27) rem(40) rem(47);
+		padding: rem(0) rem(23) rem(10);
+		@include media-breakpoint-up(md) {
+			padding: rem(30) rem(27) rem(40) rem(47);
+		}
 	}
 
 	.section-title {
-		padding-bottom: 0;
+		padding-bottom: calc(var(--sTPB) * 3);
+		@include media-breakpoint-up(md) {
+			padding-bottom: 0;
+		}
 	}
 
 
 	li {
-		padding-left: rem(24);
-		padding-bottom: rem(48);
+		padding-left: 0;
+		@include media-breakpoint-up(sm) {
+			padding-left: rem(24);
+		}
+		padding-bottom: rem(25);
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(48);
+		}
 		line-height: 1.3;
 		&::before {
 			position: static;
@@ -23,7 +35,9 @@
 			height: 4px;
 			border-radius: 0;
 			margin-bottom: rem(18);
-			margin-left: rem(-24);
+			@include media-breakpoint-up(sm) {
+				margin-left: rem(-24);
+			}
 		}
 	}
 

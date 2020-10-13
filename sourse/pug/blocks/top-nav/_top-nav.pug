@@ -16,7 +16,15 @@ mixin mob-mnu()
 		+e.inner
 			+mnu-sm()
 			+mnu()
-
+			+e.buttons
+				+e.lk(href="#")
+					+icon('user')
+					span Личный  кабинет
+				+e.basket(href="#")
+					+icon('shopping-cart')
+					+e.quantity 0
+				+e.btn.btn.btn-dark(href="#") 
+					span Нужна консультация?
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
@@ -24,5 +32,6 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy&attributes(attributes)
 		+mnu-sm(class="mnu-sm")
 		+mnu()
+
 					
 	// end top-nav

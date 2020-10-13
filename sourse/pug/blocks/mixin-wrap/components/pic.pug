@@ -14,8 +14,7 @@ mixin pic(i, bg,  media='576px')
 		if source
 			source( srcset=url   type=`image/${exp}`   )&attributes(attributes)
 		else
-			noscript(class="loading-lazy")
-				img(src=url  class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+			img(src=url  class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
 	
 	// picture
 	

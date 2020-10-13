@@ -42,6 +42,12 @@
 		column-width: rem(100);
 		display: block;
 	}
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+	}
 }
 
 h1, .h1 {

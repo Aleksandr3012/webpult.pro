@@ -3,10 +3,10 @@ $default-font: "Montserrat";
 $addr: '../fonts/';
 $file-format: woff2 woff;
 
-@include font-face ($default-font, $addr + "Montserrat-Regular/Montserrat-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Montserrat-Bold/Montserrat-Bold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Montserrat-Medium/Montserrat-Medium", 500, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Montserrat-semiBold/Montserrat-semiBold", 600, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "montserrat-regular/montserrat-regular", $file-formats: $file-format);
+@include font-face ($default-font, $addr + "montserrat-bold/montserrat-bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "montserrat-medium/montserrat-medium", 500, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "montserrat-semibold/montserrat-semibold", 600, $file-formats: $file-format);
 
 // font-weight helper:
 

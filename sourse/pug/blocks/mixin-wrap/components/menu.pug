@@ -29,7 +29,12 @@ mixin mnu()
 		+e.LI.item.dropdown( itemprop="item" )
 			+e.A.link(href="#") Сайты
 			.drop-open.drop-accardion-js
-			+b.UL.drop--about.drop-accardion-toggle-js
+				+e.iconWrap.d-lg-none
+					+icon('arrow-r')
+			+b.UL.drop.drop-accardion-toggle-js
+				+e.LI.item.back.accardion-close-js.d-lg-none
+					+icon('arrow-r')
+					span Назад
 				+e.LI.item
 					+e.A.link(href="#" itemprop="url") Лендинг пейдж
 				+e.LI.item
