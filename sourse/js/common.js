@@ -244,11 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-<<<<<<< HEAD
 	screenName = '20.jpg';
-=======
-	screenName = 'content.png';
->>>>>>> 1af88d5da275dfb6732de264429554d3a7449777
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -318,7 +314,7 @@ function eventHandler() {
 		$(this).parent().removeClass('active');
 	})
 
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
+	const galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 0,
 		slidesPerView: 4, 
 		watchSlidesVisibility: true,
@@ -327,7 +323,7 @@ function eventHandler() {
 		// clickable: true,
 
 	});
-	var galleryTop = new Swiper('.gallery-top', {
+	const galleryTop = new Swiper('.gallery-top', {
 		spaceBetween: 0,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -342,7 +338,14 @@ function eventHandler() {
 
 	});
 
-	var galleryThumbs = new Swiper('.prioritizeS-thumbs-js', {
+	$('.slideThumb--js').click(function () {
+		let index = $(this).index();
+		galleryTop.slideTo(index);
+		$(this).addClass('active').siblings().removeClass('active')
+	})
+
+
+	const galleryThumbs2 = new Swiper('.prioritizeS-thumbs-js', {
 		spaceBetween: 8,
 		slidesPerView: 'auto', 
 		watchSlidesVisibility: true,
@@ -355,7 +358,7 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 	});
-	var galleryTop = new Swiper('.prioritizeS-top-js', {
+	const galleryTop2 = new Swiper('.prioritizeS-top-js', {
 		spaceBetween: 0,
 		loop: true,
 
@@ -364,15 +367,16 @@ function eventHandler() {
 			prevEl: '.sPrioritize .sPrioritize__prevBtn',
 		},
 		thumbs: {
-			swiper: galleryThumbs
+			swiper: galleryThumbs2
 		},
 		lazy: {
 			loadPrevNext: true,
 		},
 
 	});
+	
 
-	var cardSlider = new Swiper('.cardSlider', {
+	const cardSlider = new Swiper('.cardSlider', {
 		slidesPerView: 1,
 		// freeMode: true,
 		// loop: true,
@@ -398,7 +402,7 @@ function eventHandler() {
 	});
 
 
-	var blogSlider = new Swiper('.blogSlider', {
+	const blogSlider = new Swiper('.blogSlider', {
 		slidesPerView: 'auto',
 		spaceBetween: 30,
 		// loop: true,
@@ -423,7 +427,7 @@ function eventHandler() {
 		},
 	});
 
-	var competenceSlider = new Swiper('.competenceSlider-js', {
+	const competenceSlider = new Swiper('.competenceSlider-js', {
 		spaceBetween: 32,
 		slidesPerView: 'auto',
 		// freeMode: true,
@@ -474,15 +478,13 @@ function eventHandler() {
 		})
 	}
 
-<<<<<<< HEAD
 	$('.sPreview__toggle-block--js').moreLines({
 		linecount: 3,                   	// force moreLines after a certain  
 		buttontxtmore: "Подробнее",     	// Add your inner text for button
 		buttontxtless: "Cкрыть",     	// Add your inner text for button
 		animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
 	});
-		// /hide/show text
-=======
+	// /hide/show text
 	//custom input file
 	// ;(function (document, window, index){
 	// 	'use strict';
@@ -516,7 +518,6 @@ function eventHandler() {
 	// 	});
 	// }(document, window, 0));
 
->>>>>>> 1af88d5da275dfb6732de264429554d3a7449777
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

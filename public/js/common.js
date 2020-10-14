@@ -256,11 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-<<<<<<< HEAD
 	screenName = '20.jpg';
-=======
-	screenName = 'content.png';
->>>>>>> 1af88d5da275dfb6732de264429554d3a7449777
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -338,7 +334,12 @@ function eventHandler() {
 			loadPrevNext: true
 		}
 	});
-	var galleryThumbs = new Swiper('.prioritizeS-thumbs-js', {
+	$('.slideThumb--js').click(function () {
+		var index = $(this).index();
+		galleryTop.slideTo(index);
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	var galleryThumbs2 = new Swiper('.prioritizeS-thumbs-js', {
 		spaceBetween: 8,
 		slidesPerView: 'auto',
 		watchSlidesVisibility: true,
@@ -350,7 +351,7 @@ function eventHandler() {
 			loadPrevNext: true
 		}
 	});
-	var galleryTop = new Swiper('.prioritizeS-top-js', {
+	var galleryTop2 = new Swiper('.prioritizeS-top-js', {
 		spaceBetween: 0,
 		loop: true,
 		navigation: {
@@ -358,7 +359,7 @@ function eventHandler() {
 			prevEl: '.sPrioritize .sPrioritize__prevBtn'
 		},
 		thumbs: {
-			swiper: galleryThumbs
+			swiper: galleryThumbs2
 		},
 		lazy: {
 			loadPrevNext: true
@@ -441,7 +442,6 @@ function eventHandler() {
 		$(modalTable).find('thead').remove();
 		console.log(number);
 		table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove(); // $(modalTable).find('td').not().remove()
-<<<<<<< HEAD
 	}); // /клонирование значений таблицы в модалку
 	// hide/show text
 
@@ -464,8 +464,7 @@ function eventHandler() {
 		animationspeed: 250 // Type your custom speed animation, by defaul is 'auto' auto = 1
 
 	}); // /hide/show text
-=======
-	}); //custom input file
+	//custom input file
 	// ;(function (document, window, index){
 	// 	'use strict';
 	// 	var inputs = document.querySelectorAll('.add-file__input');
@@ -494,7 +493,6 @@ function eventHandler() {
 	// 		});
 	// 	});
 	// }(document, window, 0));
->>>>>>> 1af88d5da275dfb6732de264429554d3a7449777
 }
 
 ;
