@@ -1,0 +1,73 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sPossibilities/_sPossibilities.pug
+include ../blocks/sHave/_sHave.pug
+include ../blocks/sPreview/_sPreview.pug
+include ../blocks/sSupportTable/_sSupportTable.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sOurWorks/_sOurWorks.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sNumeral/_sNumeral.pug
+include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sFAQ/_sFAQ.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= ' Фирменный стиль'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', title)
+		+headerBlockBody().--tarif
+			.container
+				.row
+					.col-xxl-5.col-xsm-7
+						+e.content
+							+b.section-title
+								h1 Разработка эксклюзивного фирменного стиля для компаний
+							p Работаем до&nbsp;полного утверждения! Не&nbsp;ограничиваем заказчиков в&nbsp;правках и&nbsp;пожеланиях!
+							br
+							.row 
+								ul.h6.strong.col-auto
+									li Без аналогов&nbsp;&mdash; только авторские работы
+							+btn-modal('Заказать  логотип ',`<span class="text-primary">Заказать</span>  логотип `)
+					+e.picCol.col-xsm-5.col-xl
+						+pic('head-img-04','','')
+	+sPreview('prev-fs',` Создание фирменного стиля &mdash;&nbsp;что это и&nbsp;нужно&nbsp;ли?`)
+		p  логотип (в&nbsp;простонародье &laquo;Лендинг&raquo;), в&nbsp;дословном переводе на&nbsp;русский язык означает &laquo;Посадочная страница&raquo;. Не&nbsp;смотря на&nbsp;то, что понятие &laquo;лендингов&raquo; уже достаточно давно вошло в&nbsp;обиход предпринимателей, многие наши заказчики до&nbsp;сих пор спрашивают его значение, в&nbsp;то
+		p Есть мнение, что создание #[strong Интернет-магазина на Битрикс] – это долго и дорого. Немного ниже, на этой странице мы постарались дать развернутый ответ на данный вопрос. Но если вкратце, то действительно, на рынке есть множество предложений по предложений по
+	+sCalc-04
+
+	+sHave20
+	
+	+sOurWorks
+	+sSteps-04
+	+sNumeral('Наши преимущества')
+	+sCompetences
+	//- +sCards-03()
+	//- +sHowOrder-03
+	+sContent()
+		+e.inner--border
+			+e.row.row
+				.col.pb-2
+					h2 Фирменный стиль, гайдлайн, брендбук... &mdash;&nbsp;в&nbsp;чем разница?
+					p Так как страница посвящена созданию фирменного стиля, то, соответственно, речь пойдет о его отличии от гайдлайна и брендбука. Фирменный стиль – понятие, которое относится исключительно к дизайну – оформлению фирменных элементов. Оно не имеет ничего общего с «закрытой» корпоративной информацией, не оформляется документально. Фирменный стиль не является доктриной, не содержит никаких определенных условий. Это дизайн. И только дизайн. Поскольку гайдлайны и брендбуки требуют больших трудозатрат, разработка фирменного стиля больше всего подходит малому бизнесу и начинающим предпринимателям, которые не имеют большого штата сотрудников, множества разных отделов компании, дочерних предприятий и т.д.
+				.col-lg-5.text-center.pb-2
+					+pic("line-1")
+		 
+
+	+sFAQ()
+	+footer()
+
+
+	

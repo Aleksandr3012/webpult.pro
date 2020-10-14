@@ -1,7 +1,14 @@
 // start .sFAQ
 .sFAQ {
  
-
+	.drop-accardion-block{
+		&__title{
+			padding-left: rem(38);
+			.icon{
+				left: 0;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
