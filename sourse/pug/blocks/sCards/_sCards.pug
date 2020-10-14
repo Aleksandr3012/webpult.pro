@@ -20,7 +20,10 @@ mixin cardItem(title,text,btn,img,sl)
 				+e.title!= title
 				p!= text
 				+e.btnWrap
-					+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#")= btn
+					if block
+						block
+					else
+						+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#")= btn
 			+e.picCol.col
 				if sl
 					picture
@@ -62,10 +65,12 @@ mixin sCards-02(data)
 			.row
 				.col-lg-4
 					+cardItem('Интернет-магазин за 180 000 рублей','для малого бизнеса и начинающим','Подробнее','cardImg-im-1')
+						+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#") Подробнее
 				.col-lg-4
 					+cardItem('Интернет-магазин за 220 000 рублей','для крупного бизнеса с точками по всей стране','Подробнее','cardImg-im-2')
 				.col-lg-4
 					+cardItem('Соберите свой интернет-магазин','выберите подходящий функционал именно Вам','Собрать','cardImg-im-3')
+						+e.btn.btn.btn-primary.btn-primary-shadow-sm.scroll-link(href="#sCalc") Собрать
 
 mixin sCards-02-2(data)
 	// start sCards
@@ -78,3 +83,19 @@ mixin sCards-02-2(data)
 					+cardItem(`Готовые решения  <br> на&nbsp;1C-bitrix`,`Быстрый запуск за&nbsp;пару дней`,'Подробнее','cardImg-im-2-1')(class="cardItem--lg" style="background-color: #a1d5ff;")
 				.col-lg-6
 					+cardItem(`Интернет-магазин <br> в&nbsp;рассрочку`,`Лучшее антикризисное предложение и&nbsp;прозрачная схема оплаты`,'Подробнее','cardImg-im-2-2')(class="cardItem--lg" style="background-color: #d5c7fd;")
+
+
+mixin sCards-03(data)
+	// start sCards
+	+b.SECTION.sCards.section&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сколько стоит разработка Landing page?
+				p Указанная выше цена на&nbsp;создание логотипа&nbsp;&mdash; актуальна, фиксирована и&nbsp;прозрачна. Мы&nbsp;гарантируем, что стоимость на&nbsp;выбранное пакетное предложение не&nbsp;изменится ни&nbsp;в&nbsp;коем случае. В&nbsp;результате нашей работы, вы&nbsp;получите красивый, уникальный и&nbsp;качественный логотип для своей компании.
+			.row
+				.col-lg-6
+					+cardItem('Создание Landing page за 45 000 рублей','Авторский индивидуальный дизайн включающий 6&nbsp;экранов','Заказать','cardImg-land-1')(class="cardItem--lg")
+						+btn-modal('Заказать ',`<span class="text-primary">Заказать</span> Landing page `)
+				.col-lg-6
+					+cardItem('Индивидуальный рассчет Вашего лендинга','Заказажите индивидуальный рассчет <br> проекта ','Заказать','cardImg-land-2')(class="cardItem--lg")
+						+btn-modal('Заказать ',`<span class="text-primary">Заказать</span> Landing page `)

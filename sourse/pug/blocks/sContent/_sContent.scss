@@ -61,6 +61,22 @@
 	}
 
 }
+.colum-3 {
+	@include media-breakpoint-up(xl) {
+		columns: 3;
+	}
+	@include media-breakpoint-up(md) {
+		columns: 2;
+		// column-width: rem(100);
+		display: block;
+		> * {
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+		}
+	}
+
+}
 
 h1, .h1 {
 	line-height: 1.22;

@@ -7,62 +7,93 @@ mixin item-circle(data)
 					+icon("question")
 	// /.item-circle
 
-mixin sHowOrder(data)
+mixin sHowOrderBody()
 	// start sHowOrder
 	+b.SECTION.sHowOrder.section#sHowOrder&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 Как заказать техническую подержку сайта на&nbsp;1С-Битрикс:
-				
-			+b.row-circle-wrap
-				+b.row-circle.row
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({ 
-							p:`Выбор пакетного предложения или обсуждение индивидуального`,
-						})
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({ 
-							p:`Составление договора на&nbsp;техническую поддержку сайта`,
-						})
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({ 
-							p:`Оплата стоимости поддержки по&nbsp;договору`,
-						})
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({ 
-							p:`Получение ежемесячной отчетности о&nbsp;проделанной работе`,
-						})
-			+b.content-block
-				p Проделанная работа будет подробно расписана в&nbsp;отчете проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря отчету, наши заказчики видят за&nbsp;что платят.
-				a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  тех. поддержку ') Заказать тех. поддержку
+			block
 	// end sHowOrder
+	
+mixin sHowOrder(data)
+	+sHowOrderBody()
+		+b.section-title.text-center
+			h2 Как заказать техническую подержку сайта на&nbsp;1С-Битрикс:
+			
+		+b.row-circle-wrap
+			+b.row-circle.row
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+						p:`Выбор пакетного предложения или обсуждение индивидуального`,
+					})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+						p:`Составление договора на&nbsp;техническую поддержку сайта`,
+					})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+						p:`Оплата стоимости поддержки по&nbsp;договору`,
+					})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+						p:`Получение ежемесячной отчетности о&nbsp;проделанной работе`,
+					})
+		+b.content-block
+			p Проделанная работа будет подробно расписана в&nbsp;отчете проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря отчету, наши заказчики видят за&nbsp;что платят.
+			a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  тех. поддержку ') Заказать тех. поддержку 
+
 mixin sHowOrder-02(data)
-	// start sHowOrder
-	+b.SECTION.sHowOrder.section#sHowOrder&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 Схема оплаты
-				p Для удобства наших заказчиков мы&nbsp;разработали удобную схему оплаты, которая исключает абсолютно все возможные риски для обеих сторон. Оплату мы&nbsp;&laquo;разбиваем&raquo; на&nbsp;этапы выполняемых работ:
-				
-			+b.row-circle-wrap
-				+b.row-circle.row
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({  
-						p:`Техническое задание, включая прототипы и&nbsp;дизайн-макеты`, 
-						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({  
-						p:`Верстка макетов`, 
-						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`	})
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({ 
-						p:`Программирование`,
-						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.` })
-					+b.col-circle.col-lg-3.col-xsm-6
-						+item-circle({ 
-						p:`Тестирование`,
-						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
-			+b.content-block
-				p Каждый из&nbsp;этапов будет подробно расписан в&nbsp;смете расчета проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря смете, наши заказчики видят за&nbsp;что платят.
-				a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  интернет-магазин') Заказать интернет-магазин
+	+sHowOrderBody()
+		+b.section-title.text-center
+			h2 Схема оплаты
+			p Для удобства наших заказчиков мы&nbsp;разработали удобную схему оплаты, которая исключает абсолютно все возможные риски для обеих сторон. Оплату мы&nbsp;&laquo;разбиваем&raquo; на&nbsp;этапы выполняемых работ:
+			
+		+b.row-circle-wrap
+			+b.row-circle.row
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({  
+					p:`Техническое задание, включая прототипы и&nbsp;дизайн-макеты`, 
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({  
+					p:`Верстка макетов`, 
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`	})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+					p:`Программирование`,
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.` })
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+					p:`Тестирование`,
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
+		+b.content-block
+			p Каждый из&nbsp;этапов будет подробно расписан в&nbsp;смете расчета проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря смете, наши заказчики видят за&nbsp;что платят.
+			a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  интернет-магазин') Заказать интернет-магазин
+	// end sHowOrder
+mixin sHowOrder-03(data)
+	+sHowOrderBody()
+		+b.section-title.text-center
+			h2 Схема оплаты
+			p Для удобства наших заказчиков мы&nbsp;разработали удобную схему оплаты, которая исключает абсолютно все возможные риски для обеих сторон. Оплату мы&nbsp;&laquo;разбиваем&raquo; на&nbsp;этапы выполняемых работ:
+			
+		+b.row-circle-wrap
+			+b.row-circle.row
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({  
+					p:`Техническое задание, включая прототипы и&nbsp;дизайн-макеты`, 
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({  
+					p:`Верстка макетов`, 
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`	})
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+					p:`Программирование`,
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.` })
+				+b.col-circle.col-lg-3.col-xsm-6
+					+item-circle({ 
+					p:`Тестирование`,
+					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
+		+b.content-block
+			p Каждый из&nbsp;этапов будет подробно расписан в&nbsp;смете расчета проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря смете, наши заказчики видят за&nbsp;что платят.
+			a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  лендинг') Заказать лендинг
 	// end sHowOrder
