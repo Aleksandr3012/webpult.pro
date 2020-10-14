@@ -1,6 +1,18 @@
 // start .sCards
 .sCards {
-	
+		.section-title{
+			h2{
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(450);
+			}
+			p{
+
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(700);
+			}
+		}
 	padding-bottom: calc(var(--sPB) / 2.6);
 
 
@@ -111,7 +123,13 @@
 	height: calc(100% - 30px);
 	min-height: rem(200);
 	margin-bottom: 30px;
+	background-color: $light2;
+	@include media-breakpoint-up(xl) {
 
+		&--lg{
+			padding-left: rem(20);
+		}
+	}
 	.row {
 		height: 100%;
 		@include roww(5px)

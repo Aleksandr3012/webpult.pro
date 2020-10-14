@@ -7,9 +7,9 @@
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
-		 margin-top: 12px;
-		 height: 55px;
+		//  resize: none;
+		 margin-top: rem(12px);
+		//  height: 55px;
  	}
  	&__btn{
 		 cursor: pointer;
@@ -23,8 +23,7 @@
 }
 
 textarea{
-	margin-top: 12px;
-	margin-bottom: 24px;
+ height: rem(110);
 }
 
 
@@ -114,6 +113,12 @@ textarea{
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
+		.icon{
+			font-size: rem(10);
+			@include a-cent;
+			opacity: 0;
+			@include mt;
+		}
 		&::after{  
 			content: '';
 			position: absolute;
@@ -139,12 +144,7 @@ textarea{
 	}
  
 	&__input[type="checkbox"] + &__lab{
-		&::after{ 
-			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
-			position: absolute;
-			@include a-cent; 
-			opacity: 0;
-		}
+	 
 	}
 
 	&__input[type="radio"] + &__lab{ 
@@ -156,7 +156,24 @@ textarea{
 
 	&__input:checked + &__lab{
 		background-color: $primary;
-		 
+		border-color: $primary;
+		.icon{
+			opacity: 1;
+			color: #ffffff;
+		}
+		&::after{
+	
+			opacity: 1;
+		}
+	}
+ 
+	&__input:checked:disabled+&__lab {
+		background-color: #e4e4e4;
+		border-color: #e4e4e4;
+		.icon{
+			opacity: 1;
+			color: #7c7c7c;
+		}
 		&::after{
 	
 			opacity: 1;

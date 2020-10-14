@@ -1,0 +1,22 @@
+mixin sOurWorksItem(i,t)
+	+e.col(class="col-xl-3 col-sm-6")
+		+b.sOurWorks-item(href="#")
+			+e.DIV.img-wrap
+				+pic(`sOurWorks-img-im-${i}.png`,'','')
+			.h6!= t
+mixin sOurWorks(data)
+	// start sOurWorks
+	+b.SECTION.sOurWorks.section#sOurWorks&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 Наши работы
+					.col-xsm-auto
+						a.tdu(href="#") Перейти в портфолио 
+			.row
+				+sOurWorksItem(1,`Интернет-магазин ротанговой мебели был разработан нами с&nbsp;нуля.`)
+				+sOurWorksItem(2,`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)
+				+sOurWorksItem(3,`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)
+				+sOurWorksItem(4,`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)
+	// end sOurWorks

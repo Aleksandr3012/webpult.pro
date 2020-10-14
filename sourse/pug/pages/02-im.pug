@@ -1,0 +1,65 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sPossibilities/_sPossibilities.pug
+include ../blocks/sHave/_sHave.pug
+include ../blocks/sPreview/_sPreview.pug
+include ../blocks/sSupportTable/_sSupportTable.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sOurWorks/_sOurWorks.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sNumeral/_sNumeral.pug
+include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sFAQ/_sFAQ.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Интернет-магазин'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', title)
+		+headerBlockBody().--tarif
+			.container
+				.row
+					.col-xxl-5.col-xsm-7
+						+e.content
+							+b.section-title
+								h1 Создание Интернет-магазинов  на&nbsp;1С-Битрикс от&nbsp;#[span.text-with-border 180&nbsp;000 рублей]
+							p Красивые прибыльные интернет-магазины с&nbsp;нуля
+							br
+							.row 
+								ul.h6.strong.col-auto
+									li С нуля 
+							
+								ul.h6.strong.col-auto 
+									li Под ключ
+							+btn-modal('Заказать интернет-магазин',`<span class="text-primary">Заказать</span> интернет-магазин`)
+					+e.picCol.col-xsm-5.col-xl
+						+pic('head-img-02','','')
+	+sPreview('prev-im',`Интернет-магазин на&nbsp;1С-битрикс &mdash;&nbsp;долго&nbsp;и&nbsp;дорого?`)
+		p Есть мнение, что создание #[strong Интернет-магазина на Битрикс] – это долго и дорого. Немного ниже, на этой странице мы постарались дать развернутый ответ на данный вопрос. Но если вкратце, то действительно, на рынке есть множество предложений по предложений по
+		p Есть мнение, что создание #[strong Интернет-магазина на Битрикс] – это долго и дорого. Немного ниже, на этой странице мы постарались дать развернутый ответ на данный вопрос. Но если вкратце, то действительно, на рынке есть множество предложений по предложений по
+	+sCards-02()
+	+sHave20
+	+sOurWorks
+	+sSteps
+	+sHowOrder-02
+	+sNumeral('ВебПульт в цифрах')
+	+sCompetences
+	+sCalc
+	+sCards-02-2()
+	+sFAQ()
+	+footer()
+
+
+	

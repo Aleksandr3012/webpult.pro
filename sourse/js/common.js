@@ -62,8 +62,10 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					if (data) {}
-					setValue(data.title, '.form-wrap__title--js');
+					if (data) {
+
+						setValue(data.title, '.form-wrap__title--js');
+					}
 					 
 				})
 			})
@@ -249,10 +251,22 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 
 	JSCCommon.CustomInputFile();
+
+
+	// modal window
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+	});
+	wow.init();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
+<<<<<<< HEAD
 	screenName = '09.png';
+=======
+	screenName = '02.jpg';
+>>>>>>> 36f0db4b89d893158152ef17ee71502f97d11fa0
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -312,7 +326,7 @@ function eventHandler() {
 	});
 	// modal window
 
-	//header accardion 
+	//  accardion 
 	$('.drop-accardion-js').click(function(){
 		$(this).parent().toggleClass('active');
 		$(this).parent().find('.drop-accardion-toggle-js').toggleClass('active');

@@ -60,9 +60,9 @@
 		&__price{
 			display: inline-block;
 			@include rfs(22px);
+			padding-top: rem(10);
 			position: relative;
 			z-index: 2;
-			padding-top: rem(10);
 			&::before{
 				content: '';
 				position: absolute;
