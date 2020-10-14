@@ -54,6 +54,23 @@ mixin sPrioritize(data)
 				.col
 					+e.rBlock
 						+e.topLine
+							+e.price 5 400 рублей
+							+e.oldPrice #[span.tdlt 1 499 900] рублей
+							+e.economy Экономия -33% 
 						+e.middle
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="basicFilling">
+								<label class="form-check-label" for="basicFilling">Базовое заполнение сайта + 19 900 рублей</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="installation">
+								<label class="form-check-label" for="installation">Установка и настройка решения + 5 000 рублей</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="payment">
+								<label class="form-check-label" for="payment">Купить в рассрочку</label>
+							</div>
+							p Добавить лицензию 1С-битрикс?
+							+select('Добавить лицензию 1С-битрикс?',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей')
 						+e.foot
 	// end sPrioritize
