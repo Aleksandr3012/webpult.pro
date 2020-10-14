@@ -26,8 +26,12 @@
 
 .drop-accardion-block{
 	border-bottom: 1px solid $light2;
+	&:first-child{
+		border-top: 1px solid $light2;
+
+	}
 	&__title{
-		padding: rem(27) rem(27);
+		padding: rem(20) rem(27);
 		padding-left: rem(60);
 		position: relative;
 		span{

@@ -124,7 +124,12 @@
 	min-height: rem(200);
 	margin-bottom: 30px;
 	background-color: $light2;
+	@include media-breakpoint-up(xl) {
 
+		&--lg{
+			padding-left: rem(20);
+		}
+	}
 	.row {
 		height: 100%;
 		@include roww(5px)

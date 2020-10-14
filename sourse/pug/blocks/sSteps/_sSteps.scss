@@ -51,8 +51,11 @@
 					left:rem(48);
 				}
 				left: 0;
-				width: auto;
-				min-width: rem(660);
+				@include media-breakpoint-up(md) {
+
+					width: auto;
+					min-width: rem(660);
+				}
 				top: 0;
 			}
 		}

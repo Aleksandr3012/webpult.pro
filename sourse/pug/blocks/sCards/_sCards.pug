@@ -1,6 +1,6 @@
 mixin sCards(data)
 	// start sCards
-	+b.SECTION.sCards.section#sCards&attributes(attributes)
+	+b.SECTION.sCards.section&attributes(attributes)
 		.container
 			+b.section-title
 				h2 Битрикс24
@@ -33,7 +33,7 @@ mixin cardItem(title,text,btn,img,sl)
 
 mixin sCards-slider(data)
 	// start sCards
-	+b.SECTION.sCards--slider.section#sCardsSlider&attributes(attributes)
+	+b.SECTION.sCards--slider.sectionSlider&attributes(attributes)
 		.container
 			+b.section-title
 				h2 Популярные услуги
@@ -54,7 +54,7 @@ mixin sCards-slider(data)
 
 mixin sCards-02(data)
 	// start sCards
-	+b.SECTION.sCards.section#sCards&attributes(attributes)
+	+b.SECTION.sCards.section&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Сколько стоит разработка интернет-магазина?
@@ -66,3 +66,15 @@ mixin sCards-02(data)
 					+cardItem('Интернет-магазин за 220 000 рублей','для крупного бизнеса с точками по всей стране','Подробнее','cardImg-im-2')
 				.col-lg-4
 					+cardItem('Соберите свой интернет-магазин','выберите подходящий функционал именно Вам','Собрать','cardImg-im-3')
+
+mixin sCards-02-2(data)
+	// start sCards
+	+b.SECTION.sCards.section&attributes(attributes)
+		.container
+			+b.section-title.pt-5
+				h2.mw-100 Наши другие предложения
+			.row
+				.col-lg-6
+					+cardItem(`Готовые решения  <br> на&nbsp;1C-bitrix`,`Быстрый запуск за&nbsp;пару дней`,'Подробнее','cardImg-im-2-1')(class="cardItem--lg" style="background-color: #a1d5ff;")
+				.col-lg-6
+					+cardItem(`Интернет-магазин <br> в&nbsp;рассрочку`,`Лучшее антикризисное предложение и&nbsp;прозрачная схема оплаты`,'Подробнее','cardImg-im-2-2')(class="cardItem--lg" style="background-color: #d5c7fd;")

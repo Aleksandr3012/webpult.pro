@@ -26,5 +26,5 @@ mixin ie11()
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 
-mixin btn-modal(b, t)
-	a.btn.btn-primary.link-modal(href="#modal-call" data-title=`${t} `)&attributes(attributes)= b
+mixin btn-modal(b, t, cl="btn-primary")
+	a.btn.link-modal(href="#modal-call" data-title=`${t} ` class= cl)&attributes(attributes)= b

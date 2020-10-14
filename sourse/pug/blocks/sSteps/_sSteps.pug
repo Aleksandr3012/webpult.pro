@@ -18,7 +18,7 @@ mixin sStepsBody(t)
 mixin sSteps()
 	+sStepsBody('Этапы создания интернет-магазина')
 		.row
-			.col-xl-6.col-lg-7
+			.col-xxl-6.col-lg-7
 				.row
 					+sStepsItem(`1`,`Написание технического задания исходя из&nbsp;пожеланий заказчика`)
 					+sStepsItem(`2`,`Разработка прототипов (скелета) страниц`)
@@ -26,7 +26,7 @@ mixin sSteps()
 					+sStepsItem(`4`,`Адаптивная под все типы устройств верстка макетов`)
 					+sStepsItem(`5`,`Интеграция верстки с&nbsp;системой управления 1С-Битрикс`)
 					+sStepsItem(`6`,`Тестирование работоспособности Интернет-магазина`)
-			.col-xl-6.col-lg-5
+			.col
 				+e.animate-block
 					+pic('mockup-1.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay  }s` data-wow-duration=`${dur * 2 }s`)
 					+pic('mockup-2.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay + 0.1 * 1 }s` data-wow-duration=`${dur * 2 }s`)
