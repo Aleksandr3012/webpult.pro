@@ -74,3 +74,58 @@ mixin sPrioritize(data)
 							+select('Добавить лицензию 1С-битрикс?',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей')
 						+e.foot
 	// end sPrioritize
+
+
+mixin sPrioritize-25page(data)
+	// start sPrioritize-25page
+	+b.SECTION.sPrioritize.section#sPrioritize&attributes(attributes)
+		.container
+			+b.section-title.mb-30
+				h1 Разработка логотипа и фирменного стиля для компании АзияИнвест
+				
+			.row
+				.col-lg-8
+					.row
+						+e.sliderCol
+							+e.topSlider.prioritizeS-top-js.swiper-container
+								+e.prevBtn
+									+icon('arrow-r')
+								+e.nextBtn
+									+icon('arrow-r')
+								.swiper-wrapper
+									mixin slide()
+										.swiper-slide
+											a(href=`img/@2x/more-aboutPortfolio.jpg` data-fancybox=`pic`)
+												picture
+													source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/more-aboutPortfolio.webp` type="image/webp")
+													img.swiper-lazy(src="#" data-src=`img/@2x/more-aboutPortfolio.jpg`, alt="")
+									+slide
+									+slide
+									+slide
+									+slide
+									+slide
+									+slide
+									+slide
+							+e.thumbSlider.prioritizeS-thumbs-js.swiper-container
+								.swiper-wrapper
+									mixin slide()
+										.swiper-slide
+											picture
+												source.swiper-lazy(srcset="#" data-srcset=`img/@1x/webp/prioritizeImg.webp` type="image/webp")
+												img.swiper-lazy(src="#" data-src=`img/@1x/prioritizeImg.jpg`, alt="")
+									+slide
+									+slide
+									+slide
+									+slide
+									+slide
+									+slide
+									+slide
+				.col
+					+e.text-wrap
+						+e.title Описание проета
+						+e.text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+					+e.btn-wrap
+						.btn
+
+
+	// end sPrioritize-25page
