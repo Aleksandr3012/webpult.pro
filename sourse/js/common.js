@@ -1,4 +1,13 @@
 const JSCCommon = {
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+
+		});
+	},
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -53,10 +62,9 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
+					if (data) {}
+					setValue(data.title, '.form-wrap__title--js');
+					 
 				})
 			})
 		}
@@ -240,7 +248,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 
-	// JSCCommon.CustomInputFile();
+	JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;

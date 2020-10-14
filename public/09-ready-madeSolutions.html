@@ -290,8 +290,36 @@
 						<div class="col">
 							<div class="sPrioritize__rBlock">
 								<div class="sPrioritize__topLine">
+									<div class="sPrioritize__price">5 400 рублей
+									</div>
+									<div class="sPrioritize__oldPrice"><span class="tdlt">1 499 900</span> рублей
+									</div>
+									<div class="sPrioritize__economy">Экономия -33% 
+									</div>
 								</div>
-								<div class="sPrioritize__middle">
+								<div class="sPrioritize__middle"><div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="basicFilling">
+<label class="form-check-label" for="basicFilling">Базовое заполнение сайта + 19 900 рублей</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="installation">
+<label class="form-check-label" for="installation">Установка и настройка решения + 5 000 рублей</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="payment">
+<label class="form-check-label" for="payment">Купить в рассрочку</label>
+</div>
+									<p>Добавить лицензию 1С-битрикс?</p>
+									<div class="sPrioritize__input-wrap">
+										<label><span class="sPrioritize__title">Добавить лицензию 1С-битрикс?</span>
+											<select class="sPrioritize__input">
+												<option> Лицензия «Малый Бизнес» — 35 900 рублей</option>
+												<option> Лицензия «Малый Бизнес» — 35 900 рублей</option>
+												<option> Лицензия «Малый Бизнес» — 35 900 рублей</option>
+												<option> Лицензия «Малый Бизнес» — 35 900 рублей</option>
+											</select>
+										</label>
+									</div>
 								</div>
 								<div class="sPrioritize__foot">
 								</div>
@@ -439,7 +467,7 @@
 			</div>
 		</div>
 		<!-- #modal-cloud-->
-		<div class="modal-win" id="modal-logo" style="display: none">
+		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
 					<input type="hidden" name="example-input-field"/>
@@ -448,7 +476,7 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку логотипа
+					<div class="form-wrap__title form-wrap__title--js form-data h3">
 					</div>
 					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
 					<div class="form-wrap__input-wrap form-group">
@@ -462,12 +490,12 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
+						<label><span class="form-wrap__title">E-mail <span class="text-primary">*</span></span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
 					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" name="commentLogo" id="commentLogo" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
+						<textarea class="form-control" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
 					</label>
 					<div class="form-wrap__polite margin">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
@@ -478,47 +506,6 @@
 				</form>
 			</div>
 		</div>
-		<!-- #modal-logo-->
-		<div class="modal-win" id="modal-onlineStore" style="display: none">
-			<div class="form-wrap">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку интернет-магазина
-					</div>
-					<p class="mb-40">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Как Вас зовут?</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text"/> 
-						</label> 
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Номер телефона</span><input class="form-wrap__input form-control" type="tel" placeholder="XXX-XXX-XX-XX" name="tel"/>
-						</label>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
-						</label>
-					</div>
-					<!-- +e.input-wrap-->
-					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" name="commentLogo" id="commentLogo" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
-					</label>
-					<div class="form-wrap__polite margin">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
-						</label>
-					</div>
-					<button class="form-wrap__btn btn btn-primary btn-primary-shadow-sm" type="submit">Оставить заявку
-					</button>
-				</form>
-			</div>
-		</div>
-		<!-- #modal-onlineStore-->
 		<div class="modal-win" id="modal-vacancy" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -553,8 +540,8 @@
 					<!-- +e.input-wrap-->
 					<p class="mb-2">Прикрепить резюме</p>
 					<div class="add-file">
-						<label><input class="add-file__input" name="file" type="file" data-multiple-caption="{count}" multiple="multiple"/><span class="add-file__btn"> </span><span class="add-file__text btn btn-gray d-block">Обзор</span>
-						</label><span class="add-file__filename"> </span>
+						<label><span class="add-file__filename"> </span><input class="add-file__input" name="file" type="file" data-multiple-caption="{count}" multiple="multiple"/><span class="add-file__btn"> </span><span class="add-file__text btn btn-gray d-block">Обзор</span>
+						</label>
 					</div>
 					<div class="form-wrap__polite margin">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>

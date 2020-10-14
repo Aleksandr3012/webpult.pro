@@ -456,10 +456,10 @@
 							<tfoot>
 								<tr>
 									<td></td>
-									<td class="bg-light2"><a class="btn btn-primary" href="#">Заказать</a></td>
-									<td class="bg-light2"><a class="btn btn-primary" href="#">Заказать</a></td>
-									<td class="bg-light2"><a class="btn btn-primary" href="#">Заказать</a></td>
-									<td class="bg-light2"><a class="btn btn-primary" href="#">Заказать</a></td>
+									<td class="bg-light2"><a class="btn btn-primary link-modal" href="#modal-call" data-title="&lt;span class=&quot;text-primary&quot;&gt;Заказать&lt;/span&gt;  начальный пакет поддержки ">Заказать</a></td>
+									<td class="bg-light2"><a class="btn btn-primary link-modal" href="#modal-call" data-title="&lt;span class=&quot;text-primary&quot;&gt;Заказать&lt;/span&gt;  Оптимальный  пакет поддержки ">Заказать</a></td>
+									<td class="bg-light2"><a class="btn btn-primary link-modal" href="#modal-call" data-title="&lt;span class=&quot;text-primary&quot;&gt;Заказать&lt;/span&gt;  Профессиональный  пакет поддержки ">Заказать</a></td>
+									<td class="bg-light2"><a class="btn btn-primary link-modal" href="#modal-call" data-title="&lt;span class=&quot;text-primary&quot;&gt;Заказать&lt;/span&gt;  Индивидуальный пакет поддержки ">Заказать</a></td>
 								</tr>
 							</tfoot>
 						</table>
@@ -520,7 +520,7 @@
 						</div>
 					</div>
 					<div class="content-block">
-						<p>Проделанная работа будет подробно расписана в&nbsp;отчете проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря отчету, наши заказчики видят за&nbsp;что платят.</p><a class="btn btn-primary" href="#">Заказать тех. поддержку</a>
+						<p>Проделанная работа будет подробно расписана в&nbsp;отчете проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря отчету, наши заказчики видят за&nbsp;что платят.</p><a class="btn btn-primary link-modal" href="#modal-call" data-title="&lt;span class=&quot;text-primary&quot;&gt;Заказать&lt;/span&gt;  тех. поддержку ">Заказать тех. поддержку</a>
 					</div>
 				</div>
 			</section>
@@ -583,15 +583,15 @@
 					<div class="sHave__inner">
 						<!-- picture-->
 						<picture class="d-none d-xl-block"> 
-							<source srcset="img/@2x/webp/have-img.webp" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="img/@1x/webp/have-img.webp" type="image/webp"/>
-							<source srcset="img/@2x/have-img.png" type="image/png" media="(min-width:576px)"/>
-							<source srcset="img/@1x/have-img.png" type="image/png"/><img src="img/@2x/have-img.png" alt=""/>
+							<source srcset="img/@2x/webp/girl.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/girl.webp" type="image/webp"/>
+							<source srcset="img/@2x/girl.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/girl.png" type="image/png"/><img src="img/@2x/girl.png" alt=""/>
 						</picture>
 						<!-- /picture-->
 						<div class="sHave__block">
-							<h3>У Вас еще нет <span class="text-primary">Битрикс24</span>?</h3>
-							<p>Мы&nbsp;готовы обсуждать индивидуальный проект любой сложности, проанализировать конкурентов, учесть Ваши пожелания, которые не&nbsp;указаны в&nbsp;предложениях и&nbsp;рассчитать стоимость внедрение Битрикс24</p><a class="btn btn-primary" href="#">Индивидуальный расчет</a>
+							<h3>  <span class="text-primary">Нет времени</span> разбираться?</h3>
+							<p>Мы&nbsp;готовы обсуждать индивидуальный проект любой сложности, проанализировать конкурентов, учесть Ваши пожелания, которые не&nbsp;указаны в&nbsp;предложениях и&nbsp;рассчитать стоимость создания Интернет-магазина на&nbsp;1С-битрикс.</p><a class="btn btn-primary link-modal" href="#modal-call" data-title="&lt;span class=&quot;text-primary&quot;&gt;Заказать&lt;/span&gt;  индивидуальный расчет ">Индивидуальный расчет </a>
 						</div>
 					</div>
 				</div>
@@ -679,7 +679,7 @@
 			</div>
 		</div>
 		<!-- #modal-cloud-->
-		<div class="modal-win" id="modal-logo" style="display: none">
+		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
 					<input type="hidden" name="example-input-field"/>
@@ -688,7 +688,7 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку логотипа
+					<div class="form-wrap__title form-wrap__title--js form-data h3">
 					</div>
 					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
 					<div class="form-wrap__input-wrap form-group">
@@ -702,12 +702,12 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
+						<label><span class="form-wrap__title">E-mail <span class="text-primary">*</span></span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
 					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" name="commentLogo" id="commentLogo" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
+						<textarea class="form-control" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
 					</label>
 					<div class="form-wrap__polite margin">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
@@ -718,47 +718,6 @@
 				</form>
 			</div>
 		</div>
-		<!-- #modal-logo-->
-		<div class="modal-win" id="modal-onlineStore" style="display: none">
-			<div class="form-wrap">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку интернет-магазина
-					</div>
-					<p class="mb-40">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Как Вас зовут?</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text"/> 
-						</label> 
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Номер телефона</span><input class="form-wrap__input form-control" type="tel" placeholder="XXX-XXX-XX-XX" name="tel"/>
-						</label>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
-						</label>
-					</div>
-					<!-- +e.input-wrap-->
-					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" name="commentLogo" id="commentLogo" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
-					</label>
-					<div class="form-wrap__polite margin">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
-						</label>
-					</div>
-					<button class="form-wrap__btn btn btn-primary btn-primary-shadow-sm" type="submit">Оставить заявку
-					</button>
-				</form>
-			</div>
-		</div>
-		<!-- #modal-onlineStore-->
 		<div class="modal-win" id="modal-vacancy" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -793,8 +752,8 @@
 					<!-- +e.input-wrap-->
 					<p class="mb-2">Прикрепить резюме</p>
 					<div class="add-file">
-						<label><input class="add-file__input" name="file" type="file" data-multiple-caption="{count}" multiple="multiple"/><span class="add-file__btn"> </span><span class="add-file__text btn btn-gray d-block">Обзор</span>
-						</label><span class="add-file__filename"> </span>
+						<label><span class="add-file__filename"> </span><input class="add-file__input" name="file" type="file" data-multiple-caption="{count}" multiple="multiple"/><span class="add-file__btn"> </span><span class="add-file__text btn btn-gray d-block">Обзор</span>
+						</label>
 					</div>
 					<div class="form-wrap__polite margin">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>

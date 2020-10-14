@@ -3,11 +3,11 @@ mixin sPossibilities(data)
 	+b.sPossibilities.section#sPossibilities&attributes(attributes)
 		.container
 			.tabs
-				+e.caption.tabs__caption
-					+e.btn-tab.tabs__btn.active
+				+b.tabs__caption--with-icon
+					+b.tabs__btn--with-icon.active
 						+icon("cloud")
 						| Облачное решение
-					+e.btn-tab.tabs__btn
+					+b.tabs__btn--with-icon
 						+icon("server")
 						| Коробочное решение
 				div
