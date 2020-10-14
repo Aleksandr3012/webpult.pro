@@ -154,8 +154,8 @@
 									</svg><span>Личный  кабинет</span></a><a class="topLine__basket" href="#">
 									<svg class="icon icon-shopping-cart ">
 										<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-									</svg><span class="topLine__quantity">0</span></a><a class="topLine__btn btn btn-dark" href="#"> <span class="d-none d-md-inline">Нужна консультация?</span></a>
-								</div><a class="topLine__btn d-md-none" href="tel:+74999387838">
+									</svg><span class="topLine__quantity">0</span></a><a class="topLine__btn btn btn-dark link-modal" href="#modal-onlineStore"><span class="d-none d-md-inline">Нужна консультация?</span></a>
+								</div><a class="topLine__btn d-md-none link-modal" href="#modal-onlineStore">
 								<svg class="icon icon-tel ">
 									<use xlink:href="img/svg/sprite.svg#tel"></use>
 								</svg></a>
@@ -446,10 +446,9 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3">
-						<div class="text-primary">Заказать</div> разработку логотипа
+					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку логотипа
 					</div>
-					<p class="after-headline">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
+					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
 					<div class="form-wrap__input-wrap form-group">
 						<label><span class="form-wrap__title">Как Вас зовут?</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text"/> 
 						</label> 
@@ -487,10 +486,9 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3">
-						<div class="text-primary">Заказать</div> разработку интернет-магазина
+					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку интернет-магазина
 					</div>
-					<p class="after-headline">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
+					<p class="mb-40">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
 					<div class="form-wrap__input-wrap form-group">
 						<label><span class="form-wrap__title">Как Вас зовут?</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text"/> 
 						</label> 
@@ -528,33 +526,34 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3">
-						<div class="text-primary">Откликнуться</div> на&nbsp;вакансию
+					<div class="form-wrap__title form-data h3"><span class="text-primary">Откликнуться</span> на&nbsp;вакансию
 					</div>
-					<p class="after-headline">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
+					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Как Вас зовут? *</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text" required="required"/> 
+						<label><span class="form-wrap__title">Как Вас зовут? <span class='text-primary'>*<span></span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text" required="required"/> 
 						</label> 
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Номер телефона *</span><input class="form-wrap__input form-control" type="tel" placeholder="XXX-XXX-XX-XX" name="tel" required="required"/> 
+						<label><span class="form-wrap__title">Номер телефона <span class='text-primary'>*<span></span><input class="form-wrap__input form-control" type="tel" placeholder="XXX-XXX-XX-XX" name="tel" required="required"/> 
 						</label> 
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/> 
+						<label><span class="form-wrap__title">E-mail <span class='text-primary'>*<span></span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/> 
 						</label> 
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Город *</span><input class="form-wrap__input form-control" type="text" placeholder="Укажите город" name="text" required="required"/> 
+						<label><span class="form-wrap__title">Город <span class='text-primary'>*<span></span><input class="form-wrap__input form-control" type="text" placeholder="Укажите город" name="text" required="required"/> 
 						</label> 
 					</div>
 					<!-- +e.input-wrap-->
-					<p>Прикрепить резюме</p>
-					<button class="form-wrap__btn btn btn-gray" type="submit">Обзор
-					</button>
+					<p class="mb-2">Прикрепить резюме</p>
+					<div class="add-file">
+						<label><input class="add-file__input" name="file" type="file" data-multiple-caption="{count}" multiple="multiple"/><span class="add-file__btn"> </span><span class="add-file__text btn btn-gray d-block">Обзор</span>
+						</label><span class="add-file__filename"> </span>
+					</div>
 					<div class="form-wrap__polite margin">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
 						</label>
