@@ -15,6 +15,13 @@ mixin sStepsBody(t)
 			
 			block
 	// end sSteps
+mixin animateBlock()
+	+e.animate-block
+		+pic('mockup-1.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay  }s` data-wow-duration=`${dur * 2 }s`)
+		+pic('mockup-2.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay + 0.1 * 1 }s` data-wow-duration=`${dur * 2 }s`)
+		+pic('mockup-3.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay + 0.4 * 1 }s` data-wow-duration=`${dur * 2 }s`)
+		+pic('mockup-4.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay  + 0.8 * 1}s` data-wow-duration=`${dur * 2 }s`)
+
 mixin sSteps()
 	+sStepsBody('Этапы создания интернет-магазина')
 		.row
@@ -27,8 +34,30 @@ mixin sSteps()
 					+sStepsItem(`5`,`Интеграция верстки с&nbsp;системой управления 1С-Битрикс`)
 					+sStepsItem(`6`,`Тестирование работоспособности Интернет-магазина`)
 			.col
+				+animateBlock()
+mixin sSteps-03()
+	+sStepsBody('Этапы создания Landing page')
+		.row
+			.col-xxl-6.col-lg-7
+				.row
+					+sStepsItem(`1`,`Написание технического задания исходя из&nbsp;пожеланий заказчика`)
+					+sStepsItem(`2`,`Разработка прототипов (скелета) страниц`)
+					+sStepsItem(`3`,`Создание дизайн-макетов будущего сайта`)
+					+sStepsItem(`4`,`Адаптивная под все типы устройств верстка макетов`)
+					+sStepsItem(`5`,`Интеграция верстки с&nbsp;системой управления 1С-Битрикс`)
+					+sStepsItem(`6`,`Тестирование работоспособности Интернет-магазина`)
+			.col
+				+animateBlock()
+mixin sSteps-04()
+	+sStepsBody('Этапы создания Landing page')
+		.row
+			.col-xxl-6.col-lg-7
+				.row
+					+sStepsItem(`1`,`Обсуждение задач и&nbsp;целей анализ основных конкурентов`)
+					+sStepsItem(`04-2`,`Составление договора с&nbsp;указанием перечня требуемых элементов`)
+					+sStepsItem(`04-3`,`Работа графических дизайнеров в&nbsp;рамках оговоренных сроков`)
+					+sStepsItem(`04-4`,`Подготовка презентации по&nbsp;созданным вариантам`)
+					+sStepsItem(`04-5`,`Утверждение, передача заказчику исходников в&nbsp;векторном формате`)
+			.col
 				+e.animate-block
-					+pic('mockup-1.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay  }s` data-wow-duration=`${dur * 2 }s`)
-					+pic('mockup-2.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay + 0.1 * 1 }s` data-wow-duration=`${dur * 2 }s`)
-					+pic('mockup-3.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay + 0.4 * 1 }s` data-wow-duration=`${dur * 2 }s`)
-					+pic('mockup-4.png')(class="wow  animate__fadeInDown "  data-wow-delay=`${delay  + 0.8 * 1}s` data-wow-duration=`${dur * 2 }s`)
+					+pic("step-img")
