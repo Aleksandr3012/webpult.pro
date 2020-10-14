@@ -66,10 +66,10 @@ mixin in-c(typ="checkbox", text, name= typ )
 mixin add-file(n)
 	+b.add-file
 		label
-			+e.INPUT.input(name='file', type='file')
+			+e.SPAN.filename 
+			+e.INPUT.input(name='file', type='file' data-multiple-caption="{count}" multiple)
 			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
-		+e.SPAN.filename 
+			+e.SPAN.text&attributes(attributes)= n
 
 
 mixin polite()

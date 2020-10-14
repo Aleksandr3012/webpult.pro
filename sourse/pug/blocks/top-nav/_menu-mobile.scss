@@ -83,8 +83,11 @@ $h: 4px;
 	position: fixed !important;
 	z-index: 1000;
 	// max-width: 85%;
-	margin-top: 80px;
-	height: calc(101vh - 80px);
+	margin-top: 78px;
+	@include media-breakpoint-up(md) {
+		margin-top: 83px;
+	}
+	height: calc((var(--vh, 1vh) * 100) - 80px);
 	width: 320px;
 	top: 0;
 	// left: 0;

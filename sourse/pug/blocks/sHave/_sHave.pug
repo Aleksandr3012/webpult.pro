@@ -1,11 +1,19 @@
-mixin sHave(data)
+mixin sHaveBody(data)
 	// start sHave
 	+b.SECTION.sHave.section#sHave&attributes(attributes)
 		.container
 			+e.inner
-				+pic("have-img.png").d-none.d-xl-block
+				+pic("girl.png").d-none.d-xl-block
 				+e.block
-					h3 У Вас еще нет #[span.text-primary Битрикс24]?
-					p Мы&nbsp;готовы обсуждать индивидуальный проект любой сложности, проанализировать конкурентов, учесть Ваши пожелания, которые не&nbsp;указаны в&nbsp;предложениях и&nbsp;рассчитать стоимость внедрение Битрикс24
-					a.btn.btn-primary(href="#") Индивидуальный расчет
+					block
 	// end sHave
+mixin sHave(data)
+	+sHaveBody()
+		h3 У Вас еще нет #[span.text-primary Битрикс24]?
+		p Мы&nbsp;готовы обсуждать индивидуальный проект любой сложности, проанализировать конкурентов, учесть Ваши пожелания, которые не&nbsp;указаны в&nbsp;предложениях и&nbsp;рассчитать стоимость внедрение Битрикс24
+		a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  индивидуальный расчет ') Индивидуальный расчет 
+mixin sHave20(data)
+	+sHaveBody()
+		h3   #[span.text-primary Нет времени] разбираться?
+		p Мы&nbsp;готовы обсуждать индивидуальный проект любой сложности, проанализировать конкурентов, учесть Ваши пожелания, которые не&nbsp;указаны в&nbsp;предложениях и&nbsp;рассчитать стоимость создания Интернет-магазина на&nbsp;1С-битрикс.
+		a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  индивидуальный расчет ') Индивидуальный расчет 

@@ -2,77 +2,7 @@
 	// start .sPossibilities
 	.sPossibilities {
 		--sPT: #{rem(69)};
-		&__caption{
-			display: flex;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: rem(513);
-			background-color: #f5f7f9;
-			margin-top: rem(2);
-			margin-bottom: rem(29);
-		}
 
-		&__btn-tab{
-			display: flex;
-			align-items: center;
-			width: 50%;
-			font-size: $xsmall;
-			height: rem(87);
-			padding: rem(24);
-			border-radius: $border-radius;
-			background-color: #f5f7f9;
-			@include mt;
-			text-transform: uppercase;
-			.icon{
-				color: $primary;
-				font-size: rem(40);
-				flex: 0 0 auto;
-				margin-right: rem(33);
-				&-cloud{
-					font-size: rem(55);
-					margin-right: rem(23);
-					
-				}
-			}
-			@include mt;
-			position: relative;
-			&::before{
-				content: '';
-				@include a-cent(x);
-				@include triangle(rem(18), #fff, down);
-				top: 100%;
-				opacity: 0;
-				@include mt;
-			}
-			&::after{
-				content: '';
-				@include a-cent;
-				width: calc(100% + 2px);
-				height: calc(100% + 2px);
-				background-color: #ffffff;
-				z-index: -1;
-				@include mt;
-				border-radius: $border-radius;
-				opacity: 0;
-			}
-			z-index: 2;
-			&.active{
-				z-index: 4;
-				&::after,
-				&::before{
-
-					opacity: 1;
-				}
-				color: $primary; 
-				z-index: 2;
-			}
-			&:hover,
-			&.active	{
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-				background-color: #ffffff;
-
-			}
-		}
 
 		@include media-breakpoint-up(xxl) {
 		--thW: #{rem(262)};
@@ -217,13 +147,7 @@
 					text-align: center;
 					// vertical-align: bottom;
 				}
-			 .icon{
-				 font-size: rem(20);
-				 color: #7c7c7c;
-				 &-plus{
-					 color: $primary;
-				 }
-			 }
+			 
 			 tr{
 				 @include mt;
 				 &:hover{

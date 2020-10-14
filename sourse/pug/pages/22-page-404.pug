@@ -15,17 +15,16 @@ block title
 block pagecontent
 	+header()
 		+topLine()
-		+headerBlockBody().--404page.bg-light
+		+headerBlockBody().--404page
 			.container
-				+e.error-item
-					.row
-						+e.picCol.col-5.col-xl
-							+pic('404','','')
-						.col-xxl-6.col-7
-								+b.section-title
-									h1 404
-									p Похоже этой страницы не существует.<br> Но не отчаивайтесь, у нас есть множество других замечательных страниц на которые можно перейти, например, 
-										a.text-primary(href="#") на главную
+				.row.align-items-center
+					+e.picCol.col-5.col-xl
+						+pic('404','','')
+					.col-xxl-6.col-7
+							+b.section-title
+								h1 404
+								p Похоже этой страницы не существует.<br> Но не отчаивайтесь, у нас есть множество других замечательных страниц на которые можно перейти, например, 
+									a.text-primary(href="#") на главную
 	+sCards-slider.sCards-slider--404page()
 	+footer()
 

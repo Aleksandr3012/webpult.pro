@@ -1,0 +1,76 @@
+mixin sPrioritize(data)
+	// start sPrioritize
+	+b.SECTION.sPrioritize.section#sPrioritize&attributes(attributes)
+		.container
+			+b.section-title.mb-30
+				h1 Приорити – Корпоративный сайт
+				
+			.row
+				.col-lg-8
+					+e.wrap
+						.row
+							+e.sliderCol.col-7
+								+e.topSlider.prioritizeS-top-js.swiper-container
+									+e.prevBtn
+										+icon('arrow-r')
+									+e.nextBtn
+										+icon('arrow-r')
+									.swiper-wrapper
+										mixin slide()
+											.swiper-slide
+												a(href=`img/@2x/prioritizeImg.jpg` data-fancybox=`pic`)
+													picture
+														source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/prioritizeImg.webp` type="image/webp")
+														img.swiper-lazy(src="#" data-src=`img/@2x/prioritizeImg.jpg`, alt="")
+										+slide
+										+slide
+										+slide
+										+slide
+										+slide
+										+slide
+										+slide
+								+e.thumbSlider.prioritizeS-thumbs-js.swiper-container
+									.swiper-wrapper
+										mixin slide()
+											.swiper-slide
+												picture
+													source.swiper-lazy(srcset="#" data-srcset=`img/@1x/webp/prioritizeImg.webp` type="image/webp")
+													img.swiper-lazy(src="#" data-src=`img/@1x/prioritizeImg.jpg`, alt="")
+										+slide
+										+slide
+										+slide
+										+slide
+										+slide
+										+slide
+										+slide
+							.col
+								.mb-30
+									a.tagBlock(href="#") Сайты
+								+e.titleSm Подходящие редакции
+								p «Старт», «Стандарт», «Малый бизнес», «Эксперт», «Бизнес»
+								+e.titleSm Описание
+								p Аспро: Приорити – универсальное типовое решение, созданное с учетом потребностей среднего и крупного бизнеса. Идеально подойдет для компаний, работающих в b2b-сегменте и сложных тематиках – крупное производство, консалтинг, финансовые услуги (от аудита до юридических услуг), инвестиции и ценные бумаги, страхование, кибербезопасность и т.д. 
+								a(href="#") Подробее
+				.col
+					+e.rBlock
+						+e.topLine
+							+e.price 5 400 рублей
+							+e.oldPrice #[span.tdlt 1 499 900] рублей
+							+e.economy Экономия -33% 
+						+e.middle
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="basicFilling">
+								<label class="form-check-label" for="basicFilling">Базовое заполнение сайта + 19 900 рублей</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="installation">
+								<label class="form-check-label" for="installation">Установка и настройка решения + 5 000 рублей</label>
+							</div>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="payment">
+								<label class="form-check-label" for="payment">Купить в рассрочку</label>
+							</div>
+							p Добавить лицензию 1С-битрикс?
+							+select('Добавить лицензию 1С-битрикс?',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей')
+						+e.foot
+	// end sPrioritize

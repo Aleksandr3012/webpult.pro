@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sSolution/_sSolution.pug
+include ../blocks/sPrioritize/_sPrioritize.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'Готовые решения'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', 'Готовые решения','Приорити','Корпоративный сайт Битрикс24')
+	+sPrioritize()
+	+sContent()
+		+b.section-title
+			h2 Описание решения
+		p Основное преимущество веб-студии в&nbsp;том, что она собирает и&nbsp;объединяет специалистов. Как правило, специалистов каждого из&nbsp;направлений в&nbsp;веб-студиях несколько. В&nbsp;хорошей веб-студии, как правило, существует понятие взаимозаменяемости. В&nbsp;связи с&nbsp;чем, вас не&nbsp;коснется проблема исчезновений специалистов и&nbsp;срывов сроков.
+		
+	+sSolution-sm()
+
+	+footer()
+
+
+	

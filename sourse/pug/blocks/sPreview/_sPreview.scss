@@ -1,0 +1,95 @@
+
+	// start .sPreview
+	.sPreview {
+		@include media-breakpoint-up(sm) {
+
+			--px: #{rem(35)};
+		}
+		--px: #{rem(17)};
+		position: relative;
+		z-index: 2;
+		&__block{
+			margin-top: rem(-40);
+			border-radius: $border-radius;
+			margin-bottom: rem(10);
+			border: 1px solid #ebebeb;
+			background-color: #ffffff;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1268px;
+			padding: rem(17) var(--px);
+			position: relative;
+			overflow: hidden;
+			z-index: 2;
+			.icon{
+				position: absolute;
+				right: rem(100);
+				font-size: rem(360);
+				color: $light2;
+				z-index: -1;
+				bottom: rem(-100);
+				transform: rotate(10deg);
+			}
+			.row{
+				@include media-breakpoint-up(xxl) {
+
+					@include roww(70px)
+				}
+				@include media-breakpoint-up(xl) {
+
+					@include roww(50px)
+				}
+			}
+		}
+		&__content{
+			padding-top: rem(60 - 17);
+			padding-bottom: rem(50 - 17);
+		}
+		.b-morelines_section_button,
+		&__more{
+			display: inline-flex;
+			align-items: center;
+			margin-top: rem(10);
+			cursor: pointer;
+			color: $primary;
+			&::after{
+				content: '';
+				margin-left: rem(8);
+				width: auto;
+				flex: 0 0 auto;
+				background-image: url(../img/svg/arrow-down.svg);
+				width: 10px;
+				height: 12px;
+				background-repeat: no-repeat;
+				position: relative;
+				@include mt;
+			}
+			&.b-morelines_section_button_active{
+				&::after{
+					transform: rotateX(180deg);
+				}
+			}
+		 
+		}
+		&__toggle-block{
+			max-width: rem(680);
+		 
+		}
+			@include media-breakpoint-up(md){
+
+				picture{
+					width: rem(414);
+				}
+			}
+				
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sPreview

@@ -1,4 +1,13 @@
 const JSCCommon = {
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+
+		});
+	},
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -53,10 +62,9 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
+					if (data) {}
+					setValue(data.title, '.form-wrap__title--js');
+					 
 				})
 			})
 		}
@@ -240,11 +248,11 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 
-	// JSCCommon.CustomInputFile();
+	JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '13.png';
+	screenName = '20.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -314,7 +322,7 @@ function eventHandler() {
 		$(this).parent().removeClass('active');
 	})
 
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
+	const galleryThumbs = new Swiper('.gallery-thumbs', {
 		spaceBetween: 0,
 		slidesPerView: 4, 
 		watchSlidesVisibility: true,
@@ -323,7 +331,7 @@ function eventHandler() {
 		// clickable: true,
 
 	});
-	var galleryTop = new Swiper('.gallery-top', {
+	const galleryTop = new Swiper('.gallery-top', {
 		spaceBetween: 0,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -338,7 +346,45 @@ function eventHandler() {
 
 	});
 
-	var cardSlider = new Swiper('.cardSlider', {
+	$('.slideThumb--js').click(function () {
+		let index = $(this).index();
+		galleryTop.slideTo(index);
+		$(this).addClass('active').siblings().removeClass('active')
+	})
+
+
+	const galleryThumbs2 = new Swiper('.prioritizeS-thumbs-js', {
+		spaceBetween: 8,
+		slidesPerView: 'auto', 
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		watchOverflow: true,
+		loop: true,
+
+		// clickable: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+	const galleryTop2 = new Swiper('.prioritizeS-top-js', {
+		spaceBetween: 0,
+		loop: true,
+
+		navigation: {
+			nextEl: '.sPrioritize .sPrioritize__nextBtn',
+			prevEl: '.sPrioritize .sPrioritize__prevBtn',
+		},
+		thumbs: {
+			swiper: galleryThumbs2
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+
+	});
+	
+
+	const cardSlider = new Swiper('.cardSlider', {
 		slidesPerView: 1,
 		// freeMode: true,
 		// loop: true,
@@ -364,7 +410,7 @@ function eventHandler() {
 	});
 
 
-	var blogSlider = new Swiper('.blogSlider', {
+	const blogSlider = new Swiper('.blogSlider', {
 		slidesPerView: 'auto',
 		spaceBetween: 30,
 		// loop: true,
@@ -389,7 +435,7 @@ function eventHandler() {
 		},
 	});
 
-	var competenceSlider = new Swiper('.competenceSlider-js', {
+	const competenceSlider = new Swiper('.competenceSlider-js', {
 		spaceBetween: 32,
 		slidesPerView: 'auto',
 		// freeMode: true,
@@ -411,22 +457,74 @@ function eventHandler() {
 		},
 	});
 	
-	let modalTable = "#modal-cloud";
 
+	// клонирование значений таблицы в модалку
+	let modalTable = "#modal-cloud";
+	
 	$('[href="#modal-cloud"]').click(function () {
 		let table = $(modalTable + " table");
 		let number = $(this).parents("th").index();
 		table.html(
 			$(this).parents('table').html()
 			)
-		$(modalTable).find('thead').remove()
-		console.log(number);
-	 
+			$(modalTable).find('thead').remove()
+			console.log(number);
 			
-		table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove() 
+			
+			table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove() 
+			
+			// $(modalTable).find('td').not().remove()
+		})
+		// /клонирование значений таблицы в модалку
+		
+		// hide/show text
+	let btnMore = document.querySelector(".sPreview__more--js");
+	if (btnMore) {
+		btnMore.addEventListener('click', (e) => {
+			e.preventDefault();
+			document.querySelector(".sPreview__toggle-block--js").classList.toggle('active');
+		})
+	}
 
-		// $(modalTable).find('td').not().remove()
-	})
+	$('.sPreview__toggle-block--js').moreLines({
+		linecount: 3,                   	// force moreLines after a certain  
+		buttontxtmore: "Подробнее",     	// Add your inner text for button
+		buttontxtless: "Cкрыть",     	// Add your inner text for button
+		animationspeed: 250             	// Type your custom speed animation, by defaul is 'auto' auto = 1
+	});
+	// /hide/show text
+	//custom input file
+	// ;(function (document, window, index){
+	// 	'use strict';
+	// 	var inputs = document.querySelectorAll('.add-file__input');
+	// 	Array.prototype.forEach.call(inputs, function (input) {
+	// 		var label = input.nextElementSibling,
+	// 				labelVal = label.innerHTML;
+
+	// 		input.addEventListener('change', function (e) {
+	// 			var fileName = '';
+	// 			if (this.files && this.files.length > 1){
+	// 				fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace('{count}', this.files.length);
+	// 			}else{
+	// 				fileName = e.target.value.split('\\').pop();
+	// 			}
+
+	// 			if (fileName){
+	// 				label.querySelector('.add-file__text').innerHTML = fileName;
+	// 			}else{
+	// 				label.innerHTML = labelVal;
+	// 			}
+	// 		});
+
+	// 		// Firefox bug fix
+	// 		input.addEventListener('focus', function () {
+	// 			input.classList.add('has-focus');
+	// 		});
+	// 		input.addEventListener('blur', function () {
+	// 			input.classList.remove('has-focus');
+	// 		});
+	// 	});
+	// }(document, window, 0));
 
 };
 if (document.readyState !== 'loading') {

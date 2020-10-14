@@ -1,0 +1,83 @@
+// start .sPrioritize
+.sPrioritize {
+	padding-top: var(--sPB);
+
+	&__wrap {
+		border-radius: $border-radius;
+		border: 1px solid #ebebeb;
+		padding: rem(24);
+	}
+
+	&__titleSm {
+		font-weight: 600;
+		margin-bottom: rem(20);
+	}
+
+	&__sliderCol {
+		position: relative;
+	}
+
+	&__nextBtn, &__prevBtn {
+		outline: none;
+		position: absolute;
+		top: 40%;
+		z-index: 10;
+		border-radius: 50%;
+		background-color: #fff;
+		box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+		width: rem(36px);
+		height: rem(36px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include mt;
+		.icon {
+			font-size: rem(14);
+			color: $gray-700;
+		}
+		&.swiper-button-disabled {
+			transform: scale(0);
+		}
+	}
+
+	&__prevBtn {
+		left: rem(20);
+	}
+
+	&__nextBtn {
+		right: rem(20);
+
+		.icon {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__topSlider {
+		margin-bottom: rem(20);
+	}
+
+	&__thumbSlider {
+		.swiper-slide {
+			width: rem(72px);
+		}
+	}
+
+	.swiper-slide {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPrioritize
