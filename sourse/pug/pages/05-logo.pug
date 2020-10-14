@@ -1,0 +1,89 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sPossibilities/_sPossibilities.pug
+include ../blocks/sHave/_sHave.pug
+include ../blocks/sPreview/_sPreview.pug
+include ../blocks/sSupportTable/_sSupportTable.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sOurWorks/_sOurWorks.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sNumeral/_sNumeral.pug
+include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sFAQ/_sFAQ.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Создание логотипов'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', title)
+		+headerBlockBody().--tarif
+			.container
+				.row
+					.col-xxl-5.col-xsm-7
+						+e.content
+							+b.section-title
+								h1 Создание красивых уникальных логотипов от&nbsp;#[span.text-with-border 14&nbsp;900 рублей]
+							p Разработка качественных логотипов до&nbsp;полного утверждения и&nbsp;с&nbsp;неограниченным количеством правок!
+							br
+							.row 
+								ul.h6.strong.col-auto
+									li С нуля
+								ul.h6.strong.col-auto
+									li Никаких шаблонов
+							+btn-modal('Заказать  логотип ',`<span class="text-primary">Заказать</span>  логотип `)
+					+e.picCol.col-xsm-5.col-xl
+						+pic('head-img-05','','')
+	+sPreview('prev-logo',`Заказать логотип в&nbsp;студии  или создать бесплатно?`)
+		p  Логотип&nbsp;&mdash; это лицо компании и&nbsp;в&nbsp;том, что к&nbsp;его разработке следует подходить основательно, ни&nbsp;у&nbsp;кого не&nbsp;возникает сомнений. Тем не&nbsp;менее, сейчас у&nbsp;наших заказчиков есть выбор между разработкой логотипа в&nbsp;профессиональной студии и&nbsp;его созданием на&nbsp;бесплатном генераторе
+		p Есть мнение, что создание #[strong Интернет-магазина на Битрикс] – это долго и дорого. Немного ниже, на этой странице мы постарались дать развернутый ответ на данный вопрос. Но если вкратце, то действительно, на рынке есть множество предложений по предложений по
+	+sCards-05
+	//- +sCalc-04
+
+	+sOurWorks
+	+sSteps-05
+	+sNumeral('Наши преимущества')
+	+sCompetences
+	+sHave-05
+	
+	//- +sCards-03()
+	//- +sHowOrder-03
+	+sContent()
+		+e.inner--border
+			+e.row.row
+				.col.pb-2
+					h2 Что лучше? Заказать бесплатный, шаблонный  лендинг или создать с&nbsp;нуля?
+					p Выше мы&nbsp;говорили о&nbsp;сайтах-визитках, а&nbsp;точнее, об&nbsp;их&nbsp;недостатках и&nbsp;лишь об&nbsp;одном преимуществе лендинга. Как видно даже из&nbsp;небольшого количества информации, описанной выше, так называемый &laquo;сайт-визитка&raquo; полностью себя изжил. Поэтому мы&nbsp;предлагаем больше не&nbsp;возвращаться в&nbsp;утопию и&nbsp;хотим рассказать об&nbsp;основных преимуществах лендингов и&nbsp;о&nbsp;том, для каких целей данный тип сайта подойдет лучше всего. 
+					p Итак, сегодня у&nbsp;желающих заказать лендинг, есть выбор между: заказать в&nbsp;веб-студии с&nbsp;нуля, купить готовый шаблон и&nbsp;создать на&nbsp;бесплатном конструкторе. Попытаемся разобраться в&nbsp;преимуществах и&nbsp;недостатках.
+				.col-lg-5.text-center.pb-2
+					+pic("line-1")
+			+e.row.row.flex-lg-row-reverse
+				.col.pb-2
+					h2 Бесплатные конструкторы лендингов
+					p Начнем с бесплатных конструкторов. 
+					.div-with-icon
+						img(src="img/svg/check-circler.svg", alt="")
+						| Единственный плюс в подобных ресурсах кроется в слове «бесплатно», однако мы верим в то, что сейчас уже все понимают то, что такое «бесплатно». 
+					.div-with-icon.mb-3
+						img(src="img/svg/times-circle.svg", alt="")
+						| Теперь о минусах. К сожалению для любителей «бесплатного», их гораздо больше.
+					p В&nbsp;первую очередь, вы&nbsp;должны четко понимать, что лендинг, который вы&nbsp;создадите на&nbsp;бесплатном конструкторе никогда (Внимание! Никогда!) не&nbsp;будет принадлежать вам. Владельцем вашего ресурса изначально и&nbsp;навсегда останется разработчик конструктора бесплатных лендингов, как&nbsp;бы красиво вас не&nbsp;заманивали.  
+				.col-lg-5.text-center.pb-2
+					+pic("line-2")
+		
+	+sFAQ()
+	+footer()
+
+
+	
