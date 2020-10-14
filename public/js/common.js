@@ -66,10 +66,9 @@ var JSCCommon = {
 						}
 					}
 
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
+					if (data) {}
+
+					setValue(data.title, '.form-wrap__title--js');
 				});
 			});
 		}
@@ -264,7 +263,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'content.png';
+	screenName = '20.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -342,7 +341,12 @@ function eventHandler() {
 			loadPrevNext: true
 		}
 	});
-	var galleryThumbs = new Swiper('.prioritizeS-thumbs-js', {
+	$('.slideThumb--js').click(function () {
+		var index = $(this).index();
+		galleryTop.slideTo(index);
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	var galleryThumbs2 = new Swiper('.prioritizeS-thumbs-js', {
 		spaceBetween: 8,
 		slidesPerView: 'auto',
 		watchSlidesVisibility: true,
@@ -354,7 +358,7 @@ function eventHandler() {
 			loadPrevNext: true
 		}
 	});
-	var galleryTop = new Swiper('.prioritizeS-top-js', {
+	var galleryTop2 = new Swiper('.prioritizeS-top-js', {
 		spaceBetween: 0,
 		loop: true,
 		navigation: {
@@ -362,7 +366,7 @@ function eventHandler() {
 			prevEl: '.sPrioritize .sPrioritize__prevBtn'
 		},
 		thumbs: {
-			swiper: galleryThumbs
+			swiper: galleryThumbs2
 		},
 		lazy: {
 			loadPrevNext: true
@@ -435,7 +439,8 @@ function eventHandler() {
 			nextEl: '.sCompetences .sCompetences__next',
 			prevEl: '.sCompetences .sCompetences__prev'
 		}
-	});
+	}); // клонирование значений таблицы в модалку
+
 	var modalTable = "#modal-cloud";
 	$('[href="#modal-cloud"]').click(function () {
 		var table = $(modalTable + " table");
@@ -444,7 +449,29 @@ function eventHandler() {
 		$(modalTable).find('thead').remove();
 		console.log(number);
 		table.find('td').not(':nth-child(' + (number + 1) + ')').not(':nth-child(1)').remove(); // $(modalTable).find('td').not().remove()
-	}); //custom input file
+	}); // /клонирование значений таблицы в модалку
+	// hide/show text
+
+	var btnMore = document.querySelector(".sPreview__more--js");
+
+	if (btnMore) {
+		btnMore.addEventListener('click', function (e) {
+			e.preventDefault();
+			document.querySelector(".sPreview__toggle-block--js").classList.toggle('active');
+		});
+	}
+
+	$('.sPreview__toggle-block--js').moreLines({
+		linecount: 3,
+		// force moreLines after a certain  
+		buttontxtmore: "Подробнее",
+		// Add your inner text for button
+		buttontxtless: "Cкрыть",
+		// Add your inner text for button
+		animationspeed: 250 // Type your custom speed animation, by defaul is 'auto' auto = 1
+
+	}); // /hide/show text
+	//custom input file
 	// ;(function (document, window, index){
 	// 	'use strict';
 	// 	var inputs = document.querySelectorAll('.add-file__input');

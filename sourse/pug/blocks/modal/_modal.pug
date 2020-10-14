@@ -8,40 +8,56 @@ mixin modal()
 
 	// #modal-cloud
 	
-	+b.modal-win(id="modal-logo" class=" " style="display: none" )
+	+b.modal-win(id="modal-call" class=" " style="display: none" )
 		+form-wrap
-			+e.title.form-data.h3 #[span.text-primary Заказать] разработку логотипа
+			+e.title--js.form-data.h3
 			p.mb-45 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
 			+input("Как Вас зовут?", "text", "Как Вас зовут?")  
 			+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
-			+input("info@webpult.pro", "email", "E-mail *")(required)
+			+input("info@webpult.pro", "email", `E-mail <span class="text-primary">*</span>`)(required)
 			label
 				span(class="form-wrap__title") Ваш комментарий
-				textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
+				textarea.form-control( placeholder="Ваш комментарий", cols="40", rows="10")
 			//- label(for="commentLogo") Ваш комментарий
 			//- textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
 			+polite()
 			+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
 			//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
-	// #modal-logo
+	//- // #modal-logo
+	//- +b.modal-win(id="modal-logo" class=" " style="display: none" )
+	//- 	+form-wrap
+	//- 		+e.title.form-data.h3 #[span.text-primary Заказать] разработку логотипа
+	//- 		p.mb-45 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+	//- 		+input("Как Вас зовут?", "text", "Как Вас зовут?")  
+	//- 		+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
+	//- 		+input("info@webpult.pro", "email", "E-mail *")(required)
+	//- 		label
+	//- 			span(class="form-wrap__title") Ваш комментарий
+	//- 			textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
+	//- 		//- label(for="commentLogo") Ваш комментарий
+	//- 		//- textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
+	//- 		+polite()
+	//- 		+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
+	//- 		//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
+	//- // #modal-logo
 
 
-	+b.modal-win(id="modal-onlineStore" class=" " style="display: none" )
-		+form-wrap
-			+e.title.form-data.h3 #[span.text-primary Заказать] разработку интернет-магазина
-			p.mb-40 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
-			+input("Как Вас зовут?", "text", "Как Вас зовут?")  
-			+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
-			+input("info@webpult.pro", "email", "E-mail *")(required)
-			label
-				span(class="form-wrap__title") Ваш комментарий
-				textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
-			//- label(for="commentLogo") Ваш комментарий
-			//- textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
-			+polite()
-			+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
-			//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
-	// #modal-onlineStore
+	//- +b.modal-win(id="modal-onlineStore" class=" " style="display: none" )
+	//- 	+form-wrap
+	//- 		+e.title.form-data.h3 #[span.text-primary Заказать] разработку интернет-магазина
+	//- 		p.mb-40 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+	//- 		+input("Как Вас зовут?", "text", "Как Вас зовут?")  
+	//- 		+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
+	//- 		+input("info@webpult.pro", "email", "E-mail *")(required)
+	//- 		label
+	//- 			span(class="form-wrap__title") Ваш комментарий
+	//- 			textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
+	//- 		//- label(for="commentLogo") Ваш комментарий
+	//- 		//- textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
+	//- 		+polite()
+	//- 		+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
+	//- 		//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
+	//- // #modal-onlineStore
 
 
 	+b.modal-win(id="modal-vacancy" class=" " style="display: none" )

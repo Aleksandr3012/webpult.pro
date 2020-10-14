@@ -310,7 +310,7 @@
 			</div>
 		</div>
 		<!-- #modal-cloud-->
-		<div class="modal-win" id="modal-logo" style="display: none">
+		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
 					<input type="hidden" name="example-input-field"/>
@@ -319,7 +319,7 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку логотипа
+					<div class="form-wrap__title form-wrap__title--js form-data h3">
 					</div>
 					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
 					<div class="form-wrap__input-wrap form-group">
@@ -333,12 +333,12 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
+						<label><span class="form-wrap__title">E-mail <span class="text-primary">*</span></span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
 					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" name="commentLogo" id="commentLogo" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
+						<textarea class="form-control" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
 					</label>
 					<div class="form-wrap__polite margin">
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
@@ -349,47 +349,6 @@
 				</form>
 			</div>
 		</div>
-		<!-- #modal-logo-->
-		<div class="modal-win" id="modal-onlineStore" style="display: none">
-			<div class="form-wrap">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title form-data h3"><span class="text-primary">Заказать</span> разработку интернет-магазина
-					</div>
-					<p class="mb-40">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Как Вас зовут?</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?" name="text"/> 
-						</label> 
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Номер телефона</span><input class="form-wrap__input form-control" type="tel" placeholder="XXX-XXX-XX-XX" name="tel"/>
-						</label>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">E-mail *</span><input class="form-wrap__input form-control" type="email" placeholder="info@webpult.pro" name="email" required="required"/>
-						</label>
-					</div>
-					<!-- +e.input-wrap-->
-					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" name="commentLogo" id="commentLogo" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
-					</label>
-					<div class="form-wrap__polite margin">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
-						</label>
-					</div>
-					<button class="form-wrap__btn btn btn-primary btn-primary-shadow-sm" type="submit">Оставить заявку
-					</button>
-				</form>
-			</div>
-		</div>
-		<!-- #modal-onlineStore-->
 		<div class="modal-win" id="modal-vacancy" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -448,5 +407,6 @@
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
+		<script src="js/moreLine.js"></script>
 	</body>
 </html>
