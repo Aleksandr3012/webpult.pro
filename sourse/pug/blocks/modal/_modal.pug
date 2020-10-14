@@ -15,11 +15,7 @@ mixin modal()
 			+input("Как Вас зовут?", "text", "Как Вас зовут?")  
 			+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
 			+input("info@webpult.pro", "email", `E-mail <span class="text-primary">*</span>`)(required)
-			label
-				span(class="form-wrap__title") Ваш комментарий
-				textarea.form-control( placeholder="Ваш комментарий", cols="40", rows="10")
-			//- label(for="commentLogo") Ваш комментарий
-			//- textarea.form-control(name="commentLogo", id="commentLogo", placeholder="Ваш комментарий", cols="40", rows="10")
+			+input("Ваш комментарий", "textarea", "Ваш комментарий") 
 			+polite()
 			+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
 			//- +e.BUTTON.btn.btn(type="submit") Оставить заявку

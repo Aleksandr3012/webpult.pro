@@ -2,6 +2,9 @@ mixin item-circle(data)
 	+b.item-circle
 		+e.count
 		+e.text!= data.p
+			if data.alert
+				span(data-alert= data.alert)
+					+icon("question")
 	// /.item-circle
 
 mixin sHowOrder(data)
@@ -32,4 +35,34 @@ mixin sHowOrder(data)
 			+b.content-block
 				p Проделанная работа будет подробно расписана в&nbsp;отчете проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря отчету, наши заказчики видят за&nbsp;что платят.
 				a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  тех. поддержку ') Заказать тех. поддержку
+	// end sHowOrder
+mixin sHowOrder-02(data)
+	// start sHowOrder
+	+b.SECTION.sHowOrder.section#sHowOrder&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Схема оплаты
+				p Для удобства наших заказчиков мы&nbsp;разработали удобную схему оплаты, которая исключает абсолютно все возможные риски для обеих сторон. Оплату мы&nbsp;&laquo;разбиваем&raquo; на&nbsp;этапы выполняемых работ:
+				
+			+b.row-circle-wrap
+				+b.row-circle.row
+					+b.col-circle.col-lg-3.col-xsm-6
+						+item-circle({  
+						p:`Техническое задание, включая прототипы и&nbsp;дизайн-макеты`, 
+						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
+					+b.col-circle.col-lg-3.col-xsm-6
+						+item-circle({  
+						p:`Верстка макетов`, 
+						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`	})
+					+b.col-circle.col-lg-3.col-xsm-6
+						+item-circle({ 
+						p:`Программирование`,
+						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.` })
+					+b.col-circle.col-lg-3.col-xsm-6
+						+item-circle({ 
+						p:`Тестирование`,
+						alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
+			+b.content-block
+				p Каждый из&nbsp;этапов будет подробно расписан в&nbsp;смете расчета проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря смете, наши заказчики видят за&nbsp;что платят.
+				a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  интернет-магазин') Заказать интернет-магазин
 	// end sHowOrder

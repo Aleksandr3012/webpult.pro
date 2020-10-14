@@ -21,6 +21,7 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body>
@@ -313,12 +314,6 @@
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="form-wrap__title form-wrap__title--js form-data h3">
 					</div>
 					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
@@ -337,11 +332,16 @@
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
-					<label><span class="form-wrap__title">Ваш комментарий</span>
-						<textarea class="form-control" placeholder="Ваш комментарий" cols="40" rows="10"></textarea>
-					</label>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Ваш комментарий</span><textarea class="form-wrap__input form-control" placeholder="Ваш комментарий" name="textarea"></textarea> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
 					<div class="form-wrap__polite margin">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab">
+							<svg class="icon icon-check_wp ">
+								<use xlink:href="img/svg/sprite.svg#check_wp"></use>
+							</svg></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
 						</label>
 					</div>
 					<button class="form-wrap__btn btn btn-primary btn-primary-shadow-sm" type="submit">Оставить заявку
@@ -352,12 +352,6 @@
 		<div class="modal-win" id="modal-vacancy" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="form-wrap__title form-data h3"><span class="text-primary">Откликнуться</span> на&nbsp;вакансию
 					</div>
 					<p class="mb-45">Оставьте заявку и менеджер свяжется с Вами в ближайшее время</p>
@@ -387,7 +381,10 @@
 						</label>
 					</div>
 					<div class="form-wrap__polite margin">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab">
+							<svg class="icon icon-check_wp ">
+								<use xlink:href="img/svg/sprite.svg#check_wp"></use>
+							</svg></span><small class="custom-input__text">Ставя отметку, я&nbsp;даю свое согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;законом &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006 и&nbsp; <a class="text-primary" href="#">принимаю условия.</a></small>
 						</label>
 					</div>
 					<button class="form-wrap__btn btn btn-primary btn-primary-shadow-sm" type="submit">Оставить заявку
@@ -399,6 +396,7 @@
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->

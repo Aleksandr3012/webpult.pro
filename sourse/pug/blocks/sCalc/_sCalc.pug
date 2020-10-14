@@ -1,0 +1,75 @@
+mixin itemDrop(t,count)
+	+b.drop-accardion-block
+		+e.title.drop-accardion-js
+			+icon("plus-drop")
+			strong= t
+			if count
+				span= count
+		+e.body.drop-accardion-toggle-js
+			block
+mixin sCalc(data)
+	// start sCalc
+	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Соберите свой интернет-магазин
+				
+			.row
+				.col-xl-8
+					.panel-white.mb-4
+						mixin group()
+							.colum-2
+								+in-c()(checked)
+									strong Адаптивная верстка
+									|  под все типы устройств
+								+in-c()(checked disabled)
+									strong Превью разделов каталога. 
+									| Плитки с фото и описанием. Вывод нужных разделов отмечается в админпанели
+
+								+in-c
+									strong Умный поиск 
+									| (с выводом подходящих товаров по совпадению букв/слов/цифр) со страницей результата поиска
+
+								+in-c
+									strong Блок новостей 
+									| (выводятся крайние добавленные)
+
+								+in-c
+									strong Стандартный состав карточки товара: 
+									| фотогалерея, характеристики (текстом/цифрами), название, краткое описание, полное описание
+
+								+in-c
+									strong Слайдер на главной 
+								+in-c
+									strong Анонсирование товаров 
+									| на главной странице по двум признакам: Хиты продаж, Новинки 
+								+in-c
+									strong Превью карточек с табами 
+									| (Хит, Новинка, Акция, Распродажа)
+
+								+in-c
+									strong Блок соцсетей 
+									| (переход в группу)
+
+								+in-c
+									strong Торговые предложения 
+									| (цена меняется от размера, цвета, и т.д.)
+						+itemDrop('Главная страница  ','(10)')
+							+group()
+									
+						+itemDrop('Каталог  ','(4)')
+						+itemDrop('Каталог  ','(19)')
+						+itemDrop('Карточка товара  	','(19)')
+						+itemDrop('Корзина 	',' (1)')
+						+itemDrop('Оформление заказа  ','(10)')
+						+itemDrop('Личный кабинет ',' (5)')
+						+itemDrop('Лицензия','')
+				.col
+					+e.aside.panel-white
+						+e.title Итоговая стоимость Интернет-магазина 
+						.small.mb-5 С учетом выбранных модулей
+						+e.title.mb-5
+							span.text-with-border 250 000 рублей
+						+btn-modal('Заказать интернет-магазин',`<span class="text-primary">Заказать</span> интернет-магазин`).btn-block
+
+	// end sCalc

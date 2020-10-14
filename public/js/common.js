@@ -66,9 +66,9 @@ var JSCCommon = {
 						}
 					}
 
-					if (data) {}
-
-					setValue(data.title, '.form-wrap__title--js');
+					if (data) {
+						setValue(data.title, '.form-wrap__title--js');
+					}
 				});
 			});
 		}
@@ -259,11 +259,17 @@ function eventHandler() {
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
-	JSCCommon.CustomInputFile(); // добавляет подложку для pixel perfect
+	JSCCommon.CustomInputFile(); // modal window
+
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated'
+	});
+	wow.init(); // добавляет подложку для pixel perfect
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '20.jpg';
+	screenName = '02.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -311,7 +317,7 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
-	//header accardion 
+	//  accardion 
 
 	$('.drop-accardion-js').click(function () {
 		$(this).parent().toggleClass('active');

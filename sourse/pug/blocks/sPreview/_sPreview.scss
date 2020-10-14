@@ -78,6 +78,9 @@
 			@include media-breakpoint-up(md){
 
 				picture{
+					min-height: rem(280);
+					line-height: rem(280);
+					vertical-align: middle;
 					width: rem(414);
 				}
 			}
