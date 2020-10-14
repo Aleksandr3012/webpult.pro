@@ -436,13 +436,17 @@ function eventHandler() {
 	});
 
 	const competenceSlider = new Swiper('.competenceSlider-js', {
-		spaceBetween: 32,
 		slidesPerView: 'auto',
 		// freeMode: true,
+		spaceBetween: 10,
 		loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
+			440: {
+				spaceBetween: 32,
+
+			},
 			992: {
 				spaceBetween: 63,
 				slidesPerView: 4
