@@ -15,6 +15,12 @@
 
 	&__sliderCol {
 		position: relative;
+		&--mb-25{
+			@include media-breakpoint-up(xl){
+				margin-bottom: 0;
+			}
+			margin-bottom: rem(25);
+		}
 	}
 
 	&__nextBtn, &__prevBtn {
@@ -73,7 +79,42 @@
 	}
 
 
+	&__text-wrap{
+		border-radius: $border-radius;
+		border: 1px solid #ebebeb;
+		@include media-breakpoint-up(sm){
+			padding: rem(39) rem(32) rem(32) rem(24);
+		}
+		padding: rem(29) rem(20) rem(25);
+	}
 
+	&__title{
+		font-weight: 600;
+		margin-bottom: rem(20);
+		line-height: (24 / 15);
+	}
+
+	&__text{
+		line-height: (24 / 15);
+	}
+
+	&__btn-wrap{
+		border-radius: $border-radius;
+		border: 1px solid #ebebeb;
+		display: flex;
+		justify-content: center;
+		@include media-breakpoint-up(sm){
+			padding-top: rem(40);
+			padding-bottom: rem(40);
+		}
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+		
+	}
+
+	&--25page{
+		padding-bottom: rem(39);
+	}
 
 
 	@include media-breakpoint-up(sm) {}
