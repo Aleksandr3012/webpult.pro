@@ -132,6 +132,37 @@
 		padding-bottom: rem(30);
 	}
 
+	&__error-item{
+		padding-top: 51px;
+		.row{
+			align-items: center;
+		}
+	}
+	
+
+	&--404page{
+		// padding-top: 51px;
+		padding-bottom: rem(41) !important;
+
+		h1{
+			font-size: rem(81);
+			font-weight: 600;
+		}
+		p{
+			font-size: $small;
+			width: rem(318);
+			a{
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&--404page .section-title{
+		padding-top: rem(91);
+	}
+
 
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) {}
