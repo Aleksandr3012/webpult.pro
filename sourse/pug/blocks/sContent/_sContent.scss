@@ -34,11 +34,20 @@
 
 	.section-title {
 		padding-bottom: calc(var(--sTPB) * 8.5);
+		&--pb-25{
+			padding-bottom: 25px;
+		}
 	}
 
 	&__row{
 		padding-bottom: rem(30);
 	}
+
+	&--23AboutUs{
+		padding-top: 10px;
+		padding-bottom: 58px;
+	}
+
 
 
 	@include media-breakpoint-up(xs) {}

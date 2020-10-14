@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sNumeral/_sNumeral.pug
+include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sMission/_sMission.pug
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'О нас'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', 'О нас')
+	+sContent()
+		+b.section-title--pb-25
+			h1 О&nbsp;компании Вебпульт
+		p Создаем только авторский дизайн премиального качества и&nbsp;никогда не&nbsp;ограничиваем наших клиентов в&nbsp;количестве пожеланий и&nbsp;правок к&nbsp;макетам! Работаем до&nbsp;полного принятия работы;
+		p Предоставляем пожизненную гарантию на&nbsp;все сайты с&nbsp;нуля&nbsp;&mdash; все свои ошибки, на&nbsp;протяжении всего срока жизни сайта, мы&nbsp;исправим бесплатно;
+		p Являемся золотым сертифицированным партнером &laquo;1С-Битрикс&raquo;;
+		p Никогда не&nbsp;срываем указанные сроки&nbsp;&mdash; все специалисты у&nbsp;нас штатные и&nbsp;взаимозаменяемые; 
+		p Не&nbsp;берем деньги за&nbsp;&laquo;воздух&raquo;, не&nbsp;&laquo;раздуваем&raquo; часы! Благодаря предоставлению смет на&nbsp;работы для каждого проекта, наши клиенты всегда знают за&nbsp;что они платят.
+
+	+sMission()
+	+sNumeral()
+	+sCompetences()
+	+sContent-noID()
+		h2.fw-600 О нас
+		p Мы&nbsp;&mdash; это не&nbsp;веб-студия, не&nbsp;Интернет-агентство и&nbsp;не&nbsp;рекламное агентство.
+		p Мы&nbsp;&mdash; это Компания. Компания молодых, целеустремленных людей, профессионалов своего дела.
+		p Мы&nbsp;работаем не&nbsp;для того чтобы &laquo;работать&raquo;,&nbsp;&mdash; мы&nbsp;получаем огромное удовольствие видя результат.
+		p Мы&nbsp;знаем о&nbsp;том, что добиться результатов в&nbsp;одиночку&nbsp;&mdash; крайне сложно. Поэтому над каждым проектом мы&nbsp;всегда работаем командой.
+		p Мы&nbsp;никогда не&nbsp;ругаемся между собой&nbsp;&mdash; мы&nbsp;спорим, а&nbsp;как известно,&nbsp;&mdash; &laquo;в&nbsp;споре рождается истина&raquo;.
+		p Мы, как и&nbsp;все люди, совершаем ошибки. Но&nbsp;с&nbsp;удовольствием их&nbsp;признаём, с&nbsp;удовольствием исправляем&nbsp;и, самое главное,&nbsp;&mdash; мы&nbsp;на&nbsp;них учимся!
+		p Мы&nbsp;никогда не&nbsp;перекладываем вину за&nbsp;допущенные ошибки друг на&nbsp;друга&nbsp;&mdash; мы&nbsp;всегда решаем проблемы сообща!
+
+	+footer()
+	
