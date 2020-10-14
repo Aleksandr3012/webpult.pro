@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sSolution/_sSolution.pug
+include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= '404'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+		+headerBlockBody().--404page
+			.container
+				.row.align-items-center
+					+e.picCol.col-5.col-xl
+						+pic('404','','')
+					.col-xxl-6.col-7
+							+b.section-title
+								h1 404
+								p Похоже этой страницы не существует.<br> Но не отчаивайтесь, у нас есть множество других замечательных страниц на которые можно перейти, например, 
+									a.text-primary(href="#") на главную
+	+sCards-slider.sCards-slider--404page()
+	+footer()
+
+
+	

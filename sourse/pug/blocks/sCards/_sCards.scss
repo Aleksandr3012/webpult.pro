@@ -161,3 +161,10 @@
 		}
 	}
 }
+
+.sCards-slider--404page{
+	@include media-breakpoint-up(sm){
+		padding-top: rem(89);
+	}
+	padding-top: rem(35);
+}
