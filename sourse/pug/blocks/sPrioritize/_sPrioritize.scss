@@ -28,7 +28,7 @@
 				margin-bottom: rem(25);
 			}
 		}
-		
+
 	}
 	&__nextBtn, &__prevBtn {
 		outline: none;
@@ -72,6 +72,12 @@
 	&__thumbSlider {
 		.swiper-slide {
 			width: rem(72px);
+			opacity: .6;
+			@include mt;
+		}
+
+		.swiper-slide-thumb-active {
+			opacity: 1;
 		}
 	}
 
@@ -186,8 +192,6 @@
 
 	.form-wrap {
 		padding-top: rem(12);
-		&__title {
-		}
 
 		&__input-wrap {
 			margin-bottom: rem(38);
