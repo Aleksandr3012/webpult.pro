@@ -1,4 +1,4 @@
-mixin sOurWorksItem(i,t, s)
+mixin sOurWorksItem(i,t, s,pr)
 	+e.col&attributes(attributes)
 		if s
 			+b.sOurWorks-item
@@ -6,28 +6,40 @@ mixin sOurWorksItem(i,t, s)
 					picture
 						+img.swiper-lazy.res-i(src="#" data-src=`sOurWorks-img-${i}.png`, alt="")
 				.h6!= t
+		else if pr
+			+b.sOurWorks-item
+				+e.DIV.img-wrap
+					+pic(`sOurWorks-img-${i}.png`,'','')
+				.h5!= t
+				+e.price.text-with-border= pr
+				+e.link.btn.btn-primary.scroll-link(href="#") Подробнее
 		else
 			+b.sOurWorks-item(href="#")
 				+e.DIV.img-wrap
 					+pic(`sOurWorks-img-${i}.png`,'','')
 				.h6!= t
 
-mixin sOurWorksBody(t, s)
+mixin sOurWorksBody(t, s,title)
 	// start sOurWorks
-	+b.SECTION.sOurWorks.section#sOurWorks
+	+b.SECTION.sOurWorks.section#sOurWorks&attributes(attributes)
 		.container
-			+b.section-title
-				.row
-					.col
-						h2!= t
-					.col-xsm-auto
-						if !s
-							a.tdu(href="#") Перейти в портфолио  
-								| 
-								span 111
-						else
-							.control-wrap
-								+arrow()
+			if title
+				+b.section-title--sm.text-center
+					h2= t
+					p Битрикс24 имеет очень много возможностей, которые позволяют автоматизировать различные бизнес-процессы в&nbsp;любой сфере бизнеса. Поскольку каждая компания, как правило, выстраивает свои бизнес-процессы в&nbsp;индивидуальном порядке, идеальное внедрение Битрикс24 возможно только после выявления задач, нужд и&nbsp;&laquo;болей&raquo; заказчика, которые может решить система.
+			else
+				+b.section-title
+					.row
+						.col
+							h2!= t
+						.col-xsm-auto
+							if !s
+								a.tdu(href="#") Перейти в портфолио  
+									| 
+									span 111
+							else
+								.control-wrap
+									+arrow()
 			if block
 				block
 			else
@@ -54,3 +66,15 @@ mixin sOurWorks-06(data)
 				+sOurWorksItem('g-4',`ООО &laquo;ИТЕЛДОР&raquo;&nbsp;&mdash; российский производитель, поставщик и&nbsp;интегратор IT-решений в&nbsp;сфере строительства и&nbsp;эксплуатации автомобильных дорог.`, s)(class="swiper-slide")
 
 				+sOurWorksItem('g-4',`ООО &laquo;ИТЕЛДОР&raquo;&nbsp;&mdash; российский производитель, поставщик и&nbsp;интегратор IT-решений в&nbsp;сфере строительства и&nbsp;эксплуатации автомобильных дорог.`, s)(class="swiper-slide")
+
+mixin sOurWorks-12(data)
+	+sOurWorksBody("Стоимость внедрения Битрикс24",'','title')(class="sOurWorks-white")
+		+e.roww.row
+			.col-6.col-lg-3
+				+sOurWorksItem('g-1',`Пакет «Начальный»`, '','от 20 000 рублей')
+			.col-6.col-lg-3
+				+sOurWorksItem('g-2',`Пакет «Оптимальный»`, '','от 42 000 рублей')
+			.col-6.col-lg-3
+				+sOurWorksItem('g-3',`Создание отдела продаж`, '','от 20 000 рублей')
+			.col-6.col-lg-3
+				+sOurWorksItem('g-4',`Автоматизация и повторные продажи`, '','от 20 000 рублей')

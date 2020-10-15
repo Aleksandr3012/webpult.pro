@@ -80,6 +80,22 @@
 		padding-bottom: rem(60);
 	}
 
+	&__roww {
+		@include media-breakpoint-up(xxl) {
+			@include roww(100px);
+		}
+	}
+
+	.solutionsMenu { 
+		&.sticky {
+			background-color: #fff;
+			z-index: 20;
+			padding-top: rem(15);
+			padding-bottom: rem(15);
+		}
+	
+	}
+
 
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) { }
