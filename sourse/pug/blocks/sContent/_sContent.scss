@@ -94,11 +94,11 @@
 		display: block;
 		> * {
 			display: inline-block;
+			width: 100%;
 			vertical-align: top;
 			// width: 100%;
 		}
 	}
-
 }
 .colum-3 {
 	@include media-breakpoint-up(xl) {

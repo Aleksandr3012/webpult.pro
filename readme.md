@@ -10,6 +10,7 @@
 1. <https://Aleksandr3012.github.io/webpult.pro/public/09-ready-madeSolutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/08-installment-plan.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/10-contacts.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/11-corporate-portal.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/13-possibilities.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/14-vacancies.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/15-content.html>
