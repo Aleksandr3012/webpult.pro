@@ -18,7 +18,15 @@ mixin cardItem(title,text,btn,img,sl)
 		.row
 			+e.textCol.col-6
 				+e.title!= title
-				p!= text
+				if text
+					p!= text
+				else
+					p Вариантов: #[strong 3]
+						br
+						| Правок: #[strong 2]
+						br
+						| Правок в списке: #[strong неограничено]
+
 				+e.btnWrap
 					if block
 						block
@@ -99,3 +107,17 @@ mixin sCards-03(data)
 				.col-lg-6
 					+cardItem('Индивидуальный рассчет Вашего лендинга','Заказажите индивидуальный рассчет <br> проекта ','Заказать','cardImg-land-2')(class="cardItem--lg")
 						+btn-modal('Заказать ',`<span class="text-primary">Заказать</span> Landing page `)
+mixin sCards-05(data)
+	// start sCards
+	+b.SECTION.sCards.section&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сколько стоит разработка уникального логотипа?
+				p Указанная выше цена на&nbsp;создание логотипа&nbsp;&mdash; актуальна, фиксирована и&nbsp;прозрачна. Мы&nbsp;гарантируем, что стоимость на&nbsp;выбранное пакетное предложение не&nbsp;изменится ни&nbsp;в&nbsp;коем случае. В&nbsp;результате нашей работы, вы&nbsp;получите красивый, уникальный и&nbsp;качественный логотип для своей компании.
+			.row
+				.col-lg-6
+					+cardItem(`Создание логотипа за&nbsp;14&nbsp;900 рублей`,'','Заказать','cardImg-logo-1')(class="cardItem--lg")
+						+btn-modal('Заказать ',`<span class="text-primary">Заказать</span> логотип`)
+				.col-lg-6
+					+cardItem(`Создание логотипа за&nbsp;19&nbsp;900 рублей`,'','Заказать','cardImg-logo-2')(class="cardItem--lg")
+						+btn-modal('Заказать ',`<span class="text-primary">Заказать</span> логотип`)

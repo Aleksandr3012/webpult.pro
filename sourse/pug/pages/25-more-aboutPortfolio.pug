@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sSolution/_sSolution.pug
+include ../blocks/sPrioritize/_sPrioritize.pug
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'Готовые решения'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', 'Портфолио','Разработка логотипа и фирменного стиля')
+	+sPrioritize-25page()
+	+sContent().sContent--25moreAP
+		+e.arrows-wrap
+			+e.back(href="#")
+				+icon('arrow-l')
+				| Передыдущий проект
+			+e.next(href="#")
+				| Следующий проект
+				+icon('arrow-r')
+	+footer()
+
+
+	

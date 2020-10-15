@@ -4,6 +4,7 @@
 1. <https://Aleksandr3012.github.io/webpult.pro/public/02-im.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/03-land.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/04.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/05-logo.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/07-complete-solutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/09-ready-madeSolutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/10-contacts.html>
@@ -16,3 +17,5 @@
 1. <https://Aleksandr3012.github.io/webpult.pro/public/20-tp.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/21-archive.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/22-page-404.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/23-about-us.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/25-more-aboutPortfolio.html>
