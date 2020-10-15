@@ -358,7 +358,7 @@ function eventHandler() {
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		watchOverflow: true,
-		loop: true,
+		// loop: true,
 		// clickable: true,
 		lazy: {
 			loadPrevNext: true
@@ -366,7 +366,7 @@ function eventHandler() {
 	});
 	var galleryTop2 = new Swiper('.prioritizeS-top-js', {
 		spaceBetween: 0,
-		loop: true,
+		// loop: true,
 		navigation: {
 			nextEl: '.sPrioritize .sPrioritize__nextBtn',
 			prevEl: '.sPrioritize .sPrioritize__prevBtn'
@@ -447,6 +447,28 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sCompetences .sCompetences__next',
 			prevEl: '.sCompetences .sCompetences__prev'
+		}
+	});
+	var ourWorksSlider = new Swiper('.sOurWorks__slider--js', {
+		slidesPerView: 1,
+		// freeMode: true,
+		// loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			992: {
+				spaceBetween: 30,
+				slidesPerView: 4 // noSwiping: false,
+
+			}
+		},
+		lazy: {
+			loadPrevNext: true
+		},
+		navigation: {
+			nextEl: '.sOurWorks .swiper-button-next',
+			prevEl: '.sOurWorks .swiper-button-prev',
+			hiddenClass: 'swiper-button-hidden'
 		}
 	}); // клонирование значений таблицы в модалку
 

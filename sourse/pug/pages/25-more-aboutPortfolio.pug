@@ -23,10 +23,15 @@ block pagecontent
 		+e.arrows-wrap
 			+e.back(href="#")
 				+icon('arrow-l')
-				| Передыдущий проект
+				| Предыдущий 
+				| 
+				span.d-none.d-sm-inline 
+					| проект
 			+e.next(href="#")
-				| Следующий проект
-				+icon('arrow-r')
+				| Следующий 
+				| 
+				span.d-none.d-sm-inline проект
+				+icon('arrow-l')
 	+footer()
 
 

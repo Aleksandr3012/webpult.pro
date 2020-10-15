@@ -314,10 +314,9 @@ input::-webkit-inner-spin-button {
 	z-index: 300;
 	outline: none !important;
 	// margin-bottom: 0;
-	background-image: none;
-	margin: 0;
+	background-image: none; 
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1); 
+box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 	@include mt;
 
 	&:hover {
@@ -340,6 +339,9 @@ input::-webkit-inner-spin-button {
 	// --swiperArrowPosition: -15px; 
 	&-next {
 		right: var(--swiperArrowPosition);
+		.icon {
+			transform: rotate(180deg);
+		}
 	}
 
 	&-prev {
@@ -724,7 +726,7 @@ table {
 		.text-with-border{
 			position: relative; 
 			z-index: 2;
-
+			display: inline-block;
 			&::before {
 				content: '';
 				position: absolute;

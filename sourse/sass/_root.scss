@@ -11,10 +11,10 @@
 	--sPB: #{rem(60 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
+		--swiperArrowSize: #{rem(36)};
 		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
+		// --swiperBorderColorDef: var(--bs-primary);
+		--swiperColorDef: $gray-700;
 		--swiperBgDef: #ffffff;
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
