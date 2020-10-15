@@ -18,9 +18,9 @@ mixin topLine()
 						+e.basket(href="#")
 							+icon('shopping-cart')
 							+e.quantity 0
-						+e.btn.btn.btn-dark.link-modal(href="#modal-onlineStore")
+						+e.btn.btn.btn-dark.link-modal(href="#modal-call" data-title=`<span class="text-primary">Обратная</span> связь`)
 							span.d-none.d-md-inline Нужна консультация?
-					+e.btn.d-md-none.link-modal(href="#modal-onlineStore")
+					+e.btn.d-md-none.link-modal(href="#modal-call" data-title=`<span class="text-primary">Обратная</span> связь`)
 						+icon('tel')
 
 	// end topLine

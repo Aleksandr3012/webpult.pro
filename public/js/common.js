@@ -269,7 +269,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '02.jpg';
+	screenName = '17.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -358,7 +358,7 @@ function eventHandler() {
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		watchOverflow: true,
-		loop: true,
+		// loop: true,
 		// clickable: true,
 		lazy: {
 			loadPrevNext: true
@@ -366,7 +366,7 @@ function eventHandler() {
 	});
 	var galleryTop2 = new Swiper('.prioritizeS-top-js', {
 		spaceBetween: 0,
-		loop: true,
+		// loop: true,
 		navigation: {
 			nextEl: '.sPrioritize .sPrioritize__nextBtn',
 			prevEl: '.sPrioritize .sPrioritize__prevBtn'
@@ -426,13 +426,16 @@ function eventHandler() {
 		}
 	});
 	var competenceSlider = new Swiper('.competenceSlider-js', {
-		spaceBetween: 32,
 		slidesPerView: 'auto',
 		// freeMode: true,
+		spaceBetween: 10,
 		loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
+			440: {
+				spaceBetween: 32
+			},
 			992: {
 				spaceBetween: 63,
 				slidesPerView: 4

@@ -1,11 +1,15 @@
 // start .sPrioritize
 .sPrioritize {
-	padding-top: var(--sPB);
+	padding-top: calc(var(--sPB) / 1.05);
+	padding-bottom: calc(var(--sPB) / 6);
 
 	&__wrap {
 		border-radius: $border-radius;
 		border: 1px solid #ebebeb;
-		padding: rem(24);
+		padding: rem(15);
+		@include media-breakpoint-up(xl) {
+			padding: rem(24);
+		}
 	}
 
 	&__titleSm {
@@ -15,18 +19,21 @@
 
 	&__sliderCol {
 		position: relative;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(30);
 		&--mb-25{
-			@include media-breakpoint-up(xl){
-				margin-bottom: 0;
+				@include media-breakpoint-up(xl){
+					margin-bottom: 0;
+				}
+				margin-bottom: rem(25);
 			}
-			margin-bottom: rem(25);
 		}
+		
 	}
-
 	&__nextBtn, &__prevBtn {
 		outline: none;
 		position: absolute;
-		top: 40%;
+		top: 45%;
 		z-index: 10;
 		border-radius: 50%;
 		background-color: #fff;
@@ -75,6 +82,142 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+
+	&__rBlock {
+		border-radius: $border-radius;
+		border: 2px solid $light2;
+	}
+
+	&__topLine {
+		background-color: $light2;
+		border-bottom: solid 1px #ebebeb;
+		padding: rem(15) rem(11) rem(11);
+		@include media-breakpoint-up(xl) {
+			padding: rem(30) rem(22) rem(22);
+		}
+	}
+
+	&__price {
+		display: inline-block;
+		margin-right: rem(10);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(20);
+		}
+		font-size: rem(22);
+		font-weight: 600;
+	}
+
+	&__oldPrice {
+		display: inline-block;
+		color: $primary;
+		font-size: $h6-font-size;
+
+		span {
+			display: inline-block;
+			margin-right: rem(5);
+		}
+	}
+
+	&__economy {
+		background-color: #f7f0a2;
+		font-size: 12px;
+		font-weight: 500;
+		display: inline-block;
+		padding: rem(2) rem(5);
+	}
+
+	&__middleBlock {
+		background-color: $light2;
+		padding: rem(10) rem(11) rem(20);
+		@include media-breakpoint-up(xl) {
+			padding: rem(20) rem(22) rem(40);
+		}
+	}
+
+	&__btnWrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		width: 100%;
+		max-width: rem(306px);
+		margin-right: rem(24);
+	}
+
+	&__demo {
+		@extend .btn;
+		background-color: #e4e4e4;
+		&:hover {
+			box-shadow: 0 5px 15px #d6d6d6;
+		}
+	}
+
+	&__payment {
+		display: flex;
+		align-items: center;
+		.icon {
+			font-size: rem(38);
+			margin-right: rem(10);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(48);
+				margin-right: rem(16);
+			}
+		}
+
+		span {
+			border-bottom: dashed 1px $primary;
+			@include media-breakpoint-down(xl) {
+				font-size: $xsmall;
+			}
+		}
+	}
+
+	&__row {
+		@include media-breakpoint-down(xl) {
+			@include roww(20px);
+		}
+	}
+
+
+	.form-wrap {
+		padding-top: rem(12);
+		&__title {
+		}
+
+		&__input-wrap {
+			margin-bottom: rem(38);
+		}
+
+		&__input {
+			width: 100%;
+			border: none;
+			height: 55px;
+			@include media-breakpoint-only(lg) {
+				padding: rem(5) rem(20) rem(5) rem(5);
+				font-size: $xsmall;
+			}
+			padding: rem(5) rem(35) rem(5) rem(17);
+		}
+	}
+
+	&__foot {
+		padding: rem(10);
+		@include media-breakpoint-up(xl) {
+			padding: rem(23);
+		}
+	}
+
+	.form-check {
+		margin-bottom: rem(20);
+
+		&-label {
+			font-size: $small;
+			font-weight: 500;
 		}
 	}
 

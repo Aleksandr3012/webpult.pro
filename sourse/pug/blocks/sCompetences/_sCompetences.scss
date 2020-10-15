@@ -7,6 +7,10 @@
 			padding-right: calc(var(--bs-gutter-x)*1.5);
 			padding-left: calc(var(--bs-gutter-x)*1.5);
 		}
+		@include media-breakpoint-down(xsm) {
+			padding-right: calc(var(--bs-gutter-x)*1);
+			padding-left: calc(var(--bs-gutter-x)*1);
+		}
 		@include media-breakpoint-up(md) {
 			max-width: rem(750);
 		}
@@ -38,6 +42,9 @@
 	}
 
 	.swiper-slide {
+		@include media-breakpoint-down(xsm) {
+			width: 25vw;
+		}
 		@include media-breakpoint-down(lg) {
 			width: 25%;
 		}
@@ -48,40 +55,54 @@
 
 	&__prev, &__next {
 		position: absolute;
-		top: 50%;
-		@include media-breakpoint-up(md) {
-			top: 54%;
-		}
+		@include a-cent(y);
 		z-index: 10;
 		outline: none;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 52px;
-		height: 52px;
+		width: 40px;
+		height: 40px;
+		@include media-breakpoint-up(xsm) {
+			width: 52px;
+			height: 52px;
+		}
 		border-radius: 50%;
 		box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 		background-color: #ffffff;
 		.icon {
-			font-size: rem(17);
+			font-size: rem(14);
+			@include media-breakpoint-up(xsm) {
+				font-size: rem(17);
+			}
 		}
 	}
 
 	&__prev {
-		left: rem(0);
+		left: rem(-20);
+		@include media-breakpoint-up(md) {
+			left: rem(0);
+		}
 		@include media-breakpoint-up(lg) {
 				left: rem(-80);
 			}
 	}
 
 	&__next {
-		right: rem(0);
+		right: rem(-20);
+		@include media-breakpoint-up(md) {
+			right: rem(0);
+		}
 		@include media-breakpoint-up(lg) {
 				right: rem(-80);
 			}
 		.icon {
 			transform: rotate(180deg);
 		}
+	}
+
+	&__slider {
+		position: relative;
 	}
 
 

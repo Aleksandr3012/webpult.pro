@@ -49,7 +49,7 @@
 		}
 		
 		&:hover .icon{
-			transform: translateX(3px);
+			transform: rotateY(180deg) translateX(-3px);
 		}
 	}
 

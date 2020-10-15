@@ -2,14 +2,14 @@ mixin sPrioritize(data)
 	// start sPrioritize
 	+b.SECTION.sPrioritize.section#sPrioritize&attributes(attributes)
 		.container
-			+b.section-title.mb-30
+			+b.section-title.mb-25
 				h1 Приорити – Корпоративный сайт
 				
 			.row
-				.col-lg-8
+				.col-lg-7.col-xl-8.mb-20
 					+e.wrap
-						.row
-							+e.sliderCol.col-7
+						+e.row.row
+							+e.sliderCol.col-sm-7
 								+e.topSlider.prioritizeS-top-js.swiper-container
 									+e.prevBtn
 										+icon('arrow-r')
@@ -44,20 +44,21 @@ mixin sPrioritize(data)
 										+slide
 										+slide
 							.col
-								.mb-30
+								.mb-20
 									a.tagBlock(href="#") Сайты
 								+e.titleSm Подходящие редакции
 								p «Старт», «Стандарт», «Малый бизнес», «Эксперт», «Бизнес»
 								+e.titleSm Описание
 								p Аспро: Приорити – универсальное типовое решение, созданное с учетом потребностей среднего и крупного бизнеса. Идеально подойдет для компаний, работающих в b2b-сегменте и сложных тематиках – крупное производство, консалтинг, финансовые услуги (от аудита до юридических услуг), инвестиции и ценные бумаги, страхование, кибербезопасность и т.д. 
-								a(href="#") Подробее
+								a.tdu.scroll-link(href="#sContent") Подробее
 				.col
 					+e.rBlock
 						+e.topLine
-							+e.price 5 400 рублей
-							+e.oldPrice #[span.tdlt 1 499 900] рублей
+							+e.priceWrap
+								+e.price 5 400 рублей
+								+e.oldPrice #[span.tdlt 1 499 900] рублей
 							+e.economy Экономия -33% 
-						+e.middle
+						+e.middleBlock
 							<div class="form-check form-switch">
 								<input class="form-check-input" type="checkbox" id="basicFilling">
 								<label class="form-check-label" for="basicFilling">Базовое заполнение сайта + 19 900 рублей</label>
@@ -70,9 +71,15 @@ mixin sPrioritize(data)
 								<input class="form-check-input" type="checkbox" id="payment">
 								<label class="form-check-label" for="payment">Купить в рассрочку</label>
 							</div>
-							p Добавить лицензию 1С-битрикс?
-							+select('Добавить лицензию 1С-битрикс?',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей')
+							+form-wrap()
+								+select('Добавить лицензию 1С-битрикс?',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей',' Лицензия «Малый Бизнес» — 35 900 рублей')
+							+e.btnWrap
+								+e.btn(type="submit") Купить
+								+e.demo(href="#") Демо
 						+e.foot
+							+e.payment(href="#")
+								+icon('installment') 
+								span Узнать условия приобретения в рассрочку
 	// end sPrioritize
 
 

@@ -262,7 +262,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '02.jpg';
+	screenName = '17.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -369,7 +369,7 @@ function eventHandler() {
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		watchOverflow: true,
-		loop: true,
+		// loop: true,
 
 		// clickable: true,
 		lazy: {
@@ -378,7 +378,7 @@ function eventHandler() {
 	});
 	const galleryTop2 = new Swiper('.prioritizeS-top-js', {
 		spaceBetween: 0,
-		loop: true,
+		// loop: true,
 
 		navigation: {
 			nextEl: '.sPrioritize .sPrioritize__nextBtn',
@@ -446,13 +446,17 @@ function eventHandler() {
 	});
 
 	const competenceSlider = new Swiper('.competenceSlider-js', {
-		spaceBetween: 32,
 		slidesPerView: 'auto',
 		// freeMode: true,
+		spaceBetween: 10,
 		loop: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		breakpoints: {
+			440: {
+				spaceBetween: 32,
+
+			},
 			992: {
 				spaceBetween: 63,
 				slidesPerView: 4

@@ -182,6 +182,12 @@
 		padding-top: 32px;
 	}
 
+	&--buy .section-title{
+		padding-top: rem(27);
+		max-width: 100%;
+		padding-bottom: calc(var(--sTPB) * 13);
+	}
+
 
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) {}

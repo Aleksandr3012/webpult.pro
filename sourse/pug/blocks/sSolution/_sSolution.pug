@@ -53,14 +53,15 @@ mixin sSolution(data)
 
 mixin sSolution-sm(data)
 	// start sSolution
-	+b.sSolution.section#sSolution&attributes(attributes)
+	+b.sSolution.section.pt-0#sSolution&attributes(attributes)
 		.container
+			h2 Другие решения
 			.row
 				mixin item(i,l,t,s)
 					+e.col.col-md-6.col-xl-4
 						+e.item(href="#")
 							+e.img-wrap
-								+pic(`solutions-${i}`,``,``)
+								+pic(`solutions-${i}`,``,``)(class="picture-bg")
 								if l
 									+e.DIV.label!= l
 								else
@@ -70,7 +71,7 @@ mixin sSolution-sm(data)
 							+e.price-wrap
 								block
 									
-				+item(1, ``, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`, ``)
+				+item(1, `Интернет-магазин`, `Приорити – Корпоративный сайтПриорити – Корпоративный сайт`, ``)
 					//- .oldPrice #[span 1 499 900] рублей
 					+e.price 19 900 рублей
 				+item(2, ``, `Аспро: Медицинский центр 2.0`)
