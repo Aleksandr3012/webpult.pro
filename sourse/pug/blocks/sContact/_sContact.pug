@@ -3,7 +3,7 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+b.section-title
-				h1 Контакты
+				h2 Контакты
 				
 			.tabs
 				+b.solutionsMenu.tabs__caption
@@ -13,7 +13,7 @@ mixin sContact()
 					mixin tabs()
 						.tabs__content&attributes(attributes)
 							.row
-								+e.textCol.col-lg-4.col-xxl-3
+								+e.textCol.col-md-3
 									+e.item
 										+e.iconWrap
 											+icon('location')
@@ -22,8 +22,8 @@ mixin sContact()
 										+e.iconWrap
 											+icon('phone')
 										div
-											+e.tel(href="#") +7 (499) 938-78-38
-											+e.tel(href="#") +7 (499) 938-78-38
+											+e.tel(href="tel:74999387838") +7 (499) 938-78-38
+											+e.tel(href="tel:74999387838") +7 (499) 938-78-38
 									+e.item
 										+e.iconWrap
 											+icon('mail')
@@ -31,8 +31,8 @@ mixin sContact()
 									+e.item
 										+e.iconWrap
 											+icon('clock')
-										| Пн - Пт с 09:00 до 18:00.<br> Суббота - в дежурном режиме. Воскресенье - выходной.
-									+btn-modal('Обратная связь','<span class="text-primary">Обратная</span> связь')(class="sContact__btn")
+										| Пн - Пт с 09:00 до 18:00. Суббота - в дежурном режиме. Воскресенье - выходной.
+									+btn-modal('Обратная связь',`<span class="text-primary">Обратная</span> связь`)
 								.col
 									+e.mapWrap
 										<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae431e4855d26c9dbab0adea0e83dbafffd99d8541ebe1afd15b9e2f7d6bca3d5&amp;source=constructor"></iframe>
