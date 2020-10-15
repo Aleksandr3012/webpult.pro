@@ -1,11 +1,11 @@
 mixin sPreview(pic="prev-support.png", title=`Техническая поддержка сайтов &mdash;&nbsp;нужна&nbsp;ли&nbsp;она?`)
 	// start sPreview
-	+b.SECTION.sPreview.section#sPreview&attributes(attributes)
+	+b.SECTION.sPreview&attributes(attributes).section#sPreview
 		.container
 			+e.block
 				+icon('logo')
 				.row
-					.col-md-auto
+					+e.imgCol.col-md-auto
 						+pic(pic,'','')
 					.col
 						+e.content

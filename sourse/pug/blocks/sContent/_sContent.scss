@@ -26,9 +26,30 @@
 			margin-right: rem(13);
 			@include mt;
 		}
+		&:hover{
+			text-decoration: underline;
+		}
 
 		&:hover .icon{
 			transform: translateX(-3px);
+		}
+	}
+	&__next {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		.icon {
+			transform: rotateY(180deg);
+			font-size: rem(13px);
+			margin-left: rem(13);
+			@include mt;
+		}
+		&:hover{
+			text-decoration: underline;
+		}
+		
+		&:hover .icon{
+			transform: rotateY(180deg) translateX(-3px);
 		}
 	}
 
@@ -48,6 +69,15 @@
 		padding-bottom: rem(58);
 	}
 
+	&__arrows-wrap{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&--25moreAP{
+		padding-top: 0;
+		padding-bottom: rem(60);
+	}
 
 
 	@include media-breakpoint-up(xs) {}
