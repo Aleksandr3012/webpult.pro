@@ -82,6 +82,7 @@
 					line-height: rem(280);
 					vertical-align: middle;
 					width: rem(414);
+					text-align: center;
 				}
 			}
 				
@@ -95,4 +96,13 @@
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+
+	//17 start
+	&--by {
+
+		.sPreview__content {
+			padding-top: 2.1rem;
+		}
+	}
+	//17 end
 } // end.sPreview

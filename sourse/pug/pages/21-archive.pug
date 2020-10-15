@@ -4,22 +4,21 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sBlog/_sBlog.pug
-include ../blocks/sSolution/_sSolution.pug
-include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sArchive/_sArchive.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Портфолио'
+	- let  title= 'Архив блога'
 	title= title
 block pagecontent
 	+header()
 		+topLine()
 	.breadcrumbWrap
 		.container
-			+breadcrumb('Главная', 'Портфолио')
+			+breadcrumb('Главная', title)
 
-	+sPortfolio()
+	+sArchive()
 	+footer()
 
 

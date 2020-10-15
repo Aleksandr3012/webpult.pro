@@ -190,6 +190,7 @@
 		&__input {
 			width: 100%;
 			border: none;
+			height: 55px;
 			@include media-breakpoint-only(lg) {
 				padding: rem(5) rem(20) rem(5) rem(5);
 				font-size: $xsmall;
