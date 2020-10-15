@@ -1,5 +1,5 @@
 <!-- https://github.com/Aleksandr3012/webpult.pro -->
-<!-- 1. <https://Aleksandr3012.github.io/webpult.pro/public/00-modal.html> -->
+1. <https://Aleksandr3012.github.io/webpult.pro/public/00-modal.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/02-im.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/03-land.html>
