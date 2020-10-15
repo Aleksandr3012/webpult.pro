@@ -18,9 +18,10 @@
 		padding-bottom: rem(20px);
 	}
 
-	&__back {
-		display: inline-flex;
-		align-items: center;
+	&__back,
+	&__next {
+		// display: inline-flex;
+		// align-items: center;
 		.icon {
 			font-size: rem(13px);
 			margin-right: rem(13);
@@ -35,9 +36,9 @@
 		}
 	}
 	&__next {
-		display: inline-flex;
-		align-items: center;
-		position: relative;
+		span{
+			margin-right: 13px;
+		}
 		.icon {
 			transform: rotateY(180deg);
 			font-size: rem(13px);
