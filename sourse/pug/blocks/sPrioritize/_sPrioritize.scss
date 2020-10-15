@@ -225,14 +225,21 @@
 		}
 	}
 
-
-	&__text-wrap{
+	&__item-25page,
+	&__item-19{
 		border-radius: $border-radius;
 		border: 1px solid #ebebeb;
+		
+	}
+	
+
+	&__text-wrap{
 		@include media-breakpoint-up(sm){
 			padding: rem(39) rem(32) rem(32) rem(24);
 		}
 		padding: rem(29) rem(20) rem(25);
+		border-bottom: 1px solid #ebebeb;
+		border-radius: $border-radius;
 	}
 
 	&__title{
@@ -246,8 +253,6 @@
 	}
 
 	&__btn-wrap{
-		border-radius: $border-radius;
-		border: 1px solid #ebebeb;
 		display: flex;
 		justify-content: center;
 		@include media-breakpoint-up(sm){
@@ -263,6 +268,39 @@
 		padding-bottom: rem(39);
 	}
 
+	&--19{
+		padding-bottom: 20px;
+	}
+
+	&__img-wrap{
+		// @include block(1010,512);
+		width: 100%;
+		@include media-breakpoint-up(xl){
+			margin-bottom: 5px;
+		}
+		margin-bottom: rem(32);
+	}
+
+	&__link-wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 24px;
+		width: 100%;
+		// @include media-breakpoint-only()
+	}
+
+	&__pic-wrap{
+		@include media-breakpoint-only(xl){
+			margin-bottom: 14px;
+		}
+	}
+
+	&__portfolio-link{
+		color: $body-color;
+		text-decoration: underline;
+	}
 
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) { }

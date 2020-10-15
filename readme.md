@@ -7,8 +7,8 @@
 1. <https://Aleksandr3012.github.io/webpult.pro/public/05-logo.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/06-Guideline.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/07-complete-solutions.html>
-1. <https://Aleksandr3012.github.io/webpult.pro/public/09-ready-madeSolutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/08-installment-plan.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/09-ready-madeSolutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/10-contacts.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/11-corporate-portal.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/13-possibilities.html>
@@ -17,6 +17,7 @@
 1. <https://Aleksandr3012.github.io/webpult.pro/public/16-about-vacancy.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/17-buy.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/18-portfolio.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/19-morePortfolio.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/20-tp.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/21-archive.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/22-page-404.html>
