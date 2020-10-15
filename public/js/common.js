@@ -269,7 +269,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '23.png';
+	screenName = '02.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -444,6 +444,28 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sCompetences .sCompetences__next',
 			prevEl: '.sCompetences .sCompetences__prev'
+		}
+	});
+	var ourWorksSlider = new Swiper('.sOurWorks__slider--js', {
+		slidesPerView: 1,
+		// freeMode: true,
+		// loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			992: {
+				spaceBetween: 30,
+				slidesPerView: 4 // noSwiping: false,
+
+			}
+		},
+		lazy: {
+			loadPrevNext: true
+		},
+		navigation: {
+			nextEl: '.sOurWorks .swiper-button-next',
+			prevEl: '.sOurWorks .swiper-button-prev',
+			hiddenClass: 'swiper-button-hidden'
 		}
 	}); // клонирование значений таблицы в модалку
 

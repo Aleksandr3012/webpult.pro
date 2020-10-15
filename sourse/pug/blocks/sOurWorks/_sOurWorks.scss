@@ -28,6 +28,7 @@
 	@extend .text-body;
 	min-height: calc(100% - 30px);
 	margin-bottom: rem(30);
+	@include mt;
 
 	&__img-wrap{
 		picture{
@@ -50,6 +51,17 @@
 	}
 	&:hover{
 		background-color: #ffffff;
-		box-shadow: 0 rem(2) rem(20) rgba($color: #000000, $alpha: .2);
+		box-shadow: 0 $em-base 30px rgba(0, 0, 0, 0.15);
+	}
+}
+
+.control-wrap{
+	position: relative;
+	width: rem(82);
+	height: var(--swiperArrowSiz);
+	--swiperArrowPosition: 0;
+	.swiper-button-hand{
+
+		margin-top: 0;
 	}
 }

@@ -1,22 +1,56 @@
-mixin sOurWorksItem(i,t)
-	+e.col(class="col-xl-3 col-sm-6")
-		+b.sOurWorks-item(href="#")
-			+e.DIV.img-wrap
-				+pic(`sOurWorks-img-im-${i}.png`,'','')
-			.h6!= t
-mixin sOurWorks(data)
+mixin sOurWorksItem(i,t, s)
+	+e.col&attributes(attributes)
+		if s
+			+b.sOurWorks-item
+				+e.DIV.img-wrap
+					picture
+						+img.swiper-lazy.res-i(src="#" data-src=`sOurWorks-img-${i}.png`, alt="")
+				.h6!= t
+		else
+			+b.sOurWorks-item(href="#")
+				+e.DIV.img-wrap
+					+pic(`sOurWorks-img-${i}.png`,'','')
+				.h6!= t
+
+mixin sOurWorksBody(t, s)
 	// start sOurWorks
-	+b.SECTION.sOurWorks.section#sOurWorks&attributes(attributes)
+	+b.SECTION.sOurWorks.section#sOurWorks
 		.container
 			+b.section-title
 				.row
 					.col
-						h2 Наши работы
+						h2!= t
 					.col-xsm-auto
-						a.tdu(href="#") Перейти в портфолио 
-			.row
-				+sOurWorksItem(1,`Интернет-магазин ротанговой мебели был разработан нами с&nbsp;нуля.`)
-				+sOurWorksItem(2,`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)
-				+sOurWorksItem(3,`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)
-				+sOurWorksItem(4,`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)
+						if !s
+							a.tdu(href="#") Перейти в портфолио  
+								| 
+								span 111
+						else
+							.control-wrap
+								+arrow()
+			if block
+				block
+			else
+				.row
+					+sOurWorksItem('im-1',`Интернет-магазин ротанговой мебели был разработан нами с&nbsp;нуля.`)(class="col-xl-3 col-sm-6")
+					+sOurWorksItem('im-2',`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)(class="col-xl-3 col-sm-6")
+					+sOurWorksItem('im-3',`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)(class="col-xl-3 col-sm-6")
+					+sOurWorksItem('im-4',`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`)(class="col-xl-3 col-sm-6")
 	// end sOurWorks
+mixin sOurWorks(data)
+	+sOurWorksBody('Наши работы')
+
+mixin sOurWorks-06(data)
+	+sOurWorksBody("Наши клиенты",'sl')
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				
+				+sOurWorksItem('g-1',`Разработка логотипа и&nbsp;гайдлайна для рыбалки, кемпинга и&nbsp;экстремального туризма.`, s)(class="swiper-slide")
+
+				+sOurWorksItem('g-2',`Разработка интернет-магазина по&nbsp;продаже кирпича оптом и&nbsp;в&nbsp;розницу с&nbsp;нуля.`, s)(class="swiper-slide")
+
+				+sOurWorksItem('g-3',`Progress&nbsp;&mdash; производство дверных блоков, кухонной мебели, корпусной и&nbsp;детской мебели, лестниц.`, s)(class="swiper-slide")
+
+				+sOurWorksItem('g-4',`ООО &laquo;ИТЕЛДОР&raquo;&nbsp;&mdash; российский производитель, поставщик и&nbsp;интегратор IT-решений в&nbsp;сфере строительства и&nbsp;эксплуатации автомобильных дорог.`, s)(class="swiper-slide")
+
+				+sOurWorksItem('g-4',`ООО &laquo;ИТЕЛДОР&raquo;&nbsp;&mdash; российский производитель, поставщик и&nbsp;интегратор IT-решений в&nbsp;сфере строительства и&nbsp;эксплуатации автомобильных дорог.`, s)(class="swiper-slide")

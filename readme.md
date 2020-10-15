@@ -5,6 +5,7 @@
 1. <https://Aleksandr3012.github.io/webpult.pro/public/03-land.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/04.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/05-logo.html>
+1. <https://Aleksandr3012.github.io/webpult.pro/public/06-Guideline.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/07-complete-solutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/09-ready-madeSolutions.html>
 1. <https://Aleksandr3012.github.io/webpult.pro/public/13-possibilities.html>

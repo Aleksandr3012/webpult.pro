@@ -466,6 +466,31 @@ function eventHandler() {
 			prevEl: '.sCompetences .sCompetences__prev',
 		},
 	});
+
+
+
+	const ourWorksSlider = new Swiper('.sOurWorks__slider--js', {
+		slidesPerView: 1,
+		// freeMode: true,
+		// loop: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true, 
+		breakpoints: {
+			992: {
+				spaceBetween: 30,
+				slidesPerView: 4,
+				// noSwiping: false,
+			}
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+		navigation: {
+			nextEl: '.sOurWorks .swiper-button-next',
+			prevEl: '.sOurWorks .swiper-button-prev',
+			hiddenClass: 'swiper-button-hidden'
+		},
+	});
 	
 
 	// клонирование значений таблицы в модалку

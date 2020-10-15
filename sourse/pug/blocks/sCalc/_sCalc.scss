@@ -46,6 +46,23 @@
 				 }
 			 }
 		 }
+		 &__footer-panel{
+			 border-radius: $border-radius;
+			 background-color: $light2;
+			 @include media-breakpoint-up(xxl) {
+
+				 padding: rem(40) rem(50);
+				}
+				padding: rem(30) rem(15);
+			 min-height: calc(100% - 20px);
+			 margin-bottom: rem(20);
+			 display: flex;
+			 align-items: center;
+			 .row{
+				//  align-items: center;
+
+			 }
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
