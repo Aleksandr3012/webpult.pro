@@ -99,12 +99,19 @@
 
 .solutionsMenu{
 		display: flex;
-		margin-bottom: rem(34);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(34);
+		}
+		margin-bottom: rem(20);
 		flex-wrap: wrap;
 		&__item{
 			color: $body-color;
 			margin-right: rem(31);
 			border-bottom: 1px dashed;
+			@include media-breakpoint-up(sm){
+				margin-bottom: 0;
+			}
+			margin-bottom: 1rem;
 		}
 		.active{
 			color: $primary;
