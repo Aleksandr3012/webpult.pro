@@ -37,10 +37,10 @@
 			transform: translateX(-3px);
 		}
 	}
-	&__next { 
-							span{
-								margin-right: rem(13);
-							}
+	&__next {
+		span{
+			margin-right: 13px;
+		}
 		.icon {
 			transform: rotateY(180deg); 
 			margin-left: rem(13);

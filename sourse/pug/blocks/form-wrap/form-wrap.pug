@@ -34,7 +34,7 @@ mixin select(label,pl,...items)
 		label
 			if label
 				+e.SPAN.title!= label
-			+e.SELECT.input
+			+e.SELECT.input.form-control&attributes(attributes)
 
 					option()= pl
 					each item in items

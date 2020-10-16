@@ -87,7 +87,7 @@
 				 @include media-breakpoint-down(xl){
 
 					 &:nth-child(n + 2) {
-						 width: calc((100% - var(--thW)) / 4); 
+						//  width: calc((100% - var(--thW)) / 4); 
 						}
 					}
 			 }

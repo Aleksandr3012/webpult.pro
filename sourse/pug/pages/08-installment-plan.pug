@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sPossibilities/_sPossibilities.pug
+include ../blocks/sHave/_sHave.pug
+include ../blocks/sPreview/_sPreview.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Возможности тарифов'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', title)
+		+headerBlockBody().--tarif
+			.container
+				.row
+					.col-xxl-5.col-xsm-7
+						+e.content
+							+b.section-title
+								h1 Возможности тарифов <br> Битрикс24
+								p Битрикс24: Забудьте про блокноты, ручки, таблицы и&nbsp;мессенджеры! Теперь достаточно иметь компьютер или даже смартфон!
+							ul.h6.strong
+								li Экономьте до&nbsp;70&nbsp;% времени на&nbsp;привычных делах!
+								li Снижайте потерю клиентов до&nbsp;0%!
+			 
+					+e.picCol.col-xsm-5.col-xl
+						+pic('head13','','')
+	+sPreview
+	+sPossibilities
+					
+	+sHave
+	+footer()
+
+
+	
