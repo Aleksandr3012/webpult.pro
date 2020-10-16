@@ -455,7 +455,7 @@ function eventHandler() {
 		breakpoints: {
 			440: {
 				spaceBetween: 32,
-
+				slidesPerView: 'auto'
 			},
 			992: {
 				spaceBetween: 63,

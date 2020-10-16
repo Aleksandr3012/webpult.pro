@@ -43,7 +43,7 @@
 
 	.swiper-slide {
 		@include media-breakpoint-down(xsm) {
-			width: 25vw;
+			width: 45%;
 		}
 		@include media-breakpoint-down(lg) {
 			width: 25%;

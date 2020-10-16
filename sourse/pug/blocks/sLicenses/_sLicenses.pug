@@ -45,11 +45,11 @@ mixin licensesRow(t,pr,sale)
 	+e.row.row.justify-content-between.align-items-center&attributes(attributes)
 		.col-lg
 			+e.title!= t
-		+e.col.col-6.col-lg-2
-			if sale
+		if sale
+			+e.col.col-xsm.col-lg-2
 				+e.oldPrice #[span.tdlt 1 499 900]  рублей
 				+e.economy Экономия -33% 
-		.col-6.col-lg-2
+		.col-xsm.col-lg-2
 			+e.price= pr
 		+e.btnCol.col-lg-auto
-			+e.btn.btn.btn-primary(type='submit') Купить
+			+e.btn.btn.btn-primary(href="#") Купить

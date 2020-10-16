@@ -226,7 +226,12 @@
 		}
 	}
 
+	.accardion-close-js {
+		cursor: pointer;
+	}
+
 	.drop-open {
+		cursor: pointer;
 		@include media-breakpoint-up(lg) {
 			pointer-events: none;
 			position: absolute;
