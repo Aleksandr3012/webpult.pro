@@ -269,7 +269,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '17.png';
+	screenName = '11.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -501,36 +501,53 @@ function eventHandler() {
 		// Add your inner text for button
 		animationspeed: 250 // Type your custom speed animation, by defaul is 'auto' auto = 1
 
-	}); // /hide/show text
-	//custom input file
-	// ;(function (document, window, index){
-	// 	'use strict';
-	// 	var inputs = document.querySelectorAll('.add-file__input');
-	// 	Array.prototype.forEach.call(inputs, function (input) {
-	// 		var label = input.nextElementSibling,
-	// 				labelVal = label.innerHTML;
-	// 		input.addEventListener('change', function (e) {
-	// 			var fileName = '';
-	// 			if (this.files && this.files.length > 1){
-	// 				fileName = ( this.getAttribute('data-multiple-caption') || '' ).replace('{count}', this.files.length);
-	// 			}else{
-	// 				fileName = e.target.value.split('\\').pop();
-	// 			}
-	// 			if (fileName){
-	// 				label.querySelector('.add-file__text').innerHTML = fileName;
-	// 			}else{
-	// 				label.innerHTML = labelVal;
-	// 			}
-	// 		});
-	// 		// Firefox bug fix
-	// 		input.addEventListener('focus', function () {
-	// 			input.classList.add('has-focus');
-	// 		});
-	// 		input.addEventListener('blur', function () {
-	// 			input.classList.remove('has-focus');
-	// 		});
+	});
+
+	if ('.stickyItem') {
+		$('.stickyItem').hcSticky({
+			stickTo: '.stickyContainer'
+		});
+	} // // Cache selectors
+	// var lastId,
+	// 	solutionsMenu = $(".solutionsMenu-js"),
+	// 	solutionsMenuHeight = 20,
+	// 	// solutionsMenuHeight = solutionsMenu.outerHeight()+15,
+	// 	// All list items
+	// 	menuItems = solutionsMenu.find(".solutionsMenu__item"),
+	// 	// Anchors corresponding to menu items
+	// 	scrollItems = menuItems.map(function () {
+	// 		var item = $($(this).attr("href"));
+	// 		if (item.length) { return item; }
 	// 	});
-	// }(document, window, 0));
+	// 	menuItems.click(function (e) {
+	// 		var href = $(this).attr("href"),
+	// 			offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight - 10;
+	// 		$('html, body').stop().animate({
+	// 			scrollTop: offsetTop
+	// 		}, 1100);
+	// 		e.preventDefault();
+	// 	});
+	// 	// Bind to scroll
+	// 	$(window).scroll(function () {
+	// 		// Get container scroll position
+	// 		var fromTop = $(this).scrollTop() + topMenuHeight;
+	// 		// Get id of current scroll item
+	// 		var cur = scrollItems.map(function () {
+	// 			if ($(this).offset().top < fromTop)
+	// 				return this;
+	// 		});
+	// 		// Get the id of the current element
+	// 		cur = cur[cur.length - 1];
+	// 		var id = cur && cur.length ? cur[0].id : "";
+	// 		if (lastId !== id) {
+	// 			lastId = id;
+	// 			// Set/remove active class
+	// 			menuItems
+	// 				.removeClass("active").parent()
+	// 				.end().filter("[href='#" + id + "']").addClass("active");
+	// 		}
+	// 	});
+
 }
 
 ;

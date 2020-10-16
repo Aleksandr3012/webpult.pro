@@ -97,3 +97,42 @@ mixin sHowOrder-03(data)
 			p Каждый из&nbsp;этапов будет подробно расписан в&nbsp;смете расчета проекта. Мы&nbsp;берем деньги только за&nbsp;то, что делаем&nbsp;и, благодаря смете, наши заказчики видят за&nbsp;что платят.
 			a.btn.btn-primary.link-modal(href="#modal-call" data-title='<span class="text-primary">Заказать</span>  лендинг') Заказать лендинг
 	// end sHowOrder
+
+mixin sHowOrder-08(data)
+	+sHowOrderBody(class="sHowOrder-tabs")
+		+b.section-title.text-center
+			h2 Как заказать сайт или интернет-магазин в&nbsp;рассрочку
+		.tabs
+			+b.tabs__caption--with-icon
+				+b.tabs__btn--with-icon.active
+					+icon("configuration")
+					| Сайты и&nbsp;магазины в&nbsp;рассрочку с&nbsp;нуля
+				+b.tabs__btn--with-icon
+					+icon("web-design")
+					| Готовые сайты и магазины в&nbsp;рассрочку
+			div
+				mixin content()
+					.tabs__content&attributes(attributes)
+						+e.smDescr Этапы и&nbsp;схема предоставления рассрочки для сайтов и&nbsp;Интернет-магазинов с&nbsp;нуля:
+						+b.row-circle-wrap
+							+b.row-circle.row
+								+b.col-circle.col-lg-3.col-xsm-6
+									+item-circle({  
+									p:`Вы&nbsp;выбираете любой понравившийся<br> сайт/магазин  <a href="#" class="tdu">из каталога</a>`, 
+									})
+								+b.col-circle.col-lg-3.col-xsm-6
+									+item-circle({  
+									p:`Вы&nbsp;оформляете заказ на странице готового сайта/магазина с&nbsp;отметкой &laquo;в&nbsp;рассрочку&raquo;`, 
+									})
+								+b.col-circle.col-lg-3.col-xsm-6
+									+item-circle({ 
+									p:`Мы&nbsp;выставляем вам счет на&nbsp;50% от&nbsp;стоимости<br> сайта/магазина`,
+									})
+								+b.col-circle.col-lg-3.col-xsm-6
+									+item-circle({ 
+									p:`Выплачиваете остаток суммы в&nbsp;течение 3&nbsp;или&nbsp;6 месяцев (на&nbsp;выбор)`,
+									})
+						p У&nbsp;нас и&nbsp;правда всё прозрачно и&nbsp;открыто! Никаких тайн мадридского двора и&nbsp;скрытых &laquo;схем&raquo;. Никаких банков и&nbsp;комиссий. Никакого завышения стоимости на&nbsp;дополнительные услуги, которые могут вам пригодиться во&nbsp;время работы с&nbsp;сайтом/магазином. От&nbsp;вас мы&nbsp;просим лишь честную своевременную ежемесячную оплату.
+				+content()
+				+content().active
+	// end sHowOrder

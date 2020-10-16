@@ -188,5 +188,28 @@
 			border-right: none !important;
 		}
 	}
+
+	//11 page start
+	&__decision {
+		background-color: $light2;
+		padding: rem(35) rem(27) rem(30);
+	}
+	&__imgWrap {
+		text-align: center;
+	}
+
+	&--page11 {
+		padding-top: 0;
+		padding-bottom: calc(var(--sPB) / 7);
+		.tabs__btn--with-icon {
+			.icon {
+				color: $primary;
+			}
+		}
+		p {
+			margin-bottom: calc(var(--pmb) * 3.3);
+		}
+	}
+	//11 page end
 } // end.sPossibilities
 

@@ -10,10 +10,10 @@ mixin sContact()
 					+e.item.tabs__btn.active Москва 
 					+e.item.tabs__btn Ташкент
 				div
-					mixin tabs()
-						.tabs__content&attributes(attributes)
-							.row
-								+e.textCol.col-md-3
+					.row
+						+e.textCol.col-md-3
+							mixin tabs()
+								.tabs__content&attributes(attributes)
 									+e.item
 										+e.iconWrap
 											+icon('location')
@@ -33,9 +33,9 @@ mixin sContact()
 											+icon('clock')
 										| Пн - Пт с 09:00 до 18:00. Суббота - в дежурном режиме. Воскресенье - выходной.
 									+btn-modal('Обратная связь',`<span class="text-primary">Обратная</span> связь`)
+							+tabs().active
+							+tabs()
 								.col
 									+e.mapWrap
 										<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae431e4855d26c9dbab0adea0e83dbafffd99d8541ebe1afd15b9e2f7d6bca3d5&amp;source=constructor"></iframe>
-					+tabs().active
-					+tabs()
 	// end sContact

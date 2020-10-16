@@ -17,7 +17,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0px;
+	background-position: center 5px;
 	// background-position: center 326px;
 	opacity: 0;
 	// opacity: 0.7;
@@ -461,6 +461,8 @@ iframe {
 .mb-50{margin-bottom: calc(#{rem(50)} / 2);}
 .mb-55{margin-bottom: calc(#{rem(55)} / 2);}
 .mb-60{margin-bottom: calc(#{rem(60)} / 2);}
+.mb-65{margin-bottom: calc(#{rem(65)} / 2);}
+.mb-70{margin-bottom: calc(#{rem(70)} / 2);}
 @include media-breakpoint-up(md) {
 	.mb-5{margin-bottom: rem(5);}
 	.mb-10{margin-bottom: rem(10);}
@@ -474,6 +476,15 @@ iframe {
 	.mb-50{margin-bottom: rem(50);}
 	.mb-55{margin-bottom: rem(55);}
 	.mb-60{margin-bottom: rem(60);}
+	.mb-65{margin-bottom: rem(65);}
+	.mb-70{margin-bottom: rem(70);}
+}
+
+.w-100 {
+	width: 100%;
+	img {
+		width: 100%;
+	}
 }
 
 

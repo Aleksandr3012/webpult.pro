@@ -324,3 +324,41 @@ mixin sPossibilities(data)
 								})
 
 	// end sPossibilities
+
+mixin sPossibilities-11(data)
+	// start sPossibilities
+	+b.sPossibilities--page11.section#sPossibilities&attributes(attributes)
+		.container
+			.tabs
+				+b.tabs__caption--with-icon
+					+b.tabs__btn--with-icon
+						+icon("cloud")
+						| Облачное решение
+					+b.tabs__btn--with-icon.active
+						+icon("server")
+						| Коробочное решение
+				div
+					mixin content(t)
+						.tabs__content&attributes(attributes)
+							+e.decision
+								.row
+									.col-lg-6
+										h2= t
+										p &laquo;Коробка&raquo;&nbsp;&mdash; коробочная версия 1С&nbsp;Битрикс24&nbsp;&mdash; это устанавливаемое на&nbsp;ваших серверах программное обеспечение от&nbsp;1С-Битрикс.
+										h4 Возможности
+										ul.mb-4
+											li Покупая это&nbsp;ПО, вы&nbsp;становитесь его владельцем и&nbsp;вправе распоряжаться им&nbsp;по&nbsp;собственному усмотрению. База данных Битрикс24 при этом хранится на&nbsp;ваших серверах;
+											li Коробочное решение дает дополнительные функции, которых не&nbsp;найти в&nbsp;облачной версии. А&nbsp;значит, расширяяет возможности системы;
+											li Коробочное решение глубоко интегрируется с&nbsp;большим количеством систем (1С, СКУД, Телефония, Почта, Сайт), что делает управление структурой и&nbsp;рабочим временем сотрудников рациональнее. Позволяет не&nbsp;упустить стратегически важных данных и&nbsp;выиграть на&nbsp;оптимизациях;
+											li Коробочное решение дает дополнительные функции, которых не&nbsp;найти в&nbsp;облачной версии. А&nbsp;значит, расширяяет возможности системы;
+											li Возможно льготное продление лицензии на&nbsp;коробочную версию, что в&nbsp;долгосрочной перспективе дешевле облачного решения.
+										.row
+											.col-auto
+												+btn-modal('Попробовать бесплатно',`<span class="text-primary">Заказать</span> интернет-магазин`)(class="mb-3")
+											.col-auto
+												a.btn.btn-secondary(href="#") Лицензии
+									.col.d-nene.d-lg-block
+										+e.imgWrap
+											+pic('decision.png','','')
+					+content('Облачное решение «Битрикс24»')
+					+content('Коробочное решение «Битрикс24»').active
