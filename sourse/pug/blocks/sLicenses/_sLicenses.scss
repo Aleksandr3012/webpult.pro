@@ -91,7 +91,10 @@
 			height: 55px;
 			border-radius: $border-radius;
 			border: 1px solid $light2;
-			width: 210px;
+				@include media-breakpoint-up(sm) {
+
+					width: 210px;
+				}
 			padding: rem(5) rem(12);
 			color: $gray-700;
 		}
