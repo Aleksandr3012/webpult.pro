@@ -617,6 +617,10 @@ table {
 	&.bg-info{
 		color: #2388d9;
 	}
+	&--warning{
+		background-color: #fff0f2;
+		color: #ff4c39;
+	}
 	.icon{
 		font-size: $h3-font-size;
 		margin-right: rem(11);

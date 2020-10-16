@@ -44,7 +44,17 @@
 	min-height: calc(100% - 30px);
 	margin-bottom: rem(30);
 	@include mt;
-
+	&--price{
+		display: flex;
+		flex-direction: column;
+	}
+	&__price{
+		margin-top: auto;
+		font-weight: 600;
+		@include rfs(22px);
+		margin-bottom: rem(30);
+		
+	}
 	&__img-wrap{
 		picture{
 
@@ -57,6 +67,14 @@
 			max-height: 100%;
 			max-width: 100%;
 		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		width: rem(158);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(20);
 	}
 	.h6{
 		margin-left: auto;

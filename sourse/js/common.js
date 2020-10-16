@@ -538,6 +538,11 @@ function eventHandler() {
 			stickTo: '.stickyContainer'
 		});
 	}
+ 
+			let aside = $('.sCatalogHorizontal__aside'); 
+			aside.hcSticky({
+				// stickTo: $(this)
+			});  
 	
 	// // Cache selectors
 	var lastId,

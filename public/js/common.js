@@ -508,8 +508,11 @@ function eventHandler() {
 		$('.stickyItem').hcSticky({
 			stickTo: '.stickyContainer'
 		});
-	} // // Cache selectors
+	}
 
+	var aside = $('.sCatalogHorizontal__aside');
+	aside.hcSticky({// stickTo: $(this)
+	}); // // Cache selectors
 
 	var lastId,
 			solutionsMenu = $(".solutionsMenu--js"),
