@@ -100,11 +100,14 @@
 .solutionsMenu{
 		display: flex;
 		margin-bottom: rem(25);
+		margin-left: rem(-15);
+		margin-right: rem(-15);
 		flex-wrap: wrap;
 		&__item{
 			margin-bottom: rem(9);
 			color: $body-color;
-			margin-right: rem(31);
+			margin-left: rem(15);
+			margin-right: rem(15);
 			border-bottom: 1px dashed;
 		}
 		.active{
