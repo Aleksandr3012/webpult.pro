@@ -16,6 +16,21 @@
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+
+	//12 page start
+	.section-title--sm {
+		max-width: 717px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-white {
+		padding-top: 0;
+		background-color: #fff;
+	}
+	&__roww {
+		@include roww(0);
+	}
+	//12 page end
 } // end.sOurWorks
 
 .sOurWorks-item{

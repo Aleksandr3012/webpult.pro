@@ -131,5 +131,15 @@
 @include media-breakpoint-up(xs) {}
 @include media-breakpoint-between(md, xl) {}
 @include media-breakpoint-only(xl) {}
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(sm) {
+	.row{
+		display: block;
+		columns: 2;
+		page-break-inside: avoid;
+
+	}
+	&__col{
+		display: inline-block;
+	}
+}
 }
