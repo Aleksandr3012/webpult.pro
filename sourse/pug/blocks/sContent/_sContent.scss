@@ -89,17 +89,28 @@
 
 	.solutionsMenu { 
 		&.sticky {
-			background-color: #fff;
-			z-index: 20;
-			padding-top: rem(15);
-			padding-bottom: rem(15);
-			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-			width: 100vw !important;
-			left: 0 !important;
+			@include media-breakpoint-up(lg) {
+				background-color: #fff;
+				z-index: 20;
+				padding-top: rem(15);
+				padding-bottom: rem(15);
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+				width: 100vw !important;
+				left: 0 !important;
+			}
+			@include media-breakpoint-down(lg){
+				position: static !important;
+			}
 		}
-	
-	}
 
+		
+	}
+	
+	.sticky-spacer {
+		@include media-breakpoint-down(lg) {
+			display: none !important;
+		}
+	}
 
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) { }
