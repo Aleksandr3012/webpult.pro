@@ -33,6 +33,7 @@
 	}
 
 	&__mapWrap {
+		min-height: rem(300);
 		height: 100%;
 		@include block(1142,477);
 		iframe, script {
@@ -44,8 +45,10 @@
 
 	.tabs {
 		&__content {
-
-			padding: rem(40) rem(65) rem(40) rem(39);
+			padding: rem(20);
+			@include media-breakpoint-up(md) {
+				padding: rem(40) rem(65) rem(40) rem(39);
+			}
 		}
 
 		&__btn {
