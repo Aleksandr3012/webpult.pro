@@ -11,8 +11,8 @@ mixin sContact()
 					+e.item.tabs__btn Ташкент
 				div
 					.row
-						+e.textCol.col-md-3
-							mixin tabs()
+						+e.textCol.col-lg-4.col-xxl-3
+							mixin tabs(i)
 								.tabs__content&attributes(attributes)
 									+e.item
 										+e.iconWrap
@@ -22,8 +22,12 @@ mixin sContact()
 										+e.iconWrap
 											+icon('phone')
 										div
-											+e.tel(href="tel:74999387838") +7 (499) 938-78-38
-											+e.tel(href="tel:74999387838") +7 (499) 938-78-38
+											if i
+												+e.tel(href="tel:74999387838") +7 (499) 938-78-38
+												+e.tel(href="tel:74999387838") +7 (499) 938-78-38
+											else
+												+e.tel(href="tel:74999387838") +7 (000) 000-00-00
+												+e.tel(href="tel:74999387838") +7 (000) 000-00-00
 									+e.item
 										+e.iconWrap
 											+icon('mail')
@@ -33,9 +37,9 @@ mixin sContact()
 											+icon('clock')
 										| Пн - Пт с 09:00 до 18:00. Суббота - в дежурном режиме. Воскресенье - выходной.
 									+btn-modal('Обратная связь',`<span class="text-primary">Обратная</span> связь`)
-							+tabs().active
+							+tabs('i').active
 							+tabs()
-								.col
-									+e.mapWrap
-										<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae431e4855d26c9dbab0adea0e83dbafffd99d8541ebe1afd15b9e2f7d6bca3d5&amp;source=constructor"></iframe>
+						.col-lg
+							+e.mapWrap
+								<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae431e4855d26c9dbab0adea0e83dbafffd99d8541ebe1afd15b9e2f7d6bca3d5&amp;source=constructor"></iframe>
 	// end sContact

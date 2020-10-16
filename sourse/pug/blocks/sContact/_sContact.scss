@@ -44,8 +44,8 @@
 
 	.tabs {
 		&__content {
-			border-radius: $border-radius;
-			border: 1px solid #ebebeb;
+
+			padding: rem(40) rem(65) rem(40) rem(39);
 		}
 
 		&__btn {
@@ -60,7 +60,12 @@
 	}
 
 	&__textCol {
-		padding: rem(40) rem(65) rem(40) rem(39);
+	}
+
+	.row {
+		@include roww(0);
+		border: 1px solid #ebebeb;
+		border-radius: $border-radius;
 	}
 
 	&__tel {
