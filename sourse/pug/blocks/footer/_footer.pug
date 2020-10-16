@@ -3,11 +3,18 @@ mixin footer()
 		.container
 			+e.row.row.justify-content-between.align-items-center
 				.col-md-auto.order-md-last
-					+e.tel(href="tel:")
+					+e.tel()
 						+icon('tel')
 						span +7 (499) 938 78 38
 						+e.drop
 							+icon('drop')
+						+e.drop-block
+							+e.drop-item
+								.h6: a.text-body(href="tel:+7 (499) 938 78 38") +7 (499) 938 78 38
+								.small.text-body Воронеж
+							+e.drop-item
+								.h6: a.text-body(href="tel:+998 93 399 08 99 ") +998 93 399 08 99 
+								.small.text-body Ташкентр
 					//- +e.tel
 					//- 	+icon('tel')
 					//- 	+select('','+7 (499) 938 78 38','+7 (000) 000 00 00','+7 (000) 000 00 00','+7 (000) 000 00 00','+7 (000) 000 00 00')

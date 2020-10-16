@@ -31,9 +31,9 @@
 
 	}
 	&__nextBtn, &__prevBtn {
+		top: 45%;
 		outline: none;
 		position: absolute;
-		top: 45%;
 		z-index: 10;
 		border-radius: 50%;
 		background-color: #fff;
@@ -44,9 +44,12 @@
 		align-items: center;
 		justify-content: center;
 		@include mt;
+		color: $gray-700;
+		&:hover {
+			color: $primary;
+		}
 		.icon {
 			font-size: rem(14);
-			color: $gray-700;
 		}
 		&.swiper-button-disabled {
 			transform: scale(0);

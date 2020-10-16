@@ -70,6 +70,9 @@
 		border-radius: 50%;
 		box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 		background-color: #ffffff;
+		&:hover {
+			color: $primary;
+		}
 		.icon {
 			font-size: rem(14);
 			@include media-breakpoint-up(xsm) {

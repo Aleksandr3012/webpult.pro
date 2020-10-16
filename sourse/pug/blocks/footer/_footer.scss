@@ -11,7 +11,8 @@
 	&__tel {
 		color: #fff;
 		@extend .h6;
-		margin-bottom: rem(37) !important;
+		padding-bottom: rem(20);
+		margin-bottom: rem(17) !important;
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0 !important;
 		}
@@ -34,6 +35,35 @@
 			color: #c7c7c7;
 			transform: rotate(90deg);
 		}
+		position: relative;
+		cursor: pointer;
+	}
+	&__tel:hover &__drop-block {
+		transform: scaleY(1);
+		visibility: visible;
+		z-index: 2;
+	}
+	&__drop-block{
+		@include mt;
+		visibility: hidden;
+		z-index: -1;
+		transform: scaleY(0);
+		transform-origin: top right;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: rem(229px); 
+		border-radius: $border-radius;
+		border: 1px solid #eeeeee;
+		background-color: #ffffff;
+	}
+	&__drop-item{
+		.h6{
+			margin-bottom: 2px;
+		}
+		padding: rem(15) rem(24);
+		border-bottom: 1px solid #ececec;
+		;
 	}
 
 	&__drop {
