@@ -132,7 +132,7 @@
 @include media-breakpoint-between(md, xl) {}
 @include media-breakpoint-only(xl) {}
 @include media-breakpoint-down(sm) {
-	.row{
+	&__linkRow {
 		display: block;
 		columns: 2;
 		page-break-inside: avoid;
