@@ -68,6 +68,9 @@
 		@include media-breakpoint-only(lg) {
 			@include roww(10px);
 		}
+		@include media-breakpoint-up(lg) {
+			justify-content: space-between;
+		}
 		// @include media-breakpoint-down(md) {
 		// 	display: block;
 		// 	columns: 2;
