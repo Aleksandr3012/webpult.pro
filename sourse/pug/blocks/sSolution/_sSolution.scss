@@ -99,9 +99,10 @@
 
 .solutionsMenu{
 		display: flex;
-		margin-bottom: rem(34);
+		margin-bottom: rem(25);
 		flex-wrap: wrap;
 		&__item{
+			margin-bottom: rem(9);
 			color: $body-color;
 			margin-right: rem(31);
 			border-bottom: 1px dashed;

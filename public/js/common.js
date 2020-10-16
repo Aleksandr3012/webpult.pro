@@ -434,7 +434,8 @@ function eventHandler() {
 		watchSlidesProgress: true,
 		breakpoints: {
 			440: {
-				spaceBetween: 32
+				spaceBetween: 32,
+				slidesPerView: 'auto'
 			},
 			992: {
 				spaceBetween: 63,
