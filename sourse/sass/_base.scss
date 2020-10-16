@@ -670,15 +670,31 @@ table {
 			align-items: center;
 			width: 50%;
 			font-size: $xsmall;
-			height: rem(87);
-			padding: rem(24);
+			height: rem(90);
+			@include media-breakpoint-down(sm){
+				font-size: rem(12);
+			}
+			@include media-breakpoint-up(sm) {
+				
+				height: rem(87);
+					padding: rem(24);
+				}
+				padding: rem(10) rem(10);
 			border-radius: $border-radius;
 			background-color: #f5f7f9;
 			@include mt;
 			text-transform: uppercase;
 
 			.icon {
-				margin-right: rem(15);
+				@include media-breakpoint-up(sm) {
+
+					margin-right: rem(15);
+				}
+				margin-right: rem(10);
+					@include media-breakpoint-down(sm) {
+
+						font-size: rem(34);
+					}
 				font-size: rem(44);
 				flex: 0 0 auto;
 
