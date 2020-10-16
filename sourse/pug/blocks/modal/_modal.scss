@@ -39,6 +39,40 @@
 		border: none;
 
 	}
+	&--lg{
+		max-width: rem(1070);
+		padding: 0 !important;
+		background-color: #ffffff;
+		overflow: hidden;
+		border-radius:  8px;
+		.form-wrap{
+			background-color: $light2;
+			border-radius: 0 8px 8px 0;
+			@include media-breakpoint-up(md) {
+				
+				padding: rem(38) rem(30);
+				width: rem(390);
+			}
+			padding: rem(38) rem(20);
+		}
+
+	}
+	&__left-block{
+		padding-top: rem(38);
+		padding-bottom: rem(30);
+	}
+	&__head{
+		border-radius: 8px 8px 0 0;
+		background-color: $light2;
+		padding-left: 15px;
+		padding-right: 15px;
+		.row{
+			align-items: center;
+		}
+		.h2{
+			max-width: rem(320);
+		}
+	}
 }
 
 a {

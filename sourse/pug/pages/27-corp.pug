@@ -1,0 +1,85 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sPossibilities/_sPossibilities.pug
+include ../blocks/sHave/_sHave.pug
+include ../blocks/sPreview/_sPreview.pug
+include ../blocks/sSupportTable/_sSupportTable.pug
+include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sOurWorks/_sOurWorks.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sNumeral/_sNumeral.pug
+include ../blocks/sCompetences/_sCompetences.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sFAQ/_sFAQ.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Создание  Landing page'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+	.breadcrumbWrap
+		.container
+			+breadcrumb('Главная', title)
+		+headerBlockBody().--tarif
+			.container
+				.row
+					.col-xxl-5.col-xsm-7
+						+e.content
+							+b.section-title
+								h1 Создаем прибыльные сайты  на&nbsp;1С-Битрикс от&nbsp;#[span.text-with-border 150&nbsp;000 рублей]
+							p Разрабатываем сайты для бизнеса на&nbsp;1С-Битрикс с&nbsp;авторским дизайном
+							br
+							.row 
+								ul.h6.strong.col-auto
+									li С нуля 
+							
+								ul.h6.strong.col-auto 
+									li Под ключ
+							+btn-modal('Заказать сайт',`<span class="text-primary">Заказать</span> сайт `)
+					+e.picCol.col-xsm-5.col-xl
+						+pic('head-img-27','','')
+	+sPreview('prev-corp',`Разработка сайтов на&nbsp;1С-Битрикс <br> под ключ`)
+		p Система управления сайтом «1С-Битрикс» на сегодняшний день является самой популярной коммерческой CMS на территории СНГ, а также входит в топ 10 популярных коммерческих систем мира. Очень часто наши заказчики задаются вопросом для чего нужно платить за лицензию битрикса, в то время как существует множество бесплатных систем. Также, многие считают, что разработка сайтов на bitrix – это долго и дорого. С подобным утверждением мы не можем 
+		p Есть мнение, что создание #[strong Интернет-магазина на Битрикс] – это долго и дорого. Немного ниже, на этой странице мы постарались дать развернутый ответ на данный вопрос. Но если вкратце, то действительно, на рынке есть множество предложений по предложений по
+	+sCards-27()
+	+sHave20
+	+sOurWorks
+	+sSteps-03('Этапы создания сайта')
+	+sHowOrder-03
+	+sNumeral('Наши преимущества')
+	+sCompetences
+	+sContent()
+		+e.inner--border
+			+e.row.row
+				.col.pb-2
+					h2 Что лучше? Заказать бесплатный, шаблонный  лендинг или создать с&nbsp;нуля?
+					p Выше мы&nbsp;говорили о&nbsp;сайтах-визитках, а&nbsp;точнее, об&nbsp;их&nbsp;недостатках и&nbsp;лишь об&nbsp;одном преимуществе лендинга. Как видно даже из&nbsp;небольшого количества информации, описанной выше, так называемый &laquo;сайт-визитка&raquo; полностью себя изжил. Поэтому мы&nbsp;предлагаем больше не&nbsp;возвращаться в&nbsp;утопию и&nbsp;хотим рассказать об&nbsp;основных преимуществах лендингов и&nbsp;о&nbsp;том, для каких целей данный тип сайта подойдет лучше всего. 
+					p Итак, сегодня у&nbsp;желающих заказать лендинг, есть выбор между: заказать в&nbsp;веб-студии с&nbsp;нуля, купить готовый шаблон и&nbsp;создать на&nbsp;бесплатном конструкторе. Попытаемся разобраться в&nbsp;преимуществах и&nbsp;недостатках.
+				.col-lg-5.text-center.pb-2
+					+pic("line-1")
+			+e.row.row.flex-lg-row-reverse
+				.col.pb-2
+					h2 Бесплатные конструкторы лендингов
+					p Начнем с бесплатных конструкторов. 
+					.div-with-icon
+						img(src="img/svg/check-circler.svg", alt="")
+						| Единственный плюс в подобных ресурсах кроется в слове «бесплатно», однако мы верим в то, что сейчас уже все понимают то, что такое «бесплатно». 
+					.div-with-icon.mb-3
+						img(src="img/svg/times-circle.svg", alt="")
+						| Теперь о минусах. К сожалению для любителей «бесплатного», их гораздо больше.
+					p В&nbsp;первую очередь, вы&nbsp;должны четко понимать, что лендинг, который вы&nbsp;создадите на&nbsp;бесплатном конструкторе никогда (Внимание! Никогда!) не&nbsp;будет принадлежать вам. Владельцем вашего ресурса изначально и&nbsp;навсегда останется разработчик конструктора бесплатных лендингов, как&nbsp;бы красиво вас не&nbsp;заманивали.  
+				.col-lg-5.text-center.pb-2
+					+pic("line-2")
+	+sFAQ()
+	+footer()
+
+
+	

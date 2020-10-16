@@ -72,6 +72,63 @@ mixin modal()
 			//- +e.BUTTON.btn.btn(type="submit") Оставить заявку
 	// #modal-vacancy
 
+	+b.modal-win--lg(id="modal-shop" class=" " style="display: none" )
+		+e.head.g-0
+			.row
+				.col-auto
+					+pic("bag.png")
+				.col
+					.h2.strong Пакет «Начальный»
+						span.text-with-border 180.000 рублей
+		+e.body
+			form
+				mixin itemDrop(t)
+					+b.drop-accardion-block
+						+e.title.drop-accardion-js
+							+icon("plus-drop")
+							strong= t
+							if count
+								span= count
+						+e.body.drop-accardion-toggle-js
+							block
+				.row.g-0
+					.col
+						+e.left-block
+							mixin group()
+								ul
+									li Описание
+									li Характеристики 
+									li Фото / видео товара 
+									li Отзывы о товаре
+									li Наклейки «новинка», «хит продаж»
 
-	
+
+							+itemDrop('Каталог товаров')
+								+group()
+										
+							+itemDrop('Карточка товара')
+								+group()
+							+itemDrop('Торговые предложения')
+								+group()
+							+itemDrop('Корзина')
+								+group()
+							+itemDrop('Доставка')
+								+group()
+							+itemDrop('Оплата')
+								+group()
+							+itemDrop('Личный кабинет покупателя')
+								+group()
+							+itemDrop('Новости (статьи)')
+								+group()
+					.col-md-auto
+						+b.form-wrap
+							+e.title--js.form-data.h3 #[span.text-primary Заказать] разработку интернет-магазина
+							p.mb-45 Оставьте заявку и менеджер свяжется с Вами в ближайшее время
+							+input("Как Вас зовут?", "text", "Как Вас зовут?")  
+							+input("XXX-XXX-XX-XX", "tel", "Номер телефона")
+							+input("info@webpult.pro", "email", `E-mail <span class="text-primary">*</span>`)(required)
+							+input("Ваш комментарий", "textarea", "Ваш комментарий") 
+							+polite()
+							+e.btn.btn.btn-primary.btn-primary-shadow-sm(type="submit") Оставить заявку
+		
 	// end modals
