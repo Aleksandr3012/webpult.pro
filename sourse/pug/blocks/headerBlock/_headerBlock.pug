@@ -9,27 +9,47 @@ mixin headerBlock()
 	+headerBlockBody().--main
 		+e.slider.swiper-container.gallery-top
 			.swiper-wrapper
-				mixin slide()
+				mixin slide(i,data)
 					+e.slide.swiper-slide
 						.container
 							.row
 								.col-xsm-7.col-xl
 									+e.content
 										+b.section-title
-											.h1 Сайты на 1С-Битрикс в рассрочку
-											p Мы предлагаем сайты и Интернет-магазины в беспроцентную рассрочку на 1С-битрикс!
+											.h1!= data.title
+											p!= data.text
 										+e.buttons.d-none.d-lg-block
-											+e.btn.btn.btn-primary.link-modal(href="#modal-call" data-title=`<span class="text-primary">Заказать</span> сайт`) Заказать сайт
+											+e.btn.btn.btn-primary.link-modal(href="#modal-call" data-title!= data.btnModal)= data.btn
 											+e.details(href="#") Подробнее
 								+e.picCol.col-xsm-5.col-xl-6
 									//- +pic('headerPic.png')
 									picture
-										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/headerPic.webp` type="image/webp")
-										img.swiper-lazy(src="#" data-src=`img/@2x/headerPic.png`, alt="")
-				+slide
-				+slide
-				+slide
-				+slide 
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/headerPic-${i}.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/headerPic-${i}.png`, alt="")
+				+slide('4',{
+					title: 'Создаем крутые сайты с&nbsp;пожизненной гарантией ',
+					text: 'Переделываем и дорабатываем существующие сайты и оказываем техническую поддержку',
+					btn: 'Заказать сайт',
+					btnModal: `<span class='text-primary'>Заказать</span> сайт`
+				})
+				+slide('3',{
+					title: `Создание Интернет-магазинов на&nbsp;1С&#8209;Битрикс`,
+					text: 'Предлагаем разработку Интернет-магазина на битриксе с бессрочной гарантией',
+					btn: 'Заказать интернет-магазин',
+					btnModal: `<span class='text-primary'>Заказать</span> интернет&#8209;магазин`
+				})
+				+slide('2',{
+					title: `Создание лендингов на&nbsp;1С&#8209;Битрикс`,
+					text: 'Правки в дизайн-макеты без ограничений!',
+					btn: 'Заказать лендинг',
+					btnModal: `<span class='text-primary'>Заказать</span> лендинг`
+				})
+				+slide('1',{
+					title: `Сайты на 1С&#8209;Битрикс в рассрочку`,
+					text: `Мы предлагаем сайты и Интернет&#8209;магазины в беспроцентную рассрочку на 1С&#8209;битрикс!`,
+					btn: 'Заказать сайт',
+					btnModal: `<span class='text-primary'>Заказать</span> сайт`
+				})
 		.container
 			+e.buttons.d-lg-none
 				+e.btn.btn.btn-primary.link-modal(href="#modal-call" data-title=`<span class="text-primary">Заказать</span> сайт`) Заказать сайт

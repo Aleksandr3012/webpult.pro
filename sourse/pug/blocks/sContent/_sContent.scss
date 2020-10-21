@@ -31,10 +31,12 @@
 		}
 		&:hover{
 			text-decoration: underline;
+			color: $primary;
+
 		}
 		
 		&:hover .icon{
-			transform: translateX(-3px);
+			// transform: translateX(-3px);
 		}
 	}
 	&__next {
@@ -200,9 +202,9 @@ ul {
 			content: '';
 			position: absolute;
 			left: 0;
-			top: em(5);
-			width: em(7);
-			height: em(7);
+			top: em(7);
+			width: .26667em;
+			height: .26667em;
 			background-color: $primary;
 			border-radius: 50%;
 		}
@@ -269,6 +271,7 @@ blockquote {
 		max-height: 32px;
 		margin-right: rem(20);
 		position: relative;
+		flex-shrink: 0;
 	}
 }
 

@@ -293,24 +293,24 @@ function eventHandler() {
 	});
 	$('.accardion-close-js').click(function () {
 		$(this).parent().removeClass('active');
-	});
-	var galleryThumbs = new Swiper('.gallery-thumbs', {
-		spaceBetween: 0,
-		slidesPerView: 4,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		watchOverflow: true // clickable: true,
+	}); // const galleryThumbs = new Swiper('.gallery-thumbs', {
+	// 	spaceBetween: 0,
+	// 	slidesPerView: 4, 
+	// 	watchSlidesVisibility: true,
+	// 	watchSlidesProgress: true,
+	// 	watchOverflow: true
+	// 	// clickable: true,
+	// });
 
-	});
 	var galleryTop = new Swiper('.gallery-top', {
 		spaceBetween: 0,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev'
 		},
-		thumbs: {
-			swiper: galleryThumbs
-		},
+		// thumbs: {
+		// 	swiper: galleryThumbs
+		// },
 		lazy: {
 			loadPrevNext: true
 		}

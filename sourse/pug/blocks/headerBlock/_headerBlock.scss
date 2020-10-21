@@ -42,6 +42,9 @@
 	.section-title { 
 		max-width: rem(620);
 		padding-bottom: calc(var(--sTPB) * 2);
+		@media (min-width: 1200px) and (max-width: 1440px) {
+			// padding-bottom: calc(var(--sTPB) * 1.5);
+		}
 
 		p {
 			line-height: 1.4;
@@ -254,9 +257,13 @@
 	justify-content: center;
 	position: relative;
 	z-index: 2;
+	margin-bottom: calc(var(--sPB) / 1.3);
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(-62);
 		overflow: visible;
+		margin-bottom: var(--sPB);
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.swiper-wrapper {
@@ -265,19 +272,42 @@
 			justify-content: center;
 		}
 	}
+	@include media-breakpoint-up(lg) {
+		border: 1px solid #ebebeb;
+	}
 
 	.slideThumb {
+		&__slideWrap {
+			@include media-breakpoint-up(lg) {
+				padding: rem(25) rem(25);
+				&::before {
+						content: '';
+						right: 0;
+						@include a-cent(y);
+						width: 2px;
+						height: 65px;
+						background-color: #ebebeb;
+				}
+			}
+			height: 100%;
+			position: relative;
+		}
+		&:last-child {
+			.slideThumb__slideWrap {
+				&::before {
+					// content: none;
+					display: none;
+				}
+			}
+		}
 		position: relative;
-		margin-bottom: calc(var(--sPB) / 1.3);
 		width: 25%;
+		
 		@include media-breakpoint-up(lg) {
-			margin-bottom: var(--sPB);
 			min-height: rem(121);
-			padding: rem(25) rem(25);
-	
+			
 			height: auto;
 			background-color: #ffffff;
-			border: 1px solid #ebebeb;
 			&:hover {
 				background-color: $light;
 				border-color: $light;
@@ -288,7 +318,7 @@
 				height: calc(100% + 11px);
 				width: 100%;
 				border-radius: $border-radius;
-				@include mt;
+				// @include mt;
 				bottom: 0;
 				left: 0;
 				position: absolute;
@@ -301,7 +331,7 @@
 					z-index: 2;
 					position: absolute;
 					@include a-cent(x);
-					@include mt;
+					// @include mt;
 					opacity: 0;
 					top: rem(-26px);
 					transform: rotate(45deg);

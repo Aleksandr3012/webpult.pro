@@ -2,7 +2,7 @@ mixin topLine()
 	// start topLine
 	+b.topLine#topLine&attributes(attributes)
 		.container
-			.row
+			.row.justify-content-between
 				.col-auto.d-lg-none
 					+mob-mnu
 				.col-auto
@@ -20,7 +20,7 @@ mixin topLine()
 							+e.quantity 0
 						+e.btn.btn.btn-dark.link-modal(href="#modal-call" data-title=`<span class="text-primary">Обратная</span> связь`)
 							span.d-none.d-md-inline Нужна консультация?
-					+e.btn.d-md-none.link-modal(href="#modal-call" data-title=`<span class="text-primary">Обратная</span> связь`)
+					+e.btn.d-md-none(href="tel:+74999387838")
 						+icon('tel')
 
 	// end topLine
