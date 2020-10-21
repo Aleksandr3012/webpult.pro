@@ -19,7 +19,7 @@
 
 	&__sliderCol {
 		position: relative;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(lg) {
 			margin-bottom: rem(30);
 		}
 
@@ -219,10 +219,14 @@
 
 	.form-check {
 		margin-bottom: rem(20);
-
+		
 		&-label {
+			cursor: pointer;
 			font-size: $small;
 			font-weight: 500;
+		}
+		&-input {
+			cursor: pointer;
 		}
 	}
 

@@ -68,9 +68,19 @@ $output-bourbon-deprecation-warnings: false;
 	align-items: center;
 	border: 2px solid #e2dedd;
 	color: $gray-700;
-	
 	border-radius: 50% !important;
+	&:hover{
+		background-color: $white;
+	}
+	
 }
+
+// .page-link:hover,
+// .pagination-wrapper li .page-numbers{
+// 	&:hover{
+// 		background-color: $white;
+// 	}
+// }
 
 .pagination-wrapper li {
   @extend .page-item;

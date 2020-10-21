@@ -91,7 +91,10 @@
 			height: 55px;
 			border-radius: $border-radius;
 			border: 1px solid $light2;
-			width: 210px;
+				@include media-breakpoint-up(sm) {
+
+					width: 210px;
+				}
 			padding: rem(5) rem(12);
 			color: $gray-700;
 		}
@@ -101,10 +104,17 @@
 		@include media-breakpoint-up(xxl) {
 			padding-left: rem(40);
 		}
+		@include media-breakpoint-down(xsm) {
+			padding-bottom: rem(10);
+		}
 	}
 
 	.solutionsMenu {
-		margin-bottom: rem(38);
+		margin-bottom: rem(30);
+
+		&__item {
+			margin-bottom: rem(8);
+		}
 	}
 
 
