@@ -21,12 +21,13 @@
 		position: relative;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: rem(30);
+		}
+
 		&--mb-25{
-				@include media-breakpoint-up(xl){
-					margin-bottom: 0;
-				}
-				margin-bottom: rem(25);
+			@include media-breakpoint-up(xl){
+				margin-bottom: 0;
 			}
+			margin-bottom: rem(25);
 		}
 
 	}
