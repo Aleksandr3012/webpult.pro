@@ -11,7 +11,8 @@
 	&__tel {
 		color: #fff;
 		@extend .h6;
-		margin-bottom: rem(37) !important;
+		padding-bottom: rem(20);
+		margin-bottom: rem(17) !important;
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0 !important;
 		}
@@ -27,6 +28,11 @@
 			font-size: rem(17);
 			color: $primary;
 			margin-right: rem(13);
+				cursor: pointer;
+			}
+			span{
+				cursor: pointer;
+
 		}
 
 		.icon-drop {
@@ -34,6 +40,35 @@
 			color: #c7c7c7;
 			transform: rotate(90deg);
 		}
+		position: relative;
+	
+	}
+	&__tel:hover &__drop-block {
+		transform: scaleY(1);
+		visibility: visible;
+		z-index: 2;
+	}
+	&__drop-block{
+		@include mt;
+		visibility: hidden;
+		z-index: -1;
+		transform: scaleY(0);
+		transform-origin: top right;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: rem(229px); 
+		border-radius: $border-radius;
+		border: 1px solid #eeeeee;
+		background-color: #ffffff;
+	}
+	&__drop-item{
+		.h6{
+			margin-bottom: 2px;
+		}
+		padding: rem(15) rem(24);
+		border-bottom: 1px solid #ececec;
+		;
 	}
 
 	&__drop {
@@ -146,3 +181,87 @@
 	}
 }
 }
+
+.btn-top{
+	position: fixed;
+	right: rem(60);
+	bottom: rem(60);
+	width: 48px;
+	height: 49px;
+	border: 2px solid transparent;
+	// background-color: #ffffff;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	@include mt;
+	z-index: 200;
+
+	.icon{
+		@include mt;
+	}
+	&:hover{
+		border-color: $secondary;
+	}
+	.icon-logo-top{
+		font-size: rem(30px *1.2);
+		stroke: $primary;
+		stroke-width: 8px; 
+		
+		
+		fill: transparent !important;
+	}
+	transform: translateX(calc(100% + #{rem(60)}));
+	&.show{
+		transform: translateX(0);
+	}
+	.icon-fire{
+	 
+		fill:#f69d35 !important;
+		font-size: $xsmall;
+		margin-bottom: (-$xsmall);
+		opacity: 0;
+	}
+	&:hover,
+	&.active{
+		.icon-logo-top{
+			fill:$primary !important;
+		}
+		.icon-fire{
+			// opacity: 0.5; 
+		}
+	}
+	&.active{ 
+		.icon-fire{
+			opacity: 0.5;
+			animation: fires .8s linear infinite;
+		}
+	}
+
+}
+
+
+@keyframes fires {
+	0% { 
+		transform: rotate(-2deg) translateY(0%);
+		opacity: .5;
+	}
+
+	25% { 
+		transform: rotate(-2deg) translateY(-5%);
+		opacity: 0;
+	}
+	
+	50% { 
+		transform: rotate(-2deg) translateY(5%);
+		opacity: 1;
+	}
+ 
+	100% { 
+		transform: rotate(-2deg) translateY(0%);
+		opacity: .5;
+	}
+	}

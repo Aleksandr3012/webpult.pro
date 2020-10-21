@@ -72,8 +72,8 @@ mixin sCards-02(data)
 				p Более точно можно будет выполнить расчет только после получения информации о&nbsp;ваших пожеланиях. Цены ориентировочные для стандартных проектов.
 			.row
 				.col-lg-4
-					+cardItem('Интернет-магазин за 180 000 рублей','для малого бизнеса и начинающим','Подробнее','cardImg-im-1')
-						+e.btn.btn.btn-primary.btn-primary-shadow-sm(href="#") Подробнее
+					+cardItem('Интернет-магазин за 180 000 рублей','для малого бизнеса и начинающим','Подробнее','cardImg-im-1') 
+						a.btn.btn-primary.link-modal(href="#modal-shop" ) Подробнее
 				.col-lg-4
 					+cardItem('Интернет-магазин за 220 000 рублей','для крупного бизнеса с точками по всей стране','Подробнее','cardImg-im-2')
 				.col-lg-4
@@ -121,3 +121,15 @@ mixin sCards-05(data)
 				.col-lg-6
 					+cardItem(`Создание логотипа за&nbsp;19&nbsp;900 рублей`,'','Заказать','cardImg-logo-2')(class="cardItem--lg")
 						+btn-modal('Заказать ',`<span class="text-primary">Заказать</span> логотип`)
+mixin sCards-27(data)
+	// start sCards
+	+b.SECTION.sCards.section&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сколько стоит разработка сайта  для бизнеса?
+				p Более точно можно будет выполнить расчет только после получения информации о&nbsp;ваших пожеланиях. Цены ориентировочные для стандартных проектов.
+			.row
+				.col-lg-6
+					+cardItem(`Создание сайта для продажи услуг от&nbsp;150&nbsp;000 рублей`,'Гибкие пакеты для разработки логотипа','Подробнее','card-corp-1')(class="cardItem--lg")
+				.col-lg-6
+					+cardItem(`Создание сайта с&nbsp;каталогом продукции от&nbsp;170&nbsp;000 рублей`,'Гибкие пакеты для разработки логотипа','Подробнее','card-corp-2')(class="cardItem--lg")

@@ -12,8 +12,9 @@
 
 	.icon {
 		font-size: rem(18);
-		color: #686868;
-	}
+		// color: #686868;
+		@include mt;
+	} 
 
 	&__btn {
 		@include media-breakpoint-only(xl) {
@@ -27,6 +28,10 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+		}
+		&:hover{
+			border-color: $primary !important;
+			background-color: $primary !important;
 		}
 
 		.icon {
@@ -76,6 +81,13 @@
 		}
 		.icon {
 			margin-right: 4px;
+			color: #686868;
+		}
+		&:hover { 
+			.icon {
+				color: $primary;
+
+			}
 		}
 	}
 
@@ -91,13 +103,21 @@
 		align-items: center;
 		.icon {
 			margin-right: 6px;
+			color: #686868;
 		}
+		color: $body-color;
 		span {
-			color: $body-color;
 			font-size: $small;
 			line-height: 1;
 			@include media-breakpoint-down(md) {
 				display: none;
+			}
+		}
+		&:hover{
+			color: $primary;
+			.icon{
+				color: $primary;
+
 			}
 		}
 	}

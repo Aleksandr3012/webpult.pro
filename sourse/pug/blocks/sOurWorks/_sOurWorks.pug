@@ -7,12 +7,12 @@ mixin sOurWorksItem(i,t, s,pr)
 						+img.swiper-lazy.res-i(src="#" data-src=`sOurWorks-img-${i}.png`, alt="")
 				.h6!= t
 		else if pr
-			+b.sOurWorks-item
+			+b.sOurWorks-item--price
 				+e.DIV.img-wrap
-					+pic(`sOurWorks-img-${i}.png`,'','')
+					+pic(`prod-${i}.png`,'','')
 				.h5!= t
-				+e.price.text-with-border= pr
-				+e.link.btn.btn-primary.scroll-link(href="#") Подробнее
+				+e.DIV.price: span.text-with-border= pr
+				+e.btn.scroll-link(href="#") Подробнее
 		else
 			+b.sOurWorks-item(href="#")
 				+e.DIV.img-wrap
@@ -69,12 +69,12 @@ mixin sOurWorks-06(data)
 
 mixin sOurWorks-12(data)
 	+sOurWorksBody("Стоимость внедрения Битрикс24",'','title')(class="sOurWorks-white")
-		+e.roww.row
-			.col-6.col-lg-3
-				+sOurWorksItem('g-1',`Пакет «Начальный»`, '','от 20 000 рублей')
-			.col-6.col-lg-3
-				+sOurWorksItem('g-2',`Пакет «Оптимальный»`, '','от 42 000 рублей')
-			.col-6.col-lg-3
-				+sOurWorksItem('g-3',`Создание отдела продаж`, '','от 20 000 рублей')
-			.col-6.col-lg-3
-				+sOurWorksItem('g-4',`Автоматизация и повторные продажи`, '','от 20 000 рублей')
+		.row.g-0
+			
+			+sOurWorksItem('1',`Пакет «Начальный»`, '','от 20 000 рублей').col-6.col-lg-3
+		
+			+sOurWorksItem('2',`Пакет «Оптимальный»`, '','от 42 000 рублей').col-6.col-lg-3
+		
+			+sOurWorksItem('3',`Создание отдела продаж`, '','от 20 000 рублей').col-6.col-lg-3
+		
+			+sOurWorksItem('4',`Автоматизация и повторные продажи`, '','от 20 000 рублей').col-6.col-lg-3

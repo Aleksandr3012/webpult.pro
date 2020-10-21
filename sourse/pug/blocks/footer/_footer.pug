@@ -3,11 +3,18 @@ mixin footer()
 		.container
 			+e.row.row.justify-content-between.align-items-center
 				.col-md-auto.order-md-last
-					+e.tel(href="tel:")
+					+e.tel()
 						+icon('tel')
 						span +7 (499) 938 78 38
 						+e.drop
 							+icon('drop')
+						+e.drop-block
+							+e.drop-item
+								.h6: a.text-body(href="tel:+7 (499) 938 78 38") +7 (499) 938 78 38
+								.small.text-body Воронеж
+							+e.drop-item
+								.h6: a.text-body(href="tel:+998 93 399 08 99 ") +998 93 399 08 99 
+								.small.text-body Ташкентр
 					//- +e.tel
 					//- 	+icon('tel')
 					//- 	+select('','+7 (499) 938 78 38','+7 (000) 000 00 00','+7 (000) 000 00 00','+7 (000) 000 00 00','+7 (000) 000 00 00')
@@ -56,6 +63,11 @@ mixin footer()
 		+e.foot
 			.container
 				+e.polite(href="#") Политика конфиденциальности	
+	+b.btn-top
+		+icon("logo-top")
+		+icon("fire")
+		//- <svg class="fire" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131.74 209.94"><title>fire</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path d="M65.94,0a66.75,66.75,0,0,1,64.52,52.43c2.21,10.33,1.43,20.45-1.26,30.58a322.85,322.85,0,0,1-12.95,37.69c-8.54,21.19-18.17,41.9-28.27,62.39-3.45,7-7,13.92-10.52,20.86a10.26,10.26,0,0,1-9.41,6,10.14,10.14,0,0,1-9.63-5.61c-6.1-11.32-12.23-22.63-18.16-34-8.85-17-17.22-34.33-24.76-52-5.11-12-10-24.06-13.23-36.7-6-23.26,0-43.48,16-60.88C27.93,10.24,40.05,3.92,54.05,1.38,58,.67,62,.45,65.94,0Z"/></g></g></svg>
+
 
 
 

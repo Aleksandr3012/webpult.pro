@@ -31,9 +31,12 @@
 		align-items: center;
 		justify-content: center;
 		@include mt;
+		color: $gray-700;
 		.icon {
 			font-size: rem(17);
-			color: $gray-700;
+		}
+		&:hover{
+			color: $primary;
 		}
 		&.swiper-button-disabled {
 			transform: scale(0);
