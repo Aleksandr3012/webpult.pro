@@ -44,15 +44,16 @@
 	
 	}
 	&__tel:hover &__drop-block {
-		transform: scaleY(1);
+		// transform: scaleY(1);
+		opacity: 1;
 		visibility: visible;
 		z-index: 2;
 	}
 	&__drop-block{
-		@include mt;
+		@include mt(.1);
 		visibility: hidden;
 		z-index: -1;
-		transform: scaleY(0);
+		opacity: 0;
 		transform-origin: top right;
 		position: absolute;
 		top: 100%;
@@ -178,23 +179,32 @@
 @include media-breakpoint-down(lg) {
 	&__linkRow {
 		display: block;
-		columns: 2;
+		columns: 3;
 		page-break-inside: avoid;
 
 	}
 	&__col{
 		display: inline-block;
 	}
+} 
+@include media-breakpoint-down(md) {
+	&__linkRow { 
+		columns: 2; 
+
+	} 
 }
 }
 
 .btn-top{
 	position: fixed;
-	right: rem(60);
-	bottom: rem(60);
+	right: rem(24);
+	bottom: 50%;
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
 	width: 48px;
-	height: 49px;
-	border: 2px solid transparent;
+	height: 48px;
+	border: 2px solid  $secondary;
 	// background-color: #ffffff;
 	display: flex; 
 	align-items: center;
@@ -210,12 +220,12 @@
 		@include mt;
 	}
 	&:hover{
-		border-color: $secondary;
+		border-color: transparent;
 	}
 	.icon-logo-top{
 		font-size: rem(30px *1.2);
 		stroke: $primary;
-		stroke-width: 8px; 
+		stroke-width: 4px; 
 		
 		
 		fill: transparent !important;
@@ -233,6 +243,7 @@
 	}
 	&:hover,
 	&.active{
+		border-color: transparent;
 		.icon-logo-top{
 			fill:$primary !important;
 		}

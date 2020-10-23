@@ -75,15 +75,15 @@
 			max-width: rem(680);
 		 
 		}
-			@include media-breakpoint-up(md){
-
-				picture{
+		
+		picture{
+			@include media-breakpoint-up(lg){
 					min-height: rem(280);
 					line-height: rem(280);
 					vertical-align: middle;
 					width: rem(414);
-					text-align: center;
 				}
+					text-align: center;
 			}
 				
 	@include media-breakpoint-up(xl) {}

@@ -218,7 +218,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '11.png';
+	screenName = '12_WP_B24_интергация.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -290,9 +290,26 @@ function eventHandler() {
 	// modal window
 
 	//  accardion 
-	$('.drop-accardion-js').click(function(){
-		$(this).parent().toggleClass('active');
-		$(this).parent().find('.drop-accardion-toggle-js').toggleClass('active');
+ 
+	$('.navMenu .drop-accardion-js').click(function(){
+		$(this).parent().toggleClass('active')
+		.find('.drop-accardion-toggle-js').toggleClass('active');
+	})
+	
+	//  accardion base
+	$(".drop-accardion-block").each(function () {
+		const toggle = $(this).find('.drop-accardion-js')
+		toggle.click(function(){
+			const th = $(this);
+		 th.parent().toggleClass('active')
+			.find('.drop-accardion-toggle-js').slideToggle(function () {
+				$(this).toggleClass('active');
+			});
+			th.parent().removeClass('active').siblings().find('.drop-accardion-js').removeClass('active');
+			th.parent().siblings().find('.drop-accardion-toggle-js').slideUp(function () {
+				$(this).removeClass('active');
+			});
+		})
 	})
 
 	$('.accardion-close-js').click(function(){
@@ -320,7 +337,12 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 		},
+ 
+	});
 
+	galleryTop.on('slideChange', function () {
+		// console.log(galleryTop.realIndex);
+		$('.slideThumb--js').eq(galleryTop.realIndex).addClass('active').siblings().removeClass('active')
 	});
 
 	$('.slideThumb--js').click(function () {

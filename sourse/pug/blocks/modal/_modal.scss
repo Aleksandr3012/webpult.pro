@@ -58,14 +58,37 @@
 
 	}
 	&__left-block{
-		padding-top: rem(38);
-		padding-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+
+			padding : rem(38)  rem(30) rem(30);
+		}
+		padding : rem(28)  rem(15) rem(30);
+		.drop-accardion-block__title{
+			padding-right: 0;
+			padding-left: rem(30);
+			.icon-plus-drop{
+				left: 0;
+			}
+		}
+		.drop-accardion-block__body{
+			padding-left: rem(0);
+			padding-right: 0;
+		}
 	}
 	&__head{
 		border-radius: 8px 8px 0 0;
 		background-color: $light2;
 		padding-left: 15px;
 		padding-right: 15px;
+		overflow: hidden;
+		position: relative;
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+		// @include media-breakpoint-up(sm)
+		picture{
+				margin-top: rem(-60);
+				margin-bottom: rem(-40);
+		}
 		.row{
 			align-items: center;
 		}
@@ -212,3 +235,7 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+.drop-accardion-block	,
+.modal-win__main{
+	 border-bottom: 1px solid #e4e4e4 !important;
+}

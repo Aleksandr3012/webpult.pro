@@ -73,9 +73,9 @@ mixin modal()
 	// #modal-vacancy
 
 	+b.modal-win--lg(id="modal-shop" class=" " style="display: none" )
-		+e.head.g-0
+		+e.head
 			.row
-				.col-auto
+				.col-auto.d-none.d-sm-block
 					+pic("bag.png")
 				.col
 					.h2.strong Пакет «Начальный»
@@ -86,7 +86,7 @@ mixin modal()
 					+b.drop-accardion-block
 						+e.title.drop-accardion-js
 							+icon("plus-drop")
-							strong= t
+							= t
 							if count
 								span= count
 						+e.body.drop-accardion-toggle-js
@@ -94,6 +94,20 @@ mixin modal()
 				.row.g-0
 					.col
 						+e.left-block
+							+e.main
+								.fw-500.mb-3 Авторский дизайн страниц включая адаптивную верстку под все типы экранов и&nbsp;устройств:
+								ul.column-2
+									li Главная 
+									li Карточка товара
+									li Оформление заказа (по стандарту Битрикс)
+									li Статьи / новости список
+
+
+									li Каталог товаров
+									li Корзина (по стандарту Битрикс)
+									li Личный кабинет покупателя (по стандарту Битрикс)
+									li Статьи / новости детальная страница
+
 							mixin group()
 								ul
 									li Описание

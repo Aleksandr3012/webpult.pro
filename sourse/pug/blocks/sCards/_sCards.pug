@@ -38,7 +38,7 @@ mixin cardItem(title,text,btn,img,sl)
 						source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/${img}.webp` type="image/webp")
 						img.swiper-lazy(src="#" data-src=`img/@2x/${img}.png`, alt="")
 				else
-					+pic(`${img}`,'','')
+					+pic(`${img}.png`,'','')
 	// end sCards
 
 
