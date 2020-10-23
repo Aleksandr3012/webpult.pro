@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
+		<link rel="stylesheet" href="libs/jquery-asPieProgress/css/asPieProgress.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body>
@@ -482,36 +483,40 @@
 					</div>
 					<div class="row-circle-wrap">
 						<div class="row-circle row">
-							<div class="col-circle col-lg-3 col-xsm-6">
+							<div class="col-circle col-lg-3 col-xsm-6 wow">
 								<div class="item-circle">
-									<div class="item-circle__count wow">
+									<div class="item-circle__count"> 
+										<div class="pieProgress" role="progressbar" data-goal="25" data-step="2"></div>
 									</div>
 									<div class="item-circle__text">Выбор пакетного предложения или обсуждение индивидуального
 									</div>
 								</div>
 								<!-- /.item-circle-->
 							</div>
-							<div class="col-circle col-lg-3 col-xsm-6">
+							<div class="col-circle col-lg-3 col-xsm-6 wow animate__animated" data-wow-delay="0.8s">
 								<div class="item-circle">
-									<div class="item-circle__count wow">
+									<div class="item-circle__count"> 
+										<div class="pieProgress" role="progressbar" data-goal="50" data-step="2"></div>
 									</div>
 									<div class="item-circle__text">Составление договора на&nbsp;техническую поддержку сайта
 									</div>
 								</div>
 								<!-- /.item-circle-->
 							</div>
-							<div class="col-circle col-lg-3 col-xsm-6">
+							<div class="col-circle col-lg-3 col-xsm-6 wow" data-wow-delay="1s">
 								<div class="item-circle">
-									<div class="item-circle__count wow">
+									<div class="item-circle__count"> 
+										<div class="pieProgress" role="progressbar" data-goal="75" data-step="2"></div>
 									</div>
 									<div class="item-circle__text">Оплата стоимости поддержки по&nbsp;договору
 									</div>
 								</div>
 								<!-- /.item-circle-->
 							</div>
-							<div class="col-circle col-lg-3 col-xsm-6">
+							<div class="col-circle col-lg-3 col-xsm-6 wow" data-wow-delay="1.2s">
 								<div class="item-circle">
-									<div class="item-circle__count wow">
+									<div class="item-circle__count"> 
+										<div class="pieProgress" role="progressbar" data-goal="100" data-step="2"></div>
 									</div>
 									<div class="item-circle__text">Получение ежемесячной отчетности о&nbsp;проделанной работе
 									</div>
@@ -994,6 +999,7 @@
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/wowjs/wow.min.js"></script>
+		<script src="libs/jquery-asPieProgress/jquery-asPieProgress.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<script src="libs/hc-sticky/hc-sticky.js"></script>
