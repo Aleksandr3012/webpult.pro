@@ -125,8 +125,10 @@ $output-bourbon-deprecation-warnings: false;
 }
 
 .next{
-  position: relative;
-	transform: rotateY(180deg);
+	position: relative;
+	.icon {
+		transform: rotateY(180deg);
+	}
 	
 }
 
