@@ -121,6 +121,7 @@
 
 } // end.sContent
 
+.column-2,
 .colum-2 {
 	@include media-breakpoint-up(md) {
 		columns: 2;

@@ -15,7 +15,11 @@
 				max-height: rem(78);
 			}
 			
-		
+			&:hover{
+				img{
+					transform: rotate(-20deg);
+				}
+			}
 		}
 		&__img-wrap{
 			background-color: $light2;
@@ -26,6 +30,10 @@
 			vertical-align: middle;
 			margin-bottom: rem(30);
 			position: relative;
+			img{
+				position: relative;
+				@include mt;
+			}
 				&::after {
 					content: counter(num);
 					counter-increment: num;

@@ -124,11 +124,7 @@
 	&__count{
 		position: relative;
 		width: rem(64px);
-		height: rem(64px);
-		border-radius: 50%;
-		border: $border-radius solid $light2;
-		// border: $border-radius solid #000;
-		background-color: #ffffff;
+		height: rem(64px); 
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -137,23 +133,21 @@
 		color: $primary;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: rem(15);
-		&::after{
-			content: '';
-			position: absolute;
-			top: -$border-radius;
-			left: -$border-radius;
-			border: $border-radius solid $primary;
-			border-radius: 50%;
-			width: calc(100% + #{$border-radius} * 2);
-			height: calc(100% + #{$border-radius} * 2);
-			
-		}
+		margin-bottom: rem(15); 
 		&::before {
 			content: counter(num);
 			counter-increment: num;
 		}
+		.pieProgress{
+			// @include a-cent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
+ 
 	font-weight: 600;
 }
 .col-circle{
@@ -168,6 +162,7 @@
 			height: 1px;
 			width: calc(100% - #{rem(64)} - 22px);
 			left: calc(50% + #{rem(64 / 2)} + 11px);
+			@include mt;
 		}
 	}
 	&:last-child{
@@ -175,27 +170,48 @@
 			display: none;
 		}
 	}
-	&:nth-child(1) {
-		.item-circle__count {
-			&::after {
-				clip-path: polygon(50% 0, 100% 0%, 100% 50%, 50% 50%, 50% 50%);
-			}
-		}
-	}
-	&:nth-child(2) {
-		.item-circle__count{
-			&::after{
-				clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 50% 100%);
-			}
-		}
-	}
-	&:nth-child(3) {
-		.item-circle__count{
-			&::after{
-				clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 50%, 50% 50%, 50% 0%);
-			}
-		}
-	}
+	// &:nth-child(1) {
+	// 	.item-circle__count-inner { 
+	// 		clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 50% 0%);
+	// 	}
+	// } 
+	// &:nth-child(2) {
+	// 	.item-circle__count-inner { 
+	// 			clip-path: polygon(50% 0, 100% 0%, 100% 0%, 50% 0%, 50% 0%); 
+	// 	}
+	// } 
+	// &:nth-child(3) {
+	// 	.item-circle__count-inner { 
+	// 			clip-path: polygon(99% 1%, 100% 100%, 2% 100%, 0% 48%); 
+	// 	}
+	// } 
+	// &:nth-child(4) {
+	// 	.item-circle__count-inner { 
+	// 			clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%); 
+	// 	}
+	// }
+// 	&.animate__animated {
+// 		&:nth-child(1) { 
+// 			.item-circle__count-inner { 
+// 						clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%);
+// 				} 
+// 		}
+// 		&:nth-child(2) {
+// 			.item-circle__count-inner{ 
+// 					clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 50% 100%); 
+// 			}
+// 		}
+// 		&:nth-child(3) {
+// 			.item-circle__count-inner{ 
+// 				clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 50% 100%);
+// 			}
+// 		}
+// 		&:nth-child(4) {
+// 			.item-circle__count-inner{ 
+// 					clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 0%, 0% 0%, 0% 0%); 
+// 		}
+// 	}
+// }
 }
 
 .content-block{
@@ -222,3 +238,14 @@
 		flex: 0 0 auto;
 	}
 }
+
+.pie_progress__svg svg{
+	width: rem(68);
+}
+// [aria-valuenow="15"]{
+// 	path{
+
+// 		opacity: 0;
+// 		@include mt;
+// 	}
+// }

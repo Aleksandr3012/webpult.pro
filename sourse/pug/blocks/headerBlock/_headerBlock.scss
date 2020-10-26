@@ -125,7 +125,7 @@
 		@extend .btn;
 		background-color: #e4e4e4;
 		&:hover {
-			box-shadow: 0 5px 15px #d6d6d6;
+			background-color: #c7c7c7;
 		}
 		@include media-breakpoint-down(lg) {
 			width: 100%;
@@ -393,10 +393,11 @@
 	.slideThumb.active {
 		z-index: 5;
 		border-color: #fff;
+		
 		@include media-breakpoint-up(lg) {
 			&::before {
 				
-				transform: scale(1);
+				transform: scale(1.02, 1);
 			}
 			&::after {
 				opacity: 1;
