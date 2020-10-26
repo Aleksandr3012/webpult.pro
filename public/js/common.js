@@ -316,6 +316,9 @@ function eventHandler() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev'
 		},
+		autoplay: {
+			delay: 5000
+		},
 		// thumbs: {
 		// 	swiper: galleryThumbs
 		// },
@@ -540,57 +543,62 @@ function eventHandler() {
 		animateClass: 'animate__animated'
 	});
 	wow.init();
-	var bar = $('.pieProgress');
-	var target = bar;
-	var targetPos = target.offset().top;
-	var winHeight = $(window).height();
-	var scrollToElem = targetPos - winHeight;
-	$(window).scroll(function () {
-		var winScrollTop = $(this).scrollTop();
+	var progress = document.querySelector('.pieProgress');
 
-		if (winScrollTop > scrollToElem) {
-			//сработает когда пользователь доскроллит к элементу с классом .elem
-			startPrigess();
-		}
-	});
-	var arr = {
-		namespace: 'pie_progress',
-		easing: 'linear',
-		min: 0,
-		first: 0,
-		size: 68,
-		barcolor: '#ec1c24',
-		barsize: '4',
-		speed: 30,
-		trackcolor: '#f5f7f9',
-		goal: 0
-	};
-	var bar1 = $('.col-circle:nth-child(1) .pieProgress');
-	var bar2 = $('.col-circle:nth-child(2) .pieProgress');
-	var bar3 = $('.col-circle:nth-child(3) .pieProgress');
-	var bar4 = $('.col-circle:nth-child(4) .pieProgress');
-	bar1.asPieProgress(arr);
-	bar3.asPieProgress(arr);
-	bar4.asPieProgress(arr);
-	bar2.asPieProgress(arr);
-	bar1.asPieProgress('start');
-	bar1.on('asPieProgress::finish', function () {
-		setTimeout(function () {
-			bar2.asPieProgress('start');
-		}, 10);
-	});
-	bar2.on('asPieProgress::finish', function () {
-		setTimeout(function () {
-			bar3.asPieProgress('start');
-		}, 10);
-	});
-	bar3.on('asPieProgress::finish', function () {
-		setTimeout(function () {
-			bar4.asPieProgress('start');
-		}, 10);
-	});
+	if (progress) {
+		var startPrigess = function startPrigess() {
+			bar1.asPieProgress('start');
+			bar1.on('asPieProgress::finish', function () {
+				setTimeout(function () {
+					bar2.asPieProgress('start');
+				}, 10);
+			});
+			bar2.on('asPieProgress::finish', function () {
+				setTimeout(function () {
+					bar3.asPieProgress('start');
+				}, 10);
+			});
+			bar3.on('asPieProgress::finish', function () {
+				setTimeout(function () {
+					bar4.asPieProgress('start');
+				}, 10);
+			});
+		};
 
-	function startPrigess() {}
+		var bar = $('.pieProgress');
+		var target = bar;
+		var targetPos = target.offset().top;
+		var winHeight = $(window).height();
+		var scrollToElem = targetPos - winHeight;
+		$(window).scroll(function () {
+			var winScrollTop = $(this).scrollTop();
+
+			if (winScrollTop > scrollToElem) {
+				//сработает когда пользователь доскроллит к элементу с классом .elem
+				startPrigess();
+			}
+		});
+		var arr = {
+			namespace: 'pie_progress',
+			easing: 'linear',
+			min: 0,
+			first: 0,
+			size: 68,
+			barcolor: '#ec1c24',
+			barsize: '4',
+			speed: 30,
+			trackcolor: '#f5f7f9',
+			goal: 0
+		};
+		var bar1 = $('.col-circle:nth-child(1) .pieProgress');
+		var bar2 = $('.col-circle:nth-child(2) .pieProgress');
+		var bar3 = $('.col-circle:nth-child(3) .pieProgress');
+		var bar4 = $('.col-circle:nth-child(4) .pieProgress');
+		bar1.asPieProgress(arr);
+		bar3.asPieProgress(arr);
+		bar4.asPieProgress(arr);
+		bar2.asPieProgress(arr);
+	}
 }
 
 ;

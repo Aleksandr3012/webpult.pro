@@ -3,7 +3,7 @@ mixin sCatalogHorizontal(data)
 	+b.sCatalogHorizontal.section#sCatalogHorizontal&attributes(attributes)
 		.container
 			mixin item(data)
-				+e.item
+				+e.item(id= data.id)
 					.row
 						.col-xxl-5.col-md-4
 							+e.aside
@@ -39,6 +39,7 @@ mixin sCatalogHorizontal(data)
 									block
 				// /+e.item
 			+item({
+				id:"pack-1",
 				i:"1",
 				t:"Пакет «Начальный»", 
 			})
@@ -64,6 +65,7 @@ mixin sCatalogHorizontal(data)
 						strong Внимание! 
 						| В некоторых (кроме РФ) странах бывшего СНГ имеются ограничения на работу базовой телефонии. Просьба уточнять подробности. 
 			+item({
+				id:"pack-2",
 				i:"2",
 				t:"Пакет «Оптимальный»", 
 			})
@@ -76,10 +78,12 @@ mixin sCatalogHorizontal(data)
 						strong Внимание! 
 						| В некоторых (кроме РФ) странах бывшего СНГ имеются ограничения на работу базовой телефонии. Просьба уточнять подробности. 
 			+item({
+				id:"pack-3",
 				i:"3",
 				t:"Создание отдела продаж — базовая настройка CRM", 
 			})
 			+item({
+				id:"pack-4",
 				i:"4",
 				t:"Автоматизация и повторные продажи — раcширенная настройка CRM", 
 			})

@@ -327,6 +327,9 @@ function eventHandler() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		autoplay: {
+			delay: 5000,
+		},
 		// thumbs: {
 		// 	swiper: galleryThumbs
 		// },
@@ -580,6 +583,8 @@ function eventHandler() {
 		animateClass: 'animate__animated',
 	});
 	wow.init();
+	let progress = document.querySelector('.pieProgress');
+	if (progress) {
 	const bar = $('.pieProgress');
 
 	var target = bar;
@@ -613,26 +618,27 @@ function eventHandler() {
 	bar3.asPieProgress(arr);  
 	bar4.asPieProgress(arr);  
 	bar2.asPieProgress(arr);  
-	bar1.asPieProgress('start'); 
-	bar1.on('asPieProgress::finish', () => {
-		setTimeout(() => {
-			
-			bar2.asPieProgress('start'); 
-		}, 10);
-	});
-	bar2.on('asPieProgress::finish', () => {
-		setTimeout(() => {
-
-			bar3.asPieProgress('start');
-		}, 10);
-	});
-	bar3.on('asPieProgress::finish', () => {
-		setTimeout(() => {
-
-			bar4.asPieProgress('start');
-		}, 10);
-	});
 	function startPrigess() {  
+		bar1.asPieProgress('start'); 
+		bar1.on('asPieProgress::finish', () => {
+			setTimeout(() => {
+				
+				bar2.asPieProgress('start'); 
+			}, 10);
+		});
+		bar2.on('asPieProgress::finish', () => {
+			setTimeout(() => {
+	
+				bar3.asPieProgress('start');
+			}, 10);
+		});
+		bar3.on('asPieProgress::finish', () => {
+			setTimeout(() => {
+	
+				bar4.asPieProgress('start');
+			}, 10);
+		});
+	}
 	}
 	
 };
