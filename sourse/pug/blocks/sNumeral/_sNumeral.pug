@@ -12,7 +12,7 @@ mixin sNumeral(t="ВебПульт в цифрах")
 					mixin item(t,text, d)
 						+e.item.text-center(class="wow  animate__fadeInDown "  data-wow-delay=`${delay * d * 1.6  }s` data-wow-duration=`${dur * 2 }s`)
 							+e.imgWrap
-								+pic('num-bg','','')
+								+pic('num-bg.png','','')
 							+e.title= t
 							+e.text!= text
 					+item('8 лет','опыта в IT','1')

@@ -39,7 +39,9 @@
 			color: $primary;
 		}
 		&.swiper-button-disabled {
-			transform: scale(0);
+			// transform: scale(0);
+			opacity: 0;
+				cursor: default;
 		}
 	}
 
