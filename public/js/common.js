@@ -216,15 +216,13 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 	JSCCommon.CustomInputFile(); // modal window
 	// добавляет подложку для pixel perfect
-
-	var x = window.location.host;
-	var screenName;
-	screenName = '12_WP_B24_интергация.png';
-
-	if (screenName && x === "localhost:3000") {
-		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	} // /добавляет подложку для pixel perfect
-
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = '12_WP_B24_интергация.png';
+	// if (screenName && x === "localhost:3000") {
+	// 	$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
+	// /добавляет подложку для pixel perfect
 
 	$(document).on('click', '.btn-top', function () {
 		var th = $(this);

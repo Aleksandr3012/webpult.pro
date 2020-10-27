@@ -15,6 +15,10 @@ $output-bourbon-deprecation-warnings: false;
 
 // Layout & components
 
+@import "../libs/swiper/css/swiper.min.scss";
+@import "../libs/@fancyapps/fancybox/jquery.fancybox.min.scss";
+@import "../libs/animate.css/animate.min.scss";
+@import "../libs/jquery-asPieProgress/css/asPieProgress.min.scss";
 @import "./node_modules/bootstrap/scss/functions";
 @import "vars";
 @import "./node_modules/bootstrap/scss/variables";
