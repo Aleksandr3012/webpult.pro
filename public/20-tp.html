@@ -586,7 +586,15 @@
 			<!-- start sHave-->
 			<section class="sHave section" id="sHave">
 				<div class="container">
-					<div class="sHave__inner">
+					<div class="sHave__inner bg-wrap">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<source srcset="img/@2x/webp/bg-gray.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/bg-gray.webp" type="image/webp"/>
+							<source srcset="img/@2x/bg-gray.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="img/@1x/bg-gray.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/bg-gray.jpg" alt=""/>
+						</picture>
+						<!-- /picture-->
 						<!-- picture-->
 						<picture class="d-none d-xl-block"> 
 							<source srcset="img/@2x/webp/girl.webp" type="image/webp" media="(min-width:576px)"/>

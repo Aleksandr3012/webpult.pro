@@ -2,7 +2,9 @@ mixin sHaveBody(data)
 	// start sHave
 	+b.SECTION.sHave.section#sHave&attributes(attributes)
 		.container
-			+e.inner
+			+e.inner.bg-wrap
+
+				+pic("bg-gray.jpg",'bg')(class="picture-bg")
 				+pic("girl.png").d-none.d-xl-block
 				+e.block
 					block
