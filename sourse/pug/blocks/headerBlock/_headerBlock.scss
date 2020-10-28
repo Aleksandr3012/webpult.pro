@@ -221,7 +221,6 @@
 	@include media-breakpoint-up(xs) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xs) {}
 	@include media-breakpoint-down(xxl) {
 		picture{
 			width: calc(130% + 25px);
@@ -229,6 +228,15 @@
 			margin-left: -25px;
 		}
 	}
+	@include media-breakpoint-down(lg) {
+			picture {
+				width: rem(700);
+				margin-right: -300px;
+				text-align: left;
+				margin-left: -25px;
+			}
+	}
+
 	@include media-breakpoint-down(xsm) {
 		picture{
 			width: 100%;

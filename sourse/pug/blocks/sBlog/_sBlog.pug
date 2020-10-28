@@ -54,8 +54,8 @@ mixin blogItem(data)
 	+b.blogItem(href="#")&attributes(attributes)
 		if data.date
 			picture.picture-bg
-				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/` + data.img + `.webp` type="image/webp")
-				img.swiper-lazy(src="#" data-src=`img/@2x/` + data.img + `.png`, alt="")
+				//- source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/` + data.img + `.webp` type="image/webp")
+				img.swiper-lazy(src="#" data-src=`img/@2x/${data.img}.jpg`, alt="")
 		else
 			+pic(data.img,'bg','')(class="picture-bg")
 		if data.name

@@ -22,22 +22,22 @@ mixin sHowOrder(data)
 			
 		+b.row-circle-wrap
 			+b.row-circle.row
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " )
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '25',
 						p:`Выбор пакетного предложения или обсуждение индивидуального`,
 					})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow  animate__animated" data-wow-delay=`${delay * 2 +.2  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '50',
 						p:`Составление договора на&nbsp;техническую поддержку сайта`,
 					})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow" data-wow-delay=`${delay * 2  +.4 }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '75',
 						p:`Оплата стоимости поддержки по&nbsp;договору`,
 					})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.6 }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '100',
 						p:`Получение ежемесячной отчетности о&nbsp;проделанной работе`,
@@ -54,22 +54,22 @@ mixin sHowOrder-02(data)
 			
 		+b.row-circle-wrap
 			+b.row-circle.row
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({  
 						size: '25',
 					p:`Техническое задание, включая прототипы и&nbsp;дизайн-макеты`, 
 					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.2  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({  
 						size: '50',
 					p:`Верстка макетов`, 
 					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`	})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2 +.4  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '75',
 					p:`Программирование`,
 					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.` })
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.6  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '100',
 					p:`Тестирование`,
@@ -86,22 +86,22 @@ mixin sHowOrder-03(data)
 			
 		+b.row-circle-wrap
 			+b.row-circle.row
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({  
 						size: '25',
 					p:`Техническое задание, включая прототипы и&nbsp;дизайн-макеты`, 
 					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.2  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({  
 						size: '50',
 					p:`Верстка макетов`, 
 					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.`	})
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2 +.4  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '75',
 					p:`Программирование`,
 					alert:`Lorem ipsum dolor sit amet consectetur adipisicing elit.` })
-				+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.6  }s`)
+				+b.col-circle.col-lg-3.col-xsm-6
 					+item-circle({ 
 						size: '100',
 					p:`Тестирование`,
@@ -124,32 +124,32 @@ mixin sHowOrder-08(data)
 					+icon("web-design")
 					| Готовые сайты и магазины в&nbsp;рассрочку
 			div
-				mixin content(t)
+				mixin content(t, text=" ")
 					.tabs__content&attributes(attributes)
 						+e.smDescr!= t 
 						+b.row-circle-wrap
 							+b.row-circle.row
-								+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2    }s`)
+								+b.col-circle.col-lg-3.col-xsm-6
 									+item-circle({  
 										size: '25',
-									p:`Вы&nbsp;выбираете любой понравившийся<br> сайт/магазин  <a href="#" class="tdu">из каталога</a>`, 
+									p:`${text} Вы&nbsp;выбираете любой понравившийся<br> сайт/магазин  <a href="#" class="tdu">из каталога</a>`, 
 									})
-								+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.2  }s`)
+								+b.col-circle.col-lg-3.col-xsm-6
 									+item-circle({  
 										size: '50',
 									p:`Вы&nbsp;оформляете заказ на странице готового сайта/магазина с&nbsp;отметкой &laquo;в&nbsp;рассрочку&raquo;`, 
 									})
-								+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.4  }s`)
+								+b.col-circle.col-lg-3.col-xsm-6
 									+item-circle({ 
 										size: '75',
 									p:`Мы&nbsp;выставляем вам счет на&nbsp;50% от&nbsp;стоимости<br> сайта/магазина`,
 									})
-								+b.col-circle.col-lg-3.col-xsm-6(class="wow " data-wow-delay=`${delay * 2  +.6  }s`)
+								+b.col-circle.col-lg-3.col-xsm-6
 									+item-circle({ 
 										size: '100',
 									p:`Выплачиваете остаток суммы в&nbsp;течение 3&nbsp;или&nbsp;6 месяцев (на&nbsp;выбор)`,
 									})
 						p У&nbsp;нас и&nbsp;правда всё прозрачно и&nbsp;открыто! Никаких тайн мадридского двора и&nbsp;скрытых &laquo;схем&raquo;. Никаких банков и&nbsp;комиссий. Никакого завышения стоимости на&nbsp;дополнительные услуги, которые могут вам пригодиться во&nbsp;время работы с&nbsp;сайтом/магазином. От&nbsp;вас мы&nbsp;просим лишь честную своевременную ежемесячную оплату.
-				+content('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+				+content('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.','При клике на кнопки выше переключаются Табы')
 				+content(`Этапы и&nbsp;схема предоставления рассрочки для сайтов и&nbsp;Интернет-магазинов с&nbsp;нуля:`).active
 	// end sHowOrder
