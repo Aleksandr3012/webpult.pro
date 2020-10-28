@@ -24,7 +24,8 @@
 			// background-image: url();
 			position: relative;
 			z-index: 2;
-			picture{
+			picture:not(.picture-bg) {
+				 
 				position: absolute;
 				left: 0;
 				bottom: 0;

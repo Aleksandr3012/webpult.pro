@@ -213,7 +213,7 @@ ul {
 		position: relative;
 		padding-left: rem(18px);
 		padding-bottom: rem(14px);
-		line-height: 1.25;
+		line-height: 1.5;
 
 		&::before {
 			content: '';
@@ -237,7 +237,7 @@ ol {
 	li {
 		position: relative;
 		padding-bottom: rem(12px);
-
+		line-height: 1.5;
 
 
 		&::before {

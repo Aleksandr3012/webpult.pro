@@ -8,6 +8,7 @@ include ../blocks/sPossibilities/_sPossibilities.pug
 include ../blocks/sHave/_sHave.pug
 include ../blocks/sPreview/_sPreview.pug
 include ../blocks/sHowOrder/_sHowOrder.pug
+include ../blocks/sFAQ/_sFAQ.pug
 
 block variables
 	- let  mainPage= null
@@ -45,6 +46,7 @@ block pagecontent
 
 					
 	+sHave-08
+	+sFAQ()
 	+footer()
 
 
