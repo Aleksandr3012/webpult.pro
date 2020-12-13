@@ -323,13 +323,21 @@
 			padding-left: rem(15);
 			visibility: hidden;
 			z-index: -1;
-				&::before {
+				&::after {
 					content: '';
 					position: absolute;
 					left: 0;
 					bottom: 100%;
 					@include triangle(20px, #fff, up);
 					left: rem(20);
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 100%;
+					@include triangle(24px, #eee, up);
+					left: rem(18);
 				}
 		}
 		@include mt(.1);

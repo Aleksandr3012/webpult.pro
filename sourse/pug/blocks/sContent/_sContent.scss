@@ -282,13 +282,28 @@ blockquote {
 	padding-bottom: rem(17);
 	 
 	display: flex;
-
-	img {
-		max-width: 32px;
-		max-height: 32px;
+	&::before{
+		content: '';
 		margin-right: rem(20);
 		position: relative;
 		flex-shrink: 0;
+		width: 32px;
+		height: 32px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		
+	}
+	&--success{
+		&::before{
+			background-image: url(../img/svg/check-circler.svg);
+		}
+	}
+	&--danger{
+		&::before{
+			background-image: url(../img/svg/times-circle.svg);
+		}
+	}
+	img {
 	}
 }
 
