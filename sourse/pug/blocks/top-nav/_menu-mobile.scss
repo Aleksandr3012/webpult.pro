@@ -180,7 +180,9 @@ $h: 4px;
 		display: flex;
 		align-items: center;
 		padding: rem(15);
+		border: none;
 		border-bottom: solid 1px #e4e4e4;
+		background-color: transparent;
 		.icon {
 			margin-right: 6px;
 		}
