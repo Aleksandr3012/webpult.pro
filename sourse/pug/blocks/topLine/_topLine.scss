@@ -130,6 +130,7 @@
 	&__logout {
 		display: block;
 		border: none;
+		padding: 0;
 		background: transparent;
 		margin-right: 10px;
 		@include media-breakpoint-up(xl) {
