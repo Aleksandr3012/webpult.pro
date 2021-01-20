@@ -127,6 +127,28 @@
 		}
 	}
 
+	&__logout {
+		display: block;
+		border: none;
+		background: transparent;
+		margin-right: 10px;
+		@include media-breakpoint-up(xl) {
+			margin-right: 30px;
+		}
+
+		.icon {
+			font-size: rem(15px);
+			color: $body-color;
+		}
+
+		&:hover {
+			.icon{
+				color: $primary;
+			}
+		}
+
+	}
+
 	.row {
 		@include media-breakpoint-down(md) {
 			@include roww(5px);
