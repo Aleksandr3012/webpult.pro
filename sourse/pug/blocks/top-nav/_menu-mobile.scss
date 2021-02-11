@@ -176,11 +176,13 @@ $h: 4px;
 		}
 	}
 
-	&__lk {
+	&__lk, &__logout {
 		display: flex;
 		align-items: center;
 		padding: rem(15);
+		border: none;
 		border-bottom: solid 1px #e4e4e4;
+		background-color: transparent;
 		.icon {
 			margin-right: 6px;
 		}
