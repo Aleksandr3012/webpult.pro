@@ -1,0 +1,189 @@
+
+	// start .bx-auth
+	.bx-auth {
+		// position: relative;
+		max-width: rem(390) !important;
+		border-radius: 8px 8px 0;
+		background-color: #f5f7f9;
+		padding: rem(30);
+		margin-left: auto;
+		margin-right: auto;
+		font-weight: 500;
+		margin-top: rem(15);
+		margin-bottom: rem(15);
+		@include media-breakpoint-down(sm) {
+			padding: rem(15);
+		}
+
+  
+		table, tbody, tfoot, tr, td {
+			display: block;
+			border: none !important;
+		}
+
+		.bx-auth-note {
+			max-width: rem(190);
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 28px;
+		}
+
+		.bx-auth-label {
+			margin-top: rem(25);
+			margin-bottom: rem(15);
+			font-size: rem(15);
+			text-align: left;
+		}
+
+		label[for="USER_REMEMBER"] {
+			font-size: rem(14);
+			margin-top: rem(25);
+		}
+
+		#USER_REMEMBER {
+			width: rem(20);
+			height: rem(20);
+			margin-top: rem(25);
+			margin-right: rem(6);
+			@extend .form-check-input;
+			box-shadow: none !important;
+		}
+
+		a[href="/auth/?forgot_password=yes"] {
+			font-size: rem(14);
+			text-decoration: underline;
+		}
+
+		input[value="Войти"] {
+			width: 100%;
+			margin-top: rem(38);
+			margin-bottom: rem(38);
+			box-shadow: none;
+			font-weight: 500;
+		}
+
+		a[href="/auth/?register=yes"] {
+			@extend .btn;
+			@extend .btn-gray;
+			width: 100%;
+			margin-bottom: rem(30);
+			margin-top: rem(38);
+			font-weight: 500;
+		}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+
+	a[href="/auth/?login=yes"] {
+		@extend .btn;
+		@extend .btn-gray;
+		width: 100%;
+		margin-top: rem(30);
+		font-weight: 500;
+	}
+
+	input[value="Регистрация"] {
+		@extend .btn;
+		@extend .btn-primary;
+		width: 100%;
+		margin-top: rem(30);
+		margin-bottom: rem(30);
+		box-shadow: none;
+		font-weight: 500;
+	}
+
+	.bx-auth-input {
+		@extend .form-control;
+	}
+
+	p:first-child {
+		text-align: left;
+	}
+
+	.bx-registration-table td b {
+		display: block;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 28px;
+		margin-bottom: rem(20);
+	}
+
+	.bx-registration-table tr input{
+		margin-top: rem(3);
+		margin-bottom: rem(15);
+	}	
+
+} 
+
+form[action="/auth/?forgot_password=yes"] {
+	max-width: rem(390);
+	border-radius: 8px 8px 0;
+	background-color: #f5f7f9;
+	padding: rem(30);
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 500;
+	margin-top: rem(15);
+	@include media-breakpoint-down(sm) {
+		padding: rem(15);
+	}
+}
+
+input[name="send_account_info"] {
+	@extend .btn;
+	@extend .btn-primary;
+	width: 100%;
+	margin-top: rem(10);
+	box-shadow: none;
+}
+
+a[href="/auth/?login=yes"] {
+	display: block;
+	@extend .btn;
+	@extend .btn-gray;
+	max-width: rem(330);
+	font-weight: 500;
+	margin: rem(30) auto 0;
+}
+
+input[name="USER_LOGIN"] {
+	@extend .form-control;
+	margin-bottom: rem(20);
+}
+
+input[type="checkbox"][value="Y"] {
+	@extend .form-check-input;
+	width: rem(15);
+	height: rem(15);
+	margin-top: 0;
+}
+
+form[action="/auth/?forgot_password=yes"]+div {
+	margin-bottom: rem(36);
+}
+
+.breadcrumb {
+	background: none;
+}
+
+@media (max-width: 767px) {
+	.basket-items-list .basket-items-list-item-container>td {
+		border-top: 0;
+		padding: 0;
+		border: none;
+	}
+}
+
+.basket-items-list-item-price { 
+	padding-left: rem(10);
+	padding-right: rem(10);
+}

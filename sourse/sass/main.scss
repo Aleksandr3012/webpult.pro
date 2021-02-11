@@ -141,6 +141,12 @@ $output-bourbon-deprecation-warnings: false;
 	
 }
 
+.breadcrumb>li+li:before {
+	display: none;
+}
+
+
+
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";

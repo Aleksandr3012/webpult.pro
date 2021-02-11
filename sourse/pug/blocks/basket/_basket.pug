@@ -1,0 +1,113 @@
+mixin basket(data)
+	// start basket
+	section.section(id="" wfd-id="47")
+		.container(wfd-id="48")
+			.section-title(wfd-id="115")
+				h1 Моя корзина
+			#basket-root.bx-basket.bx-blue.bx-step-opacity(style="opacity: 1;" wfd-id="52")
+				.row(wfd-id="91")
+					.col-xs-12(data-entity="basket-total-block" wfd-id="92")
+						.basket-checkout-container(data-entity="basket-checkout-aligner" wfd-id="93")
+							.basket-coupon-section(wfd-id="109")
+								.basket-coupon-block-field(wfd-id="110")
+									.basket-coupon-block-field-description(wfd-id="114")
+										| Введите код купона для скидки:
+									.form(wfd-id="111")
+										.form-group(style="position: relative;" wfd-id="112")
+											input.form-control(type="text" id="" placeholder="" data-entity="basket-coupon-input" wfd-id="197")
+											span.basket-coupon-block-coupon-btn(wfd-id="113")
+							.basket-checkout-section(wfd-id="99")
+								.basket-checkout-section-inner(wfd-id="100")
+									.basket-checkout-block.basket-checkout-block-total(wfd-id="105")
+										.basket-checkout-block-total-inner(wfd-id="106")
+											.basket-checkout-block-total-title(wfd-id="108") Итого:
+											.basket-checkout-block-total-description(wfd-id="107")
+									.basket-checkout-block.basket-checkout-block-total-price(wfd-id="102")
+										.basket-checkout-block-total-price-inner(wfd-id="103")
+											.basket-coupon-block-total-price-current(data-entity="basket-total-price" wfd-id="104")
+												| 5 400 ₽
+									.basket-checkout-block.basket-checkout-block-btn(wfd-id="101")
+										button.btn.btn-lg.btn-default.basket-btn-checkout(data-entity="basket-checkout-button" wfd-id="203")
+											| Оформить заказ
+							.basket-coupon-alert-section(wfd-id="94")
+								.basket-coupon-alert-inner(wfd-id="95")
+									.basket-coupon-alert.text-danger(wfd-id="96")
+										span.basket-coupon-text(wfd-id="98")
+											strong 321321321
+											|  - купон не найден
+										span.close-link(data-entity="basket-coupon-delete" data-coupon="321321321" wfd-id="97")
+											| Удалить
+				.row(wfd-id="88")
+					.col-xs-12(wfd-id="89")
+						#basket-warning.alert.alert-warning.alert-dismissable(style="display: none;" wfd-id="90")
+							span.close(data-entity="basket-items-warning-notification-close") ×
+							div(data-entity="basket-general-warnings" style="display: none;")
+							div(data-entity="basket-item-warnings" style="display: none;")
+								| В вашей корзине 
+								a(href="javascript:void(0)" data-entity="basket-items-warning-count")
+								|  требует внимания.
+				.row(wfd-id="53")
+					.col-xs-12(wfd-id="54")
+						#basket-items-list-wrapper.basket-items-list-wrapper.basket-items-list-wrapper-height-fixed(wfd-id="55")
+							.basket-items-list-header(data-entity="basket-items-list-header" wfd-id="83")
+								.basket-items-search-field(data-entity="basket-filter" wfd-id="85")
+									.form.has-feedback(wfd-id="86")
+										input.form-control(type="text" placeholder="Фильтр" data-entity="basket-filter-input" wfd-id="196")
+										span.form-control-feedback.basket-clear(data-entity="basket-filter-clear-btn" wfd-id="87")
+								.basket-items-list-header-filter(wfd-id="84")
+									a.basket-items-list-header-filter-item.active(href="javascript:void(0)" data-entity="basket-items-count" data-filter="all" style="") В корзине 1 товар
+									a.basket-items-list-header-filter-item(href="javascript:void(0)" data-entity="basket-items-count" data-filter="similar" style="display: none;")
+									a.basket-items-list-header-filter-item(href="javascript:void(0)" data-entity="basket-items-count" data-filter="warning" style="display: none;")
+									a.basket-items-list-header-filter-item(href="javascript:void(0)" data-entity="basket-items-count" data-filter="delayed" style="display: none;")
+									a.basket-items-list-header-filter-item(href="javascript:void(0)" data-entity="basket-items-count" data-filter="not-available" style="display: none;")
+							#basket-items-list-container.basket-items-list-container(wfd-id="56")
+								#basket-items-list-overlay.basket-items-list-overlay(style="display: none;" wfd-id="82")
+								#basket-item-list.basket-items-list(wfd-id="57")
+									#basket-item-list-empty-result.basket-search-not-found(style="display: none;" wfd-id="81")
+										.basket-search-not-found-icon
+										.basket-search-not-found-text
+											| По данному запросу товаров не найдено
+									table#basket-item-table.basket-items-list-table
+										tbody
+											tr#basket-item-118.basket-items-list-item-container(data-entity="basket-item" data-id="118")
+												td.basket-items-list-item-descriptions
+													#basket-item-height-aligner-118.basket-items-list-item-descriptions-inner(wfd-id="72")
+														.basket-item-block-image(wfd-id="80")
+															img.basket-item-image(alt='Программа для ЭВМ "1С-Битрикс: Управление сайтом". Лицензия Старт' src="img/@2x/no_photo.png")
+														.basket-item-block-info(wfd-id="73")
+															span.basket-item-actions-remove.visible-xs(data-entity="basket-item-delete" wfd-id="79")
+															h2.basket-item-info-name
+																span(data-entity="basket-item-name" wfd-id="78") Программа для ЭВМ "1С-Битрикс: Управление сайтом". Лицензия Старт
+															.basket-item-block-properties(wfd-id="74")
+																.basket-item-property-custom.basket-item-property-custom-text(data-entity="basket-item-property" wfd-id="75")
+																	.basket-item-property-custom-name(wfd-id="77") Тип цены
+																	.basket-item-property-custom-value(data-column-property-code="TYPE" data-entity="basket-item-property-column-value" wfd-id="76")
+																		| Базовая цена
+												td.basket-items-list-item-price.basket-items-list-item-price-for-one.hidden-xs
+													.basket-item-block-price(wfd-id="68")
+														.basket-item-price-current(wfd-id="70")
+															span#basket-item-price-118.basket-item-price-current-text(wfd-id="71")
+																| 5 400 ₽
+														.basket-item-price-title(wfd-id="69")
+															| цена за 1 шт
+												td.basket-items-list-item-amount
+													.basket-item-block-amount(data-entity="basket-item-quantity-block" wfd-id="63")
+														span.basket-item-amount-btn-minus(data-entity="basket-item-quantity-minus" wfd-id="67")
+														.basket-item-amount-filed-block(wfd-id="66")
+															input#basket-item-quantity-118.basket-item-amount-filed(type="text" value="1" data-value="1" data-entity="basket-item-quantity-field" wfd-id="195")
+														span.basket-item-amount-btn-plus(data-entity="basket-item-quantity-plus" wfd-id="65")
+														.basket-item-amount-field-description(wfd-id="64")
+															| шт
+												td.basket-items-list-item-price
+													.basket-item-block-price(wfd-id="60")
+														.basket-item-price-current(wfd-id="61")
+															span#basket-item-sum-price-118.basket-item-price-current-text(wfd-id="62")
+																| 5 400 ₽
+												td.basket-items-list-item-remove.hidden-xs
+													.basket-item-block-actions(wfd-id="58")
+														span.basket-item-actions-remove(data-entity="basket-item-delete" wfd-id="59")
+			div(data-entity="parent-container" wfd-id="49")
+				.catalog-block-header(data-entity="header" data-showed="false" style="display: none; opacity: 0;" wfd-id="51")
+					| Выберите один из подарков
+				.sale-products-gift.bx-blue(data-entity="sale-products-gift-container" wfd-id="50")
+	// end basket
