@@ -254,6 +254,16 @@
 			}
 		}
 	}
+
+	.swiper-button {
+		&-hand-next {
+			right: calc(var(--swiperArrowPosition) + 3vw);
+		}
+
+		&-hand-prev {
+			left: calc(var(--swiperArrowPosition) + 3vw);
+		}
+	}
 }// end.headerBlock
 
 //thumbs

@@ -312,6 +312,7 @@ function eventHandler() {
 
 	var galleryTop = new Swiper('.gallery-top', {
 		spaceBetween: 0,
+		disableOnInteraction: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev'
@@ -330,10 +331,16 @@ function eventHandler() {
 		// console.log(galleryTop.realIndex);
 		$('.slideThumb--js').eq(galleryTop.realIndex).addClass('active').siblings().removeClass('active');
 	});
-	$('.slideThumb--js').click(function () {
+	$('.headerBlock .slideThumb--js').click(function () {
 		var index = $(this).index();
 		galleryTop.slideTo(index);
 		$(this).addClass('active').siblings().removeClass('active');
+	});
+	$(".headerBlock .slideThumb--js").mouseenter(function () {
+		galleryTop.autoplay.stop();
+	});
+	$(".slideThumb--js").mouseleave(function () {
+		galleryTop.autoplay.start();
 	});
 	var galleryThumbs2 = new Swiper('.prioritizeS-thumbs-js', {
 		spaceBetween: 8,
