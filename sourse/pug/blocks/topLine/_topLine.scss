@@ -50,6 +50,9 @@
 		display: block;
 		width: rem(160);
 		@include media-breakpoint-up(md) {
+			width: rem(150);
+		}
+		@include media-breakpoint-up(xl) {
 			width: rem(186);
 		}
 	}
@@ -187,6 +190,12 @@
 
 	&__link {
 		font-size: $xsmall;
+		@include media-breakpoint-up(lg) {
+			font-size: 12px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: $xsmall;
+		}
 		@include media-breakpoint-up(xxl) {
 			font-size: $small;
 		}
