@@ -8,6 +8,8 @@ mixin headerBlockBody()
 mixin headerBlock()
 	+headerBlockBody().--main
 		+e.slider.swiper-container.gallery-top
+			.d-none.d-lg-block
+				+arrow()
 			.swiper-wrapper
 				mixin slide(i,data)
 					+e.slide.swiper-slide
