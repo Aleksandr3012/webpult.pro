@@ -63,14 +63,16 @@
 			}
 		}
 		&__body {
-			padding: 0 0 calc(var(--size) * 0.72) calc(var(--size) * 2.4);
+			padding: 0 0 var(--size) calc(var(--size) * 2.4);
 			a {
 				display: block;
 				color: $body-color;
 				font-size: calc(var(--size) * 0.6);
 				// line-height: 1.2;
-				padding: calc(var(--size) * 0.15) var(--size) calc(var(--size) * 0.15) 0;
-				margin: calc(var(--size) * 0.15) 0;
+				padding: calc(var(--size) * 0.28) var(--size) 0 0;
+				&:not(:last-child) {
+					margin-bottom: calc(var(--size) * 0.28);
+				}
 				&:hover,
 				&.active {
 					color: $primary;
