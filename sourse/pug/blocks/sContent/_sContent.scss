@@ -20,9 +20,7 @@
 	&__back {
 		display: inline-flex;
 		align-items: center;
-		span {
-			margin-left: rem(10);
-		}
+		
 		.icon {
 			font-size: rem(13px);
 			margin-right: rem(13);
@@ -32,15 +30,20 @@
 			text-decoration: underline;
 			color: $primary;
 		}
-
-		&:hover .icon {
-			// transform: translateX(-3px);
+		span {
+			margin-left: rem(10);
 		}
 	}
-	&__next {
-		span {
-			margin-right: 13px;
+	&__back {
+		&:hover {
+			.icon {
+				transform: translateX(-3px);
+			}
 		}
+		
+	}
+	&__next {
+		
 		.icon {
 			transform: rotateY(180deg);
 			margin-left: rem(13);
@@ -329,5 +332,3 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-
-
