@@ -214,7 +214,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '12_WP_B24_интергация.png';
+	screenName = '29.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -297,7 +297,8 @@ function eventHandler() {
 		const toggle = $(this).find('.drop-accardion-js')
 		toggle.click(function(){
 			const th = $(this);
-		 th.parent().toggleClass('active')
+			th.toggleClass('active');
+			th.parent().toggleClass('active')
 			.find('.drop-accardion-toggle-js').slideToggle(function () {
 				$(this).toggleClass('active');
 			});

@@ -1,9 +1,9 @@
 extends layout/main.pug
 
 
-include ../blocks/sContent/_sContent.pug
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sBlog/_sBlog.pug
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sPossibilities/_sPossibilities.pug
 include ../blocks/sHave/_sHave.pug
 
@@ -29,14 +29,11 @@ block pagecontent
 							ul.h6.strong
 								li Экономьте до&nbsp;70&nbsp;% времени на&nbsp;привычных делах!
 								li Снижайте потерю клиентов до&nbsp;0%!
-			 
+
 					+e.picCol.col-xsm-5.col-xl
 						+pic('head13.png','','')
-						 
+
 	+sPossibilities
 					
 	+sHave
 	+footer()
-
-
-	

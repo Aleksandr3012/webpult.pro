@@ -1,0 +1,99 @@
+// start .asideDropdown
+.asideDropdown {
+	--size: #{rem(23)};
+	@include media-breakpoint-up(sm) {
+		--size: #{rem(25)};
+	}
+	@include media-breakpoint-up(lg) {
+		--size: #{rem(22)};
+	}
+	@include media-breakpoint-up(xl) {
+		--size: #{rem(23)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--size: #{rem(25)};
+	}
+	h2 {
+		// Style for "Описание м"
+		font-size: rem(20);
+		font-weight: 500;
+		letter-spacing: 0.64px;
+		line-height: normal;
+		@include media-breakpoint-up(md) {
+			margin-bottom: var(--h2mb);
+		}
+	}
+	&__wrapper {
+		border: 1px solid #e4e4e4;
+	}
+	.drop-accardion-block {
+		border: none !important	;
+		position: relative;
+		&:not(:last-child) {
+			&::after {
+				content: "";
+				position: absolute;
+				width: calc(100% - (var(--size) * 2));
+				height: 1px;
+				left: var(--size);
+				bottom: 0;
+				background-color: #e4e4e4;
+			}
+		}
+		&__title {
+			@include mt;
+			display: flex;
+			align-items: center;
+			padding: calc(var(--size) - (var(--size) / 4)) var(--size) calc(var(--size) - (var(--size) / 4))
+				calc(var(--size) * 2.4);
+			color: #081727;
+			font-size: calc(var(--size) * 0.6);
+			font-weight: 500;
+			line-height: 1.1;
+			&.active,
+			&:hover {
+				color: $primary;
+				.icon-plus-drop {
+					transform: rotate(45deg);
+				}
+			}
+			.icon-plus-drop {
+				left: var(--size);
+				font-size: calc(var(--size) * 0.64);
+			}
+		}
+		&__body {
+			padding: 0 0 calc(var(--size) * 0.72) calc(var(--size) * 2.4);
+			a {
+				display: block;
+				color: $body-color;
+				font-size: calc(var(--size) * 0.6);
+				// line-height: 1.2;
+				padding: calc(var(--size) * 0.15) var(--size) calc(var(--size) * 0.15) 0;
+				margin: calc(var(--size) * 0.15) 0;
+				&:hover,
+				&.active {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+	//
+	@include media-breakpoint-only(xl) {
+	}
+	//
+	@include media-breakpoint-down(xl) {
+	}
+} // end.asideDropdown

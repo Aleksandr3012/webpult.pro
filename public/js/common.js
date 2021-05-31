@@ -219,7 +219,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '12_WP_B24_интергация.png';
+	screenName = '29.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -290,6 +290,7 @@ function eventHandler() {
 		var toggle = $(this).find('.drop-accardion-js');
 		toggle.click(function () {
 			var th = $(this);
+			th.toggleClass('active');
 			th.parent().toggleClass('active').find('.drop-accardion-toggle-js').slideToggle(function () {
 				$(this).toggleClass('active');
 			});
