@@ -2,6 +2,10 @@
 .topLine {
 	padding-top: rem(16);
 	padding-bottom: rem(16);
+	.col-auto{
+		position: relative;
+		z-index: 4;
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(30);
 		padding-bottom: rem(28);
@@ -186,6 +190,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		margin-right: -200px;
+		width: auto !important;
 	}
 	margin-bottom: 0;
 
